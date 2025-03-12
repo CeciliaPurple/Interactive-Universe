@@ -6,8 +6,9 @@
 
    /*BORDA*/
    --borda: 1px solid #fff;
-   --brilho: 0px 0px 60px 5px hsl(0, 0%, 100%, 0.5);
-   --brilho-2: 0px 0px 60px 5px hsl(0, 0%, 100%);
+   --borda-curva: 5px;
+   --brilho: 0px 0px 30px 5px hsl(0, 0%, 100%, 0.25);
+   --brilho-2: 0px 0px 60px 5px hsl(0, 0%, 100%, 0.5);
 
    /*FONTES*/
    --ff-bruno: "Bruno Ace SC";
@@ -35,4 +36,49 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
+}
+
+.caixa{
+    width: 500px;
+    border: var(--borda);
+    border-radius: var(--borda-curva);
+    box-shadow: var(--brilho);
+}
+
+.caixa:hover{
+    box-shadow: var(--brilho-2);
+}
+
+.maior{
+    width: 700px;
+}
+
+.sub-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-bottom: var(--borda);
+    font-size: var(--h2-32);
+    font-family: var(--ff-bruno);
+    background-color: var(--cinza);
+}
+
+.texto{
+    margin: 20px;
+    display: flex;
+    font-family: var(--ff-poppins);
+    text-align: center;
+}
+
+.info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 80px;
+    font-family: var(--ff-poppins);
+    justify-content: center;
+}
+
+li{
+    padding-right: 50px;
 }
