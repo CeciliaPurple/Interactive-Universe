@@ -1,0 +1,38 @@
+/*-----PROPRIEDADES CUSTOMIZADAS-----*/
+
+:root{
+    /*CORES*/
+   --cinza:  #404041;
+
+   /*BORDA*/
+   --borda: 1px solid #fff;
+   --brilho: 0px 0px 60px 5px hsl(0, 0%, 100%, 0.5);
+   --brilho-2: 0px 0px 60px 5px hsl(0, 0%, 100%);
+
+   /*FONTES*/
+   --ff-bruno: "Bruno Ace SC";
+   --ff-poppins: "Poppins";
+
+   /*TAMANHOS*/
+   --h1-96: 6rem;
+   --h2-32: 2rem;
+   --h3-24: 1.5rem;
+   --h4-20: 1.25rem;
+}
+
+/*-----RESET-----*/
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../img/aleksandar.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
