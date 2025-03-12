@@ -48,5 +48,14 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    
     top: -90px;
+}
+
+.title{
+    position: absolute;
+    color: aliceblue;
+    position: relative;
+    right: 500px;
+    top: 50px;
 }
