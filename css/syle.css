@@ -6,6 +6,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
 }
 
 .header{
@@ -13,6 +14,7 @@ body{
     justify-content: center;
     color: aliceblue;
     margin-top: 40px;
+    height: 50px;
 }
 
 .menu{
@@ -36,10 +38,11 @@ body{
 }
 
 .logo{
-    position: relative;
-    right: 920px;
-    width: 120px;
-    top: -20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: auto;
 }
 
 
@@ -48,14 +51,24 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    
     top: -90px;
 }
 
 .title{
     position: absolute;
     color: aliceblue;
-    position: relative;
-    right: 500px;
-    top: 50px;
+    text-align: center;
+    font-size: 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    flex: 1; 
+    background-image: url(/img/banner.png); 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 100%;
 }
