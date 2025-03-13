@@ -38,8 +38,19 @@ body{
     color: #fff;
 }
 
+main{
+    background-color: rgb(43, 31, 18);
+}
+
+.titulo{
+    text-align: center;
+    margin: 5%;
+    font-family: var(--ff-bruno);
+    font-size: var(--h1-96);
+}
+
 .caixa{
-    width: 500px;
+    width: 30%;
     border: var(--borda);
     border-radius: var(--borda-curva);
     box-shadow: var(--brilho);
@@ -49,36 +60,57 @@ body{
     box-shadow: var(--brilho-2);
 }
 
+.menor{
+    justify-self: end;
+    margin-right: 10%;
+    margin-bottom: 5%;
+}
+
 .maior{
-    width: 700px;
+    justify-self: center;
+    width: 60%;
+    align-self: end;
 }
 
 .sub-titulo{
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 50px;
+    height: auto;
+    padding: 1%;
     border-bottom: var(--borda);
-    font-size: var(--h2-32);
+    font-size: var(--h3-24);
     font-family: var(--ff-bruno);
     background-color: var(--cinza);
 }
 
 .texto{
-    margin: 20px;
+    margin: 4%;
     display: flex;
     font-family: var(--ff-poppins);
     text-align: center;
 }
 
-.info{
+ul{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 20px 80px;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: start;
+    padding: 0 10% 3%;
     font-family: var(--ff-poppins);
-    justify-content: center;
 }
 
 li{
-    padding-right: 50px;
+    margin-top: 10%;
+    font-size: var(--h4-20);
+}
+
+@media (max-width: 1024px){
+    html{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px){
+    html{
+        font-size: 10px;
+    }
 }
