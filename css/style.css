@@ -1,4 +1,33 @@
+/*-----PROPRIEDADES CUSTOMIZADAS-----*/
+:root{
+    /*CORES*/
+   --cinza:  #404041;
 
+   /*BORDA*/
+   --borda: 1px solid #fff;
+   --borda-curva: 5px;
+   --brilho: 0px 0px 30px 5px hsl(0, 0%, 100%, 0.25);
+   --brilho-2: 0px 0px 60px 5px hsl(0, 0%, 100%, 0.5);
+
+   /*FONTES*/
+   --ff-bruno: "Bruno Ace SC";
+   --ff-poppins: "Poppins";
+
+   /*TAMANHOS*/
+   --h1-96: 6rem;
+   --h2-32: 2rem;
+   --h3-24: 1.5rem;
+   --h4-20: 1.25rem;
+}
+
+/*-----RESET-----*/
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 
 body{
@@ -6,7 +35,6 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
 }
 
 .header{
@@ -45,30 +73,20 @@ body{
     height: auto;
 }
 
-
 .banner{
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    top: -90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
-.title{
+.titulo{
     position: absolute;
-    color: aliceblue;
+    color: #fff;
     text-align: center;
-    font-size: 2.5rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: var(--h1-96);
+    font-family: var(--ff-bruno);
 }
 
-.container {
-    flex: 1; 
-    background-image: url(/img/banner.png); 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover;
-    height: 100%;
+.imagem{
+    width: 100%;
+    height: auto;
 }
