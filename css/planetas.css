@@ -38,17 +38,24 @@ body{
     color: #fff;
 }
 
-main{
-    background-color: rgb(43, 31, 18);
-}
-
 .titulo{
     text-align: center;
-    margin: 5%;
+    margin-top: 2%;
     font-family: var(--ff-bruno);
     font-size: var(--h1-96);
 }
 
+img{
+    position: relative;
+    top: -70px;
+    margin-left: 10vw;
+    width: 50%;
+}
+
+main{
+    position: relative;
+    top: -450px;
+}
 .caixa{
     width: 30%;
     border: var(--borda);
@@ -61,8 +68,9 @@ main{
 }
 
 .menor{
+    align-self: self-start;
     justify-self: end;
-    margin-right: 10%;
+    margin-right: 20%;
     margin-bottom: 5%;
 }
 
