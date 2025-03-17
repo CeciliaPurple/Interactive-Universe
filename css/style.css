@@ -14,6 +14,7 @@
    --ff-poppins: "Poppins";
 
    /*TAMANHOS*/
+   --h0-128: 8rem;
    --h1-96: 6rem;
    --h2-32: 2rem;
    --h3-24: 1.5rem;
@@ -31,7 +32,7 @@
 
 
 body{
-    background-image: url(/img/aleksandar-kyng-Z2u3gckkRY0-unsplash.jpg);
+    background-image: url(../img/aleksandar.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -78,15 +79,18 @@ body{
     flex-direction: column;
     justify-content: center;
 }
+
 .titulo{
-    position: absolute;
+    position: relative;
+    top: 100px; 
     color: #fff;
     text-align: center;
-    font-size: var(--h1-96);
-    font-family: var(--ff-bruno);
+    font-size: var(--h0-128);
+    font-family: var(--ff-bruno);   
 }
 
 .imagem{
-    width: 100%;
-    height: auto;
+    z-index: -1;
+    position: relative;
+    top: -200px;
 }
