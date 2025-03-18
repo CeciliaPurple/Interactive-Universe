@@ -15,7 +15,7 @@
 
    /*TAMANHOS*/
    --h0-128: 8rem;
-   --h1-96: 6rem;
+   --h1-96: 5rem;
    --h2-32: 2rem;
    --h3-24: 1.5rem;
    --h4-20: 1.25rem;
@@ -93,4 +93,32 @@ body{
     z-index: -1;
     position: relative;
     top: -200px;
+}
+
+.noticia{
+    background-color: rgb(24, 102, 17);
+    max-width: 60%;
+    display: flex;
+}
+
+.grupo-noticia{
+}
+
+.noticia-sub-titulo{
+    font-size: var(--h3-24);
+    font-weight: lighter;
+    font-family: var(--ff-poppins);
+    color: #fff;
+}
+
+.noticia-titulo{
+    font-size: var(--h1-96);
+    font-family: var(--ff-bruno);
+    color: #fff;
+}
+
+.noticia-texto{
+    font-size: var(--h4-20);
+    font-family: var(--ff-bruno);
+    color: #fff;
 }
