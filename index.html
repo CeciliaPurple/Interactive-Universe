@@ -14,9 +14,9 @@
 <body>
     <main>
         <div class="header">
-            <div class="menu"><a href="#"></a>Planetas</div>
-            <div  class="menu"><a href="#"></a>Noticias</div>
-            <div class="menu"><a href="#"></a>Astros</div>
+            <div class="menu"><a href="#planet">Planetas</a></div>
+            <div  class="menu"><a href="#news">Noticias</a></div>
+            <div class="menu"><a href="astros.html">Astros</a></div>
             <!-- From Uiverse.io by pathikcomp --> 
         <label class="main">
             Login
@@ -27,9 +27,9 @@
             <span class="bottom bar-list"></span>
             </div>
             <section class="menu-container">
-            <div class="menu-list"><a href="login.html"></a>Entrar</div>
-            <div class="menu-list"><a href="cadastro.html"></a>Cadastrar</div>
-            <div class="menu-list"><a href="login.html"></a>Atualizar</div>
+            <div class="menu-list"><a class="menu-list" href="login.html">Entrar</a></div>
+            <div class="menu-list"><a href="cadastro.html">Cadastrar</a></div>
+            <div class="menu-list"><a href="atualização.html">Atualizar</a></div>
             </section>
         </label>
   
@@ -42,7 +42,7 @@
             <img class="imagem" src="img/banner.png">
         </div>
 
-        <section class="grupo-noticia1">
+        <section class="grupo-noticia1" id="news">
             <div class="noticia">
                 <div class="grupo-noticia1">
                     <p class="noticia-sub-titulo">O GRANDE FENÔMENO</p>
@@ -52,13 +52,14 @@
                     </p>
                 </div>
                 
-                <img src="img/eclipse.png">
+                <a href="nebulosa.html"><img src="img/eclipse.png"></a>
                 <img class="linhas">
             </div>
         </section>
 
         <section class="grupo-noticia2">
             <div class="noticia">
+                <a href="nebulosa.html"><img src="img/fotos.png"></a>
                 <div class="grupo-noticia2">
                     <p class="noticia-sub-titulo">O ENCANTO CÓSMICO DAS</p>
                     <p class="noticia-titulo">Nebulosas</p>
@@ -67,12 +68,11 @@
                     </p>
                 </div>
                 
-                <img src="img/fotos.png">
                 <img class="linhas">
             </div>
         </section>
 
-        <section class="carrossel">
+        <section class="carrossel" id="planet">
             <button id="prev">&lt;</button>
             <div class="planetario">
                 <div class="planet">
