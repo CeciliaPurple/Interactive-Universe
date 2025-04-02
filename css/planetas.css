@@ -48,6 +48,8 @@ a{
   color: aliceblue;
   margin-top: 40px;
   height: 50px;
+ position: relative;
+ left: 400px;
 }
 
 .menu{
@@ -255,12 +257,15 @@ img{
     box-shadow: var(--brilho-2);
 }
 
+
+
 .menor{
     align-self: self-start;
     justify-self: end;
     margin-right: 20%;
     margin-bottom: 5%;
     margin-top: 90px;
+    color: white;
 }
 
 .maior{
@@ -268,6 +273,7 @@ img{
     width: 60%;
     align-self: end;
     margin-top: 70px;
+    color: white;
 }
 
 .sub-titulo{
