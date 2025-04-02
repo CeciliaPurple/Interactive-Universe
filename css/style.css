@@ -276,6 +276,16 @@ a{
     margin: 0;
 }
 
+.eclipse{
+  margin-right: 120px;
+  margin-bottom: 30px;
+}
+
+.nebu{
+  margin-left: 80px;
+
+}
+
 .grupo-noticia2 .noticia{
     margin-bottom: 20px;
     text-align: left;
@@ -303,6 +313,7 @@ a{
     font-size: var(--h4-20);
     font-family: var(--ff-bruno);
     color: #fff;
+
 }
 
 
