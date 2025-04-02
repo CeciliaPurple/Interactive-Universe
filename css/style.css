@@ -245,17 +245,29 @@ a{
     top: -200px;
 }
 
-.noticia{
+.noticia1{
+  max-width: 60%;
+  display: flex;
+  justify-self: flex-end;
+  margin-right: 100px;
+}
+
+.noticia2{
     max-width: 60%;
     display: flex;
+    margin-left: 100px;
+}
+
+.nebu{
+  width: 300px;
 }
 
 .grupo-noticia1{
     display: flex;
     flex-direction: column;
-    align-items: flex-end;  
+    align-items: flex-start;  
     width: 100%;            
-    margin: 0;
+    margin-right: 50px;
 }
 
 .grupo-noticia1 .noticia {
@@ -273,17 +285,11 @@ a{
     flex-direction: column;
     align-items: flex-start;  
     width: 100%;            
-    margin: 0;
+    margin-left: 50px;
 }
 
 .eclipse{
-  margin-right: 120px;
   margin-bottom: 30px;
-}
-
-.nebu{
-  margin-left: 80px;
-
 }
 
 .grupo-noticia2 .noticia{
