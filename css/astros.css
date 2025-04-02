@@ -93,12 +93,6 @@ height: auto;
   justify-content: space-between;
 }
 
-.bandeira{
-  position:relative;
-  top: 0px;
-  left:400px;
-}
-
 .menu-container {
   background-color: white;
   color: #004AAD;
@@ -209,6 +203,13 @@ height: auto;
   -webkit-appearance: none;
   display: none;
   visibility: hidden;
+}
+
+.bandeira{
+  margin-right: 50px;
+  position:relative;
+  top: 0px;
+  left:400px;
 }
 
 .bar {

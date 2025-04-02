@@ -40,7 +40,6 @@ body{
     margin-top: 17px;
     box-shadow: #0d3041 0px 10px 10px -5px;
     border-inline: 2px solid transparent;
-  
   }
   
   .form .input::-moz-placeholder {
@@ -69,8 +68,6 @@ body{
     text-decoration: none;
   }
 
-  
-  
   .form .login-button {
     display: block;
     width: 100%;
@@ -113,7 +110,6 @@ body{
     color: #feffff;
     text-decoration: none;
   }
-
   
   .social-account-container .social-accounts {
     width: 100%;

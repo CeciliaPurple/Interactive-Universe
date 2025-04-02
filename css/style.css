@@ -94,12 +94,6 @@ a{
   justify-content: space-between;
 }
 
-.bandeira{
-  position:relative;
-  top: 0px;
-  left:400px;
-}
-
 .login > .inp:checked + .arrow {
   transform: rotateX(180deg);
 }
@@ -181,6 +175,13 @@ a{
   transition:
     transform 0.4s calc(var(--delay) + (var(--trdelay) * 3)),
     opacity 0.4s calc(var(--delay) + (var(--trdelay) * 3));
+}
+
+.bandeira{
+  margin-right: 50px;
+  position:relative;
+  top: 0px;
+  left:400px;
 }
 
 .bar-inp {
