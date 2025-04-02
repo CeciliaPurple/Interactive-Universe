@@ -36,6 +36,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 
 a{
@@ -46,10 +47,11 @@ a{
   display: flex;
   justify-content: center;
   color: aliceblue;
-  margin-top: 40px;
-  height: 50px;
- position: relative;
- left: 400px;
+  margin-top: 60px;
+  height: 30px;
+  position: relative;
+  justify-self: center;
+  left: 150px;
 }
 
 .menu{
@@ -66,11 +68,10 @@ color:  #fff;
 }
 
 .logo{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 150px;
-  height: auto;
+ position: relative;
+ right: 1400px;
+ bottom: 75px;
+  
 }
 
 .login > .inp {
@@ -233,6 +234,7 @@ color:  #fff;
     margin-top: 2%;
     font-family: var(--ff-bruno);
     font-size: var(--h1-96);
+    color: white;
 }
 
 img{
