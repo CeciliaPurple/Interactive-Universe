@@ -84,6 +84,7 @@ body{
     color: aliceblue;
     margin-top: 40px;
     height: 50px;
+    margin-left: 270px;
 }
 
 .menu{
@@ -109,7 +110,7 @@ body{
 .logo{
     position: absolute;
     top: 0;
-    left: 0;
+    right: 1100px;
     width: 150px;
     height: auto;
 }
@@ -263,7 +264,7 @@ body{
 
 img{
     position: relative;
-    top: -70px;
+    bottom: 30px;
     margin-left: 10vw;
     width: 50%;
 }
@@ -288,12 +289,14 @@ img{
     justify-self: end;
     margin-right: 20%;
     margin-bottom: 5%;
+    margin-top: 90px;
 }
 
 .maior{
     justify-self: center;
     width: 60%;
     align-self: end;
+    margin-top: 70px;
 }
 
 .sub-titulo{
