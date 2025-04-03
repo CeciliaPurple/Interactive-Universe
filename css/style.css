@@ -398,26 +398,84 @@ button {
     margin: 10px;
 }
 
---- carrossel --------
+/*CARROSSEL*/
+
+/*CAIXA GRANDE*/
+.caixa-G{
+  justify-self: center;
+  width: 300px;
+  height: 350px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  box-shadow: var(--brilho);
+  align-content: end;
+}
+
+.caixa-G:hover{
+  box-shadow: var(--brilho-2);
+}
+
+.nome-planeta{
+  position: relative;
+  top: -20px;
+  width: 100px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #fff;
+  font-family: var(--ff-bruno);
+  font-size: var(--h4-20);
+  justify-self: center;
+}
+
+.planeta{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.planeta img{
+  align-self: center;
+  width: 200px;
+}
+
+.meia-caixa-G{
+  background-color: hsl(246, 20%, 47%, 0.5);
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: none;
+  height: 100px;
+  border-top: 1px solid #fff;
+  text-align: justify;
+  color: #fff;
+  font-family: var(--ff-bruno);
+  font-size: 14px;
+  padding: 10px 25px;
+}
+
+
 
 button:hover {
     background: rgba(255, 255, 255, 0.5);
 }
 
+.item {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  width: 100%;
+}
   
-  .item {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    width: 100%;
-  }
-  
-  footer {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    padding: 20px;
-    color: white; 
-    text-align: center; 
-  }
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  color: white; 
+  text-align: center; 
+}
+
+footer p{
+  position: relative;
+  bottom: -450px;
+}
   
