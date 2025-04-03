@@ -249,6 +249,11 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 .imagem{
   z-index: -1;
   position: relative;
+  top: -100px;
+}
+
+.noticias{
+  position: relative;
   top: -200px;
 }
 
@@ -401,8 +406,6 @@ button {
 
 /*CARROSSEL*/
 .carrossel{
-position: relative;
-bottom: -100px;
 display: flex;
 justify-content: center;
 place-items: end;
