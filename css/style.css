@@ -177,12 +177,20 @@ a{
     opacity 0.4s calc(var(--delay) + (var(--trdelay) * 3));
 }
 
-.bandeira{
+.bandeira1{
   margin-right: 50px;
   position:relative;
   top: 0px;
-  left:400px;
+  left:210px;
 }
+
+.bandeira2{
+  margin-right: 50px;
+  position:relative;
+  top: 0px;
+  left:170px;
+}
+
 
 .bar-inp {
   -webkit-appearance: none;
