@@ -40,7 +40,7 @@ body{
       border-radius: 20px; 
       padding: 70px;
       max-height: 600px;
-      border: 5px solid rgb(255, 255, 255);
+      border: 2px solid rgb(255, 255, 255);
       box-shadow: 0 0 30px rgba(255, 255, 255, 0.878) ;
       justify-self: center;
       margin-top: 90px;
@@ -56,7 +56,11 @@ body{
     .form {
       margin-top:-340px;
       margin-left: 490px;
-      
+    }
+    
+    .input{
+      font-family: var(--ff-poppins);
+      font-weight: 500;
     }
     
     .form .input {
