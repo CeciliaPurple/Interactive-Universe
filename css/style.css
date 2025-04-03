@@ -484,7 +484,53 @@ button {
   padding: 10px 25px;
 }
 
+/*CAIXA PEQUENA*/
+.caixa-P{
+  justify-self: center;
+  width: 200px;
+  height: 250px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  box-shadow: var(--brilho);
+  align-content: end;
+}
 
+.nome-planeta-P{
+  position: relative;
+  top: -20px;
+  width: 70px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #fff;
+  font-family: var(--ff-bruno);
+  font-size: 14px;
+  justify-self: center;
+}
+
+.planeta-P{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+}
+
+.planeta-P img{
+  align-self: center;
+  width: 120px;
+}
+
+.meia-caixa-P{
+  background-color: hsl(246, 20%, 47%, 0.5);
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: none;
+  height: 70px;
+  border-top: 1px solid #fff;
+  text-align: justify;
+  color: #fff;
+  font-family: var(--ff-bruno);
+  font-size: 9px;
+  padding: 5px 20px;
+}
 
 button:hover {
     background: rgba(255, 255, 255, 0.5);
