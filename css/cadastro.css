@@ -103,8 +103,8 @@ body{
   }
   
   .form .login-button {
-    display: block;
-    width: 100%;
+    display: flow-root;
+    width: 105%;
     font-weight: bold;
     background: linear-gradient(0deg, hsl(246, 21%, 29%,0.5)100%, hsl(246, 64%, 10%,0.5) 70%,hsl(250, 24%, 10%,0.5) 100%);
     color: white;
@@ -241,11 +241,11 @@ ul {
 }
 .example-2 .icon-content a[data-social="pinterest"] .filled,
 .example-2 .icon-content a[data-social="pinterest"] ~ .tooltip {
-  background-color: #bd081c;
+  background-color: #c98b18;
 }
 .example-2 .icon-content a[data-social="dribbble"] .filled,
 .example-2 .icon-content a[data-social="dribbble"] ~ .tooltip {
-  background-color: #ea4c89;
+  background-color: #3e20c5;
 }
 .example-2 .icon-content a[data-social="telegram"] .filled,
 .example-2 .icon-content a[data-social="telegram"] ~ .tooltip {
@@ -266,4 +266,7 @@ ul {
     color: #feffff;
     text-decoration: none;
   }
+
+
+
   
