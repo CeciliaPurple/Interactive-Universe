@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+
+    <!--LINK CSS-->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/software (1) 1.png" width="120px"  heigth="120px" type="image/png">
+
+    <!--LOGO GUIA-->
+    <link rel="shortcut icon" href="img/favicon.ico" width="120px"  heigth="120px" type="image/png">
 
     <!--FONTES-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,35 +20,39 @@
     <main>
         <div class="header">
             <div class="menu"><a href="#planet">Planetas</a></div>
-            <div  class="menu"><a href="#news">Noticias</a></div>
+            <div  class="menu"><a href="#news">Notícias</a></div>
             <div class="menu"><a href="astros.html">Astros</a></div>
-            <!-- From Uiverse.io by pathikcomp --> 
-        <label class="main">
-            Login
-            <input class="inp" checked="" type="checkbox" />
-            <div class="bar">
-            <span class="top bar-list"></span>
-            <span class="middle bar-list"></span>
-            <span class="bottom bar-list"></span>
-            </div>
-            <section class="menu-container">
-            <div class="menu-list"><a class="menu-list" href="login.html">Entrar</a></div>
-            <div class="menu-list"><a href="cadastro.html">Cadastrar</a></div>
-            <div class="menu-list"><a href="atualização.html">Atualizar</a></div>
-            </section>
-        </label>
+
+            <label class="login">
+                Login
+                <input class="inp" checked="" type="checkbox" />
+                <div class="bar">
+                <span class="top bar-list"></span>
+                <span class="middle bar-list"></span>
+                <span class="bottom bar-list"></span>
+                </div>
+
+                <section class="menu-container">
+                    <div class="menu-list"><a href="login.html">Entrar</a></div>
+                    <div class="menu-list"><a href="cadastro.html">Cadastrar</a></div>
+                    <div class="menu-list"><a href="atualização.html">Atualizar</a></div>
+                </section>
+            </label>
   
-        <img class="logo" src="img/software (1) 1.png">
-        <img src="" alt="">
+            <a href="index.html"><img class="logo" src="img/software (1) 1.png"></a>
+            <img class="bandeira" src="../Interactive-Universe/img/brasil.png">
+            <img class="bandeira" src="../Interactive-Universe/img/estadosUnidos.png">
         </div>
 
+    <!--BANNER-->
         <div class="banner">
             <h1 class="titulo">Solar Sistem</h1>
             <img class="imagem" src="img/banner.png">
         </div>
 
-        <section class="grupo-noticia1" id="news">
-            <div class="noticia">
+    
+    <!--NOTÍCIAS-->
+            <div class="noticia1" id="news">
                 <div class="grupo-noticia1">
                     <p class="noticia-sub-titulo">O GRANDE FENÔMENO</p>
                     <p class="noticia-titulo">Eclipse Lunar</p>
@@ -53,14 +61,13 @@
                     </p>
                 </div>
                 
-                <a href="nebulosa.html"><img src="img/eclipse.png"></a>
+                <a href="nebulosa.html"><img  class="eclipse" src="img/eclipse.png"></a>
                 <img class="linhas">
             </div>
-        </section>
 
-        <section class="grupo-noticia2">
-            <div class="noticia">
-                <a href="nebulosa.html"><img src="img/fotos.png"></a>
+       
+            <div class="noticia2">
+                <a href="nebulosa.html"><img class="nebu" src="img/fotos.png"></a>
                 <div class="grupo-noticia2">
                     <p class="noticia-sub-titulo">O ENCANTO CÓSMICO DAS</p>
                     <p class="noticia-titulo">Nebulosas</p>
@@ -71,77 +78,8 @@
                 
                 <img class="linhas">
             </div>
-        </section>
+      
 
-        <section class="carrossel" id="planet">
-            <button id="prev">&lt;</button>
-            <div class="planetario">
-                <div class="planet">
-                    <img src="img/mercurio.png" alt="mercurio">
-                    <div class="descricao">
-                        <h3>mercurio</h3>
-                        <p>Descrição do Mercúrio...</p>
-                    </div>
-                </div>
-        
-                <div class="planet">
-                    <img src="img/venus.png" alt="venus">
-                    <div class="descricao">
-                        <h3>venus</h3>
-                        <p>Descrição de Vênus...</p>
-                    </div>
-                </div>
-        
-                <div class="planet">
-                    <img src="img/terra.png" alt="terra">
-                    <div class="descricao">
-                        <h3>terra</h3>
-                        <p>Descrição da Terra...</p>
-                    </div>
-                </div>
-        
-                <div class="planet">
-                    <img src="img/marte.png" alt="marte">
-                    <div class="descricao">
-                        <h3>marte</h3>
-                        <p>Descrição de Marte...</p>
-                    </div>
-                </div>
-        
-                <div class="planet">
-                    <img src="img/jupiter.png" alt="jupiter">
-                    <div class="descricao">
-                        <h3>jupiter</h3>
-                        <p>Descrição de Júpiter...</p>
-                    </div>
-                </div>
-        
-                <div class="planet">
-                    <img src="img/saturno.png" alt="saturno">
-                    <div class="descricao">
-                        <h3>saturno</h3>
-                        <p>Descrição de Saturno...</p>
-                    </div>
-                </div>
-        
-                <div class="planet">
-                    <img src="img/urano.png" alt="urano">
-                    <div class="descricao">
-                        <h3>urano</h3>
-                        <p>Descrição de Urano...</p>
-                    </div>
-                </div>
-        
-                <div class="planet">
-                    <img src="img/netuno.png" alt="netuno">
-                    <div class="descricao">
-                        <h3>netuno</h3>
-                        <p>Descrição de Netuno...</p>
-                    </div>
-                </div>
-            </div>
-            <button id="next">&gt;</button>
-        </section>
         
 
         <div class="carrosel-sol">
@@ -155,6 +93,10 @@
         </footer>
 
     </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
     <script src="js/home.js"></script>
 </body>
 </html>

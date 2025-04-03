@@ -8,8 +8,6 @@ body{
   background-position: center;
 }
 
-
-
 .container {
     max-width: 390px;
     background: #ffffff;
@@ -43,7 +41,6 @@ body{
     margin-top: 17px;
     box-shadow: #0d3041 0px 10px 10px -5px;
     border-inline: 2px solid transparent;
-  
   }
   
   .form .input::-moz-placeholder {
@@ -71,8 +68,6 @@ body{
     color: #feffff;
     text-decoration: none;
   }
-
-  
   
   .form .login-button {
     display: block;
