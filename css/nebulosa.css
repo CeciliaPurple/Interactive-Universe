@@ -65,7 +65,7 @@ a{
 .logo{
   position: absolute;
   top: 0;
-  left: 120px;
+  left: 0;
   width: 150px;
   height: auto;
 }
@@ -177,7 +177,12 @@ a{
 }
 
 
-
+.bandeira{
+  margin-right: 50px;
+  position:relative;
+  top: 0px;
+  left:400px;
+}
 
 .bar-inp {
   -webkit-appearance: none;
@@ -240,14 +245,14 @@ a{
 /*card1*/
 
 .caixa{
-    background-image: url(../img/nebu1.png);
+    background-image: url(../img/nebulosa1.jpg);
     background-position: center;
     background-size: cover;
     height: 400px;
     max-width: 500px;
     margin-left: 200px;
     margin-top: 150px;
-    box-shadow: 10px 10px 35px 10px hsla(0, 0%, 100%, 0.5);
+    box-shadow: 10px 10px 35px 10px hsla(281, 68%, 67%, 0.5);
     border-radius: 10px;
 }
 
@@ -293,7 +298,7 @@ a{
 
 /*card3*/
 .caixa3{
-    background-image: url(../img/nebu3.png);
+    background-image: url(../img/galaxy-nebulosa.jpg);
     background-position: center;
     background-size: cover;
     height: 250px;
@@ -301,7 +306,7 @@ a{
     margin-left: 200px;
     position: relative;
     bottom: -250px;
-    box-shadow:10px 10px 35px 10px hsla(0, 0%, 100%, 0.5);
+    box-shadow:10px 10px 35px 10px hsla(283, 77%, 39%, 0.5);
     border-radius: 10px;
     
 }
