@@ -193,6 +193,7 @@ ul {
   opacity: 1;
   visibility: visible;
   top: -50px;
+  background-color: #2635b8;
 }
 .example-2 .icon-content a {
   position: relative;
@@ -233,24 +234,10 @@ ul {
   transition: all 0.3s ease-in-out;
 }
 .example-2 .icon-content a:hover .filled {
-  height: 100%;
+  height: 15%;
 }
-.example-2 .icon-content a[data-social="spotify"] .filled,
-.example-2 .icon-content a[data-social="spotify"] ~ .tooltip {
-  background-color: #1db954;
-}
-.example-2 .icon-content a[data-social="pinterest"] .filled,
-.example-2 .icon-content a[data-social="pinterest"] ~ .tooltip {
-  background-color: #c98b18;
-}
-.example-2 .icon-content a[data-social="dribbble"] .filled,
-.example-2 .icon-content a[data-social="dribbble"] ~ .tooltip {
-  background-color: #3e20c5;
-}
-.example-2 .icon-content a[data-social="telegram"] .filled,
-.example-2 .icon-content a[data-social="telegram"] ~ .tooltip {
-  background-color: #0088cc;
-}
+
+
   
   .agreement {
     display: block;

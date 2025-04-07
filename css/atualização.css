@@ -285,7 +285,138 @@ body{
   .example-2 .icon-content a[data-social="telegram"] ~ .tooltip {
     background-color: #0088cc;
   }
-    
+  
+    /* From Uiverse.io by Yaya12085 */ 
+button {
+  max-width: 320px;
+  display: flex;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  gap: 0.75rem;
+  color: rgb(65, 63, 63);
+  background-color: #fff;
+  cursor: pointer;
+  transition: all .6s ease;
+}
+
+.button svg {
+  height: 24px;
+}
+
+button:hover {
+  transform: scale(1.02);
+}
+
+/* From Uiverse.io by TreepDeep */ 
+.button.google {
+  max-width: 320px;
+  display: flex;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(50, 50, 80, 0.25);
+  gap: 0.75rem;
+  color: #ffffff;
+  background-color: rgb(50, 50, 80);
+  cursor: pointer;
+  transition: all 0.6s ease;
+  text-decoration: none;
+  margin-left: 20%;
+  margin-top: 50px;
+  position: relative;
+  top: 45px;
+}
+
+.button.google svg {
+  height: 24px;
+  width: 24px;
+  fill: #fff;
+  margin-right: 0.5rem;
+}
+
+.button.google:hover {
+  transform: scale(1.02);
+  background-color: rgb(90, 90, 120);
+  box-shadow: 0 2px 4px rgba(90, 90, 120, 0.1);
+}
+
+.button.google:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 40, 0.3);
+}
+
+.button.google:active {
+  transform: scale(0.98);
+  opacity: 0.8;
+}
+
+
+.button.facebook {
+  max-width: 320px;
+  display: flex;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(50, 50, 80, 0.25);
+  gap: 0.75rem;
+  color: #ffffff;
+  background-color: #1877f2; /* Azul Facebook */
+  cursor: pointer;
+  transition: all 0.6s ease;
+  text-decoration: none;
+  margin-left: 60%;
+}
+
+.button.facebook svg {
+  height: 24px;
+  width: 24px;
+  fill: #fff;
+  margin-right: 0.5rem;
+}
+
+.button.facebook:hover {
+  transform: scale(1.02);
+  background-color: #166fe5; /* tom um pouco mais escuro */
+  box-shadow: 0 2px 4px rgba(24, 119, 242, 0.2);
+}
+
+.button.facebook:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.4);
+}
+
+.button.facebook:active {
+  transform: scale(0.98);
+  opacity: 0.85;
+}
+
+
+@media (max-width: 480px) {
+  .button.google {
+    max-width: 100%;
+  }
+}
+
     .agreement {
       display: block;
       text-align: center;
