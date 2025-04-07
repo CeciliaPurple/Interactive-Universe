@@ -460,6 +460,62 @@ height: auto;
    top: 10px;
   }
 
-  
 
+  
+.card1{
+  display: flex;
+   position: relative;
+   cursor: pointer;
+   width: 50px;
+   bottom: 7px;
+   right: 50px;
+   gap: 30px;
+ }
+
+ .facebook{
+  height: 50px;
+  width: 50px;
+ }
+
+ .instagram{
+  height: 50px;
+  width: 50px;
+ }
+
+ .twitter{
+  height: 50px;
+  width: 50px;
+ }
+
+ .youtube{
+  height: 50px;
+  width: 50px;
+ }
+
+.facebook:hover{
+  background-color: #3d77cf;
+  border-radius: 10px;
+  
+}
+
+
+.instagram:hover{
+  background-color: #7a2d63;
+  border-radius: 10px;
+  
+}
+
+
+.youtube:hover{
+  background-color: #852121;
+  border-radius: 10px;
+  
+}
+
+.twitter:hover{
+  background-color: #b480cc;
+  border-radius: 10px;
+  
+  
+}
   

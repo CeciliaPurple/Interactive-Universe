@@ -388,14 +388,7 @@ margin-bottom: 30px;
   border-radius: 50%;
 }
 
-.planet:nth-child(1) { transform: translate(-150px, 100px); }
-.planet:nth-child(2) { transform: translate(-100px, 50px); }
-.planet:nth-child(3) { transform: translate(-50px, 20px); }
-.planet:nth-child(4) { transform: translate(0, 0px); }
-.planet:nth-child(5) { transform: translate(50px, 20px); }
-.planet:nth-child(6) { transform: translate(100px, 50px); }
-.planet:nth-child(7) { transform: translate(150px, 100px); }
-.planet:nth-child(8) { transform: translate(200px, 150px); }
+
 
 .descricao {
   text-align: center;
