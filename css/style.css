@@ -588,3 +588,15 @@ position: absolute;
 .sol:hover{
 filter: drop-shadow(5px  5px 10px #f5c207);
 }
+
+/*footer*/
+
+.card1{
+position: relative;
+bottom: -450px;
+gap: 80px;
+ 
+ }
+ 
+ 
+ 

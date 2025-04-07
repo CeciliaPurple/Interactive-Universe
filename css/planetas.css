@@ -374,38 +374,64 @@ li{
 .card1{
  display: flex;
   position: relative;
-  weight: 120px;
+  cursor: pointer;
   width: 120px;
-  top: 90px;
+  top: 70px;
+  left: 270px;
+  
 
-  
-  
 }
 
 .facebook{
   color:white;
   position: relative;
   left: 300px;
+  width: 50px;
+  height: 50px;
+ 
 }
+
+
 
 
 .twitter{
   color:white;
-  background-color: #1DA1F2;
   position: relative;
-  right: 150px;
-
+  right: 150px
 }
 
-.youtube{
-  color:white;
-  background-color: #FF0000;
-}
 
 .instagram{
-  color:white;
+  
 left: 150px;
-  background-color: #E1306C;
+  width: 50px;
+  height: 50px;
+}
+
+.facebook:hover{
+  background-color: #3d77cf;
+  border-radius: 10px;
+  
+}
+
+
+.instagram:hover{
+  background-color: #7a2d63;
+  border-radius: 10px;
+  
+}
+
+
+.youtube:hover{
+  background-color: #852121;
+  border-radius: 10px;
+  
+}
+
+.twitter:hover{
+  background-color: #b480cc;
+  border-radius: 10px;
+  
 }
 
 
@@ -425,8 +451,7 @@ left: 150px;
  font-family: var(--ff-bruno-ace);
  position: relative;
  left: 700px;
- bottom: 10px;
-
+ top:25px;
 
 }
 

@@ -65,7 +65,7 @@ a{
 .logo{
   position: absolute;
   top: 0;
-  left: 0;
+  left: 120px;
   width: 150px;
   height: auto;
 }
@@ -177,12 +177,7 @@ a{
 }
 
 
-.bandeira{
-  margin-right: 50px;
-  position:relative;
-  top: 0px;
-  left:400px;
-}
+
 
 .bar-inp {
   -webkit-appearance: none;
@@ -252,8 +247,12 @@ a{
     max-width: 500px;
     margin-left: 200px;
     margin-top: 150px;
-    box-shadow: 10px 10px 35px 10px hsla(281, 68%, 67%, 0.5);
+    box-shadow: 10px 10px 35px 10px hsla(0, 0%, 100%, 0.5);
     border-radius: 10px;
+}
+
+.caixa:hover{
+  box-shadow: 10px 10px 35px 10px hsla(281, 68%, 67%, 0.5);
 }
 
 
@@ -275,8 +274,12 @@ a{
     max-width: 500px;
     margin-left: 1200px;
     margin-top: 200px;
-    box-shadow: 10px 10px 35px 10px hsla(41, 62%, 41%, 0.5);
+    box-shadow: 10px 10px 35px 10px hsla(0, 0%, 100%, 0.5);
     border-radius: 10px;
+}
+
+.caixa2:hover{
+  box-shadow: 10px 10px 35px 10px hsla(41, 62%, 41%, 0.5);
 }
 
 .text2{
@@ -298,9 +301,13 @@ a{
     margin-left: 200px;
     position: relative;
     bottom: -250px;
-    box-shadow:10px 10px 35px 10px hsla(283, 77%, 39%, 0.5);
+    box-shadow:10px 10px 35px 10px hsla(0, 0%, 100%, 0.5);
     border-radius: 10px;
     
+}
+
+.caixa3:hover{
+  box-shadow:10px 10px 35px 10px hsla(283, 77%, 39%, 0.5);
 }
 
 .text3{
@@ -324,6 +331,10 @@ a{
   text-align: center;
   justify-self: center;
   border: #fff;
+}
+
+.container:hover{
+  box-shadow: 0 0 50px rgb(255, 255, 255);
 }
 
 h1 {
@@ -472,4 +483,65 @@ button:hover {
     clear: both;
     margin-top: 27px;
   }
+  
+/*footer*/
+
+.card1{
+  display: flex;
+   position: relative;
+   cursor: pointer;
+   width: 50px;
+   bottom: 7px;
+   right: 50px;
+   gap: 30px;
+ }
+
+ .facebook{
+  height: 50px;
+  width: 50px;
+ }
+
+ .instagram{
+  height: 50px;
+  width: 50px;
+ }
+
+ .twitter{
+  height: 50px;
+  width: 50px;
+ }
+
+ .youtube{
+  height: 50px;
+  width: 50px;
+ }
+
+.facebook:hover{
+  background-color: #3d77cf;
+  border-radius: 10px;
+  
+}
+
+
+.instagram:hover{
+  background-color: #7a2d63;
+  border-radius: 10px;
+  
+}
+
+
+.youtube:hover{
+  background-color: #852121;
+  border-radius: 10px;
+  
+}
+
+.twitter:hover{
+  background-color: #b480cc;
+  border-radius: 10px;
+  
+}
+ 
+ 
+ 
 

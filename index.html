@@ -20,7 +20,7 @@
 <body>
     <main>
         <div class="header">
-            <div class="menu"><a href="#planet">Planetas</a></div>
+            <div class="menu"><a href="#planeta">Planetas</a></div>
             <div  class="menu"><a href="#news">Notícias</a></div>
             <div class="menu"><a href="astros.html">Astros</a></div>
 
@@ -83,7 +83,7 @@
         </div>
     </div>
             <!--CARROSSEL DE PLANETAS-->
-        <div class="carrossel">
+        <div id="planeta" class="carrossel">
             <span class="seta"><</span>
 
             <div class="caixa-P">
@@ -108,7 +108,7 @@
 
             <div class="caixa-G">
                 <div class="nome-planeta"><p>Terra</p></div>
-                <div class="planeta"><img src="img/terra.png"></div>
+               <div class="planeta"> <a href="planetas.html"><img src="img/terra.png"></div></a>
                 <div class="meia-caixa-G">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Maxime at perferendis obcaecati, earum porro.
@@ -141,8 +141,18 @@
     </main>
 
     <footer>
+        <footer class="icons">
+            <div class="card">
+                <div class="card1">
+                    <img class="facebook" src="img/icons8-facebook-novo.svg"  alt="facebook">
+                    <img class="instagram" src="img/icons8-instagram.svg" alt="INSTA">
+                    <img class="youtube" src="img/youtube-c.svg" alt="tube">  
+                    <img class="twitter" src="img/twitter-c.svg" alt="tw">
+                </div>
+            </div>
         <p>&copy; 2025 Sistema Solar. Todos os direitos reservados.</p>
         <img  class="sol" src="img/sol.png" alt="imagem-sol">
+        
     </footer>
 
     <script src="js/home.js"></script>
