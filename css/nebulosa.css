@@ -65,7 +65,7 @@ a{
 .logo{
   position: absolute;
   top: 0;
-  left: 0;
+  left: 10%;
   width: 150px;
   height: auto;
 }
