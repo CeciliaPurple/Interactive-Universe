@@ -579,28 +579,69 @@ justify-content: center;
 align-items: center;
 color: white;
 text-align: center;
+
 }
 
 footer p{
 position: relative;
 bottom: -450px;
+z-index: 6;
 }
 
 footer p:hover{
 position: absolute;
 }
+
+.sol{
+  transition:all 1.9s ;
+}
 .sol:hover{
 filter: drop-shadow(5px  5px 100px hsl(47, 94%, 49%, 0.75));
+transition: all 0.7s;
+transition: 1.7s ;
+
 }
 
 /*footer*/
 
 .card1{
+display: flex;  
 position: relative;
 bottom: -450px;
-gap: 80px;
+gap: 18px;
+z-index: 10;
  
  }
+
+
+
+
+.facebook:hover{
+  background-color: #3d77cf;
+  border-radius: 10px;
+  
+}
+
+
+.instagram:hover{
+  background-color: #7a2d63;
+  border-radius: 10px;
+  
+}
+
+
+.youtube:hover{
+  background-color: #852121;
+  border-radius: 10px;
+  
+}
+
+.twitter:hover{
+  background-color: #b480cc;
+  border-radius: 10px;
+  
+}
+
  
  
  
