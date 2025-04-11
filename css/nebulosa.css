@@ -252,12 +252,12 @@ a{
     max-width: 500px;
     margin-left: 200px;
     margin-top: 150px;
-    box-shadow: 10px 10px 35px 10px hsla(0, 0%, 100%, 0.5);
+    transition: all 0.7s ease;
     border-radius: 10px;
 }
 
 .caixa:hover{
-  box-shadow: 10px 10px 35px 10px hsla(281, 68%, 67%, 0.5);
+  box-shadow: 15px 15px 40px 15px hsla(281, 68%, 67%, 0.5);
 }
 
 
@@ -279,12 +279,12 @@ a{
     max-width: 500px;
     margin-left: 1200px;
     margin-top: 200px;
-    box-shadow: 10px 10px 35px 10px hsla(0, 0%, 100%, 0.5);
+    transition: all 0.7s ease;
     border-radius: 10px;
 }
 
 .caixa2:hover{
-  box-shadow: 10px 10px 35px 10px hsla(41, 62%, 41%, 0.5);
+  box-shadow: 15px 15px 40px 15px hsla(41, 54%, 55%, 0.5);
 }
 
 .text2{
@@ -306,13 +306,14 @@ a{
     margin-left: 200px;
     position: relative;
     bottom: -250px;
-    box-shadow:10px 10px 35px 10px hsla(283, 77%, 39%, 0.5);
     border-radius: 10px;
+    transition: all 0.5s ease;
     
 }
 
 .caixa3:hover{
-  box-shadow:10px 10px 35px 10px hsla(0, 0%, 100%, 0.5);
+ 
+  box-shadow:15px 15px 35px 15px hsla(283, 64%, 44%, 0.5);
 }
 
 .text3{
@@ -336,6 +337,7 @@ a{
   text-align: center;
   justify-self: center;
   border: #fff;
+  transition: all 0.5s ease;
 }
 
 .container:hover{
