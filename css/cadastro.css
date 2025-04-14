@@ -177,6 +177,7 @@ ul {
   place-content: center;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
 .example-2 .icon-content {
   position: relative;

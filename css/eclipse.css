@@ -45,6 +45,7 @@ body{
   color: aliceblue;
   margin-top: 40px;
   height: 50px;
+  margin-left: 150px;
 }
 
 
@@ -54,18 +55,27 @@ body{
  align-items: center;
  font-size: 20px;
  margin-left: 120px;
-   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif    
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif    
 }
 
 
 .login{
-position: relative;
-left: 200px;
-border-radius: 10px;
-width: 80px;
-height: 35px;
-background-color: blue;
-color: aliceblue;
+  font-weight: 800;
+  font-family: var(--ff-bruno);
+  position: relative;
+  left: 200px;
+  color: white;
+  background-color: #004AAD;
+  padding: 3px 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  width: 12rem;
+  position: relative;
+  cursor: pointer;
+  justify-content: space-between;
+
 
 }
 
@@ -82,25 +92,8 @@ height: auto;
 
 
 
-.main > .inp {
+.login> .inp {
   display: none;
-}
-.main {
-  font-weight: 800;
-  position: relative;
-  left: 200px;
-  color: white;
-  background-color: #004AAD;
-  padding: 3px 15px;
-  border-radius: 10px;
-  
-  display: flex;
-  align-items: center;
-  height: 2.5rem;
-  width: 12rem;
-  position: relative;
-  cursor: pointer;
-  justify-content: space-between;
 }
 
 .arrow {
@@ -276,21 +269,24 @@ height: auto;
     max-width: 500px;
     margin-left: 200px;
     margin-top: 100px;
-    box-shadow: 10px 10px 35px 10px hsl(0, 0%, 100%);
     border-radius: 10px;
+    transition: all 1.5s ease;
 }
 
 .caixa:hover{
-  box-shadow: 10px 10px 35px 15px hsla(9, 72%, 52%, 0.5);
+  box-shadow: 15px 15px 40px 15px hsla(9, 72%, 52%, 0.5);
+  transition: all 0.9s ease;
+  
 }
 
 
 .text1{
-   font-size: 22px;
-   text-align:and;
-   margin-left: 820px;
+   font-size: 20px;
+   text-align:center;
+   margin-left: 700px;
    margin-top: -250px;
    font-family: var(--ff-bruno);
+   font-weight: bold;
 }
 
 /*card2*/
@@ -301,25 +297,25 @@ height: auto;
     background-size: cover;
     height: 400px;
     max-width: 500px;
-    margin-left: 1100px;
+    margin-left: 1200px;
     margin-top: 200px;
-    box-shadow: 10px 10px 35px 10px hsl(0, 0%, 100%);
     border-radius: 10px;
+    transition: all 1.5s ease;
 }
 
 .caixa2:hover{
-  box-shadow: 10px 10px 35px 15px hsl(219, 48%, 14%);
-
-
+  box-shadow: 15px 15px 40px 15px hsl(219, 42%, 28%);
+  transition: all 0.7s ease;
 }
 
 .text2{
-    font-size: 22px;
+   font-size: 20px;
    position: relative;
-   right: 890px;
+   right: 300px;
    margin-top: -250px;
    font-family: var(--ff-bruno);
-   text-align: end;
+   text-align: center;
+   font-weight: bold;
 
 }
 
@@ -333,12 +329,12 @@ height: auto;
     margin-left: 200px;
     position: relative;
     bottom: -250px;
-    box-shadow:10px 10px 35px 10px hsl(0, 100%, 100%);
     border-radius: 10px;
-    
+    transition: all 1.5s ease;
 }
 .caixa3:hover{
-  box-shadow:10px 10px 35px 15px hsla(198, 39%, 51%, 0.5);
+  box-shadow:15px 15px 40px 15px hsla(198, 39%, 51%, 0.5);
+  transition: all 0.7s ease;
 }
 
 .text3{
@@ -362,9 +358,11 @@ height: auto;
   text-align: center;
   justify-self: center;
   border: #fff;
+  transition: all 1.5s ease;
 }
 .container:hover{
   box-shadow: 0 0 70px rgb(255, 255, 255);
+  transition: all 0.7s ease;
 }
 
 h1 {
