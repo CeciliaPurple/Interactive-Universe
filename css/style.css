@@ -98,7 +98,11 @@ position: relative;
 cursor: pointer;
 justify-content: space-between;
 margin-right: 30px;
+
 }
+
+
+
 
 .login > .inp:checked + .arrow {
 transform: rotateX(180deg);
