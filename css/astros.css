@@ -60,7 +60,13 @@ a{
 
 .menu a {
   color:  #fff;
-}
+  text-decoration: none;
+  }
+  
+  .menu a:hover {
+    color: #006eff;
+    text-decoration: underline;
+  }
 
 .logo{
 position: absolute;

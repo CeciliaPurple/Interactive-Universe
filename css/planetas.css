@@ -100,6 +100,8 @@ a{
   left: 150px;
 }
 
+
+
 .menu{
 margin: 10px;
 justify-content: center;
@@ -110,9 +112,16 @@ font-family: var(--ff-bruno);
 }
 
 .menu a {
-color:  #fff;
-}
+  color:  #fff;
+  text-decoration: none;
+  }
+  
+  .menu a:hover {
+    color: #006eff;
+    text-decoration: underline;
+  }
 
+  
 .logo{
  position: relative;
  right: 1400px;

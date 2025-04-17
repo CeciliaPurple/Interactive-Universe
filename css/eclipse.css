@@ -55,8 +55,18 @@ body{
  align-items: center;
  font-size: 20px;
  margin-left: 120px;
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif    
+font-family: var(--ff-bruno) ;
 }
+
+.menu a {
+  color:  #fff;
+  text-decoration: none;
+  }
+  
+  .menu a:hover {
+    color: #006eff;
+    text-decoration: underline;
+  }
 
 
 .login{
