@@ -41,12 +41,13 @@ a{
   text-decoration: none;
 }
 
-.header {
+.header{
   display: flex;
   justify-content: center;
   color: aliceblue;
   margin-top: 40px;
   height: 50px;
+  text-decoration: none;
 }
 
 .menu{
@@ -56,21 +57,21 @@ a{
   font-size: 20px;
   margin-left: 120px;
   font-family: var(--ff-bruno);  
+  text-decoration: none;
 }
 
 .menu a {
   color:  #fff;
-  text-decoration: none;
-  }
+}
   
-  .menu a:hover {
-    color: #006eff;
-    text-decoration: underline;
-  }
-
+.menu a:hover {
+  color: #006eff;
+  text-decoration: underline;
+}
+ 
 .logo{
   position: absolute;
-  top: 0;
+  top: -20px;
   left: 10%;
   width: 150px;
   height: auto;
@@ -96,6 +97,12 @@ a{
   position: relative;
   cursor: pointer;
   justify-content: space-between;
+  margin-right: 30px;
+  transform: scale(1.0);
+}
+
+.login:hover{
+  transform: scale(1.03);
 }
 
 .login > .inp:checked + .arrow {
@@ -143,7 +150,7 @@ a{
   background-color: rgba(0, 0, 0, 0.3);
   width: 95%;
 }
-
+  
 .menu-list:hover {
   background-color: rgb(223, 223, 223);
 }
@@ -179,14 +186,6 @@ a{
   transition:
     transform 0.4s calc(var(--delay) + (var(--trdelay) * 3)),
     opacity 0.4s calc(var(--delay) + (var(--trdelay) * 3));
-}
-
-
-.bandeira{
-  margin-right: 50px;
-  position:relative;
-  top: 0px;
-  left:400px;
 }
 
 .bar-inp {
@@ -231,34 +230,33 @@ a{
 
 
 /*titulo*/
-
 .title{
-    font-family: var(--ff-bruno);
-    justify-self: center;
-    margin-top: 70px;
-    font-size: 90px;
+  font-family: var(--ff-bruno);
+  justify-self: center;
+  margin-top: 2%;
+  font-size: var(--h1-96);
 }
 
 .title2{
-    font-family: var(--ff-bruno);
-    justify-self: center;
-    margin-top: -20px;
-    font-size: 90px;
+  font-family: var(--ff-bruno);
+  justify-self: center;
+  margin-top: -20px;
+  font-size: 90px;
 }
 
 
 /*card1*/
 
 .caixa{
-    background-image: url(../img/nebulosa1.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 400px;
-    max-width: 500px;
-    margin-left: 200px;
-    margin-top: 150px;
-    transition: all 1.5s ease;
-    border-radius: 10px;
+  background-image: url(../img/nebulosa1.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  max-width: 500px;
+  margin-left: 200px;
+  margin-top: 150px;
+  transition: all 1.5s ease;
+  border-radius: 10px;
 }
 
 .caixa:hover{
@@ -268,25 +266,27 @@ a{
 
 
 .text{
-   font-size: 20px;
-   text-align:and;
-   margin-left: 850px;
-   margin-top: -250px;
-   font-family: var(--ff-bruno);
+  width: 50%;
+  font-size: var(--h4-20);
+  text-align: justify;
+  justify-self: end;
+  margin-right: 100px;
+  margin-top: -250px;
+  font-family: var(--ff-bruno);
 }
 
 /*card2*/
 
 .caixa2{
-    background-image: url(../img/nebu2.png);
-    background-position: center;
-    background-size: cover;
-    height: 400px;
-    max-width: 500px;
-    margin-left: 1200px;
-    margin-top: 200px;
-    transition: all 1.5s ease;
-    border-radius: 10px;
+  background-image: url(../img/nebu2.png);
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  max-width: 500px;
+  margin-left: 1200px;
+  margin-top: 200px;
+  transition: all 1.5s ease;
+  border-radius: 10px;
 }
 
 .caixa2:hover{
@@ -295,12 +295,13 @@ a{
 }
 
 .text2{
-   font-size: 20px;
-   position: relative;
-   right: 400px;
-   margin-top: -250px;
-   font-family: var(--ff-bruno);
-
+  width: 50%;
+  font-size: var(--h4-20);
+  position: relative;
+  margin-top: -250px;
+  margin-left: 100px;
+  font-family: var(--ff-bruno);
+  text-align: justify;
 }
 
 /*card3*/
@@ -324,10 +325,12 @@ a{
 }
 
 .text3{
-    font-size: 25px;
-   text-align: center;
-   margin-top: 280px;
-   font-family: var(--ff-bruno);
+  width: 50%;
+  font-size: var(--h4-20);
+  justify-self: center;
+  text-align: justify;
+  margin-top: 280px;
+  font-family: var(--ff-bruno);
 }
 
 /*CHAT*/
@@ -348,7 +351,7 @@ a{
 }
 
 .container:hover{
-  box-shadow: 0 0 50px rgb(255, 255, 255);
+  box-shadow: 0 0 50px rgb(255, 255, 255, 0.75);
   transition: all 0.7s ease;
 }
 
@@ -483,16 +486,13 @@ button:hover {
   }
 
   /*copy*/
-
-  .agreement{
-   margin-left: 700px;
-   font-size: 20px;
-   font-family: var(--ff-bruno-ace);
-   position: relative;
-   justify-content: center;
-   align-items: center;
- 
-  }
+.agreement{
+  font-size: 20px;
+  font-family: var(--ff-bruno-ace);
+  display: flex;
+  justify-self: center;
+  padding-bottom: 20px;
+}
 
   footer{
     clear: both;
@@ -500,7 +500,6 @@ button:hover {
   }
   
 /*footer*/
-
 .card1{
   display: flex;
    position: relative;
@@ -509,27 +508,27 @@ button:hover {
    bottom: 7px;
    right: 50px;
    gap: 30px;
- }
+}
 
- .facebook{
+.facebook{
   height: 50px;
   width: 50px;
- }
+}
 
  .instagram{
   height: 50px;
   width: 50px;
  }
 
- .twitter{
+.twitter{
   height: 50px;
   width: 50px;
- }
+}
 
- .youtube{
+.youtube{
   height: 50px;
   width: 50px;
- }
+}
 
 .facebook:hover{
   background-color: #3d77cf;
@@ -537,13 +536,11 @@ button:hover {
   
 }
 
-
 .instagram:hover{
   background-color: #7a2d63;
   border-radius: 10px;
   
 }
-
 
 .youtube:hover{
   background-color: #852121;
@@ -556,7 +553,3 @@ button:hover {
   border-radius: 10px;
   
 }
- 
- 
- 
-

@@ -41,12 +41,17 @@ a{
   text-decoration: none;
 }
 
-.header {
+a{
+  text-decoration: none;
+}
+
+.header{
   display: flex;
   justify-content: center;
   color: aliceblue;
   margin-top: 40px;
   height: 50px;
+  text-decoration: none;
 }
 
 .menu{
@@ -56,24 +61,24 @@ a{
   font-size: 20px;
   margin-left: 120px;
   font-family: var(--ff-bruno);  
+  text-decoration: none;
 }
 
 .menu a {
   color:  #fff;
-  text-decoration: none;
-  }
+}
   
-  .menu a:hover {
-    color: #006eff;
-    text-decoration: underline;
-  }
-
+.menu a:hover {
+  color: #006eff;
+  text-decoration: underline;
+}
+ 
 .logo{
-position: absolute;
-top: 0;
-left: 10%;
-width: 150px;
-height: auto;
+  position: absolute;
+  top: -20px;
+  left: 10%;
+  width: 150px;
+  height: auto;
 }
 
 .login > .inp {
@@ -89,7 +94,6 @@ height: auto;
   background-color: #004AAD;
   padding: 3px 15px;
   border-radius: 10px;
-  
   display: flex;
   align-items: center;
   height: 2.5rem;
@@ -97,6 +101,16 @@ height: auto;
   position: relative;
   cursor: pointer;
   justify-content: space-between;
+  margin-right: 30px;
+  transform: scale(1.0);
+}
+
+.login:hover{
+  transform: scale(1.03);
+}
+
+.login > .inp:checked + .arrow {
+  transform: rotateX(180deg);
 }
 
 .menu-container {
@@ -140,7 +154,7 @@ height: auto;
   background-color: rgba(0, 0, 0, 0.3);
   width: 95%;
 }
-
+  
 .menu-list:hover {
   background-color: rgb(223, 223, 223);
 }
@@ -248,37 +262,37 @@ height: auto;
 }
 
 .title{
-    font-family: var(--ff-bruno);
-    justify-self: center;
-    margin-top: 70px;
-    font-size: 90px;
+  font-family: var(--ff-bruno);
+  justify-self: center;
+  margin-top: 2%;
+  font-size: 90px;
 }
 
 .title2{
-    font-family: var(--ff-bruno);
-    justify-self: center;
-    margin-top: -20px;
-    font-size: 90px;
+  font-family: var(--ff-bruno);
+  justify-self: center;
+  margin-top: -20px;
+  font-size: 90px;
 }
 
 
 /*card1*/
 .caixa{
-    background-image: url(../img/rocha.png);
-    background-position: center;
-    background-size: cover;
-    height: 300px;
-    max-width: 600px;
-    margin-left: 1000px;
-   margin-top: 120px;
- box-shadow: 10px 10px 30px 5px hsl(0, 0%, 100%, 0.25);
- border-radius: 10px;
+  background-image: url(../img/rocha.png);
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  max-width: 600px;
+  margin-left: 1000px;
+  margin-top: 120px;
+  border-radius: 10px;
+  transition: 1.5s;
 }
 
 .caixa:hover{
   box-shadow: 10px 10px 35px 10px hsl(0, 0%, 100%, 0.5);
+  transition: 1.5s;
 }
-
 
 .asteroides{
     margin-left: 400px;
@@ -288,10 +302,13 @@ height: auto;
 }
 
 .text{
-    font-size: 25px;
-   text-align: center;
-   margin-top: 180px;
-   font-family: var(--ff-bruno);
+  width: 70%;
+  font-size: var(--h4-20);
+  justify-self: center;
+  text-align: justify;
+  margin-top: 180px;
+  font-family: var(--ff-bruno);
+  margin-bottom: 50px;
 }
 
 .linha{
@@ -299,23 +316,22 @@ height: auto;
   margin-left: 450px;
 }
 
-
 /*card2*/
-
 .caixa2{
-    background-image: url(../img/caixa_2.png);
-    background-position: center;
-    background-size: cover;
-    height: 300px;
-    max-width: 600px;
-    margin-left: 700px;
-   margin-top: 70px;
-   box-shadow:  10px 10px 30px 5px hsl(0, 0%, 100%, 0.25);
-   border-radius: 10px;
+  background-image: url(../img/caixa_2.png);
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  max-width: 600px;
+  margin-left: 700px;
+  margin-top: 70px;
+  border-radius: 10px;
+  transition: 1.5s;
 }
 
 .caixa2:hover{
   box-shadow: 10px 10px 35px 10px hsla(231, 73%, 55%, 0.5);
+  transition: 1.5s;
 }
 
 .Cometas{
@@ -325,52 +341,35 @@ height: auto;
     font-size: 50px;
 }
 
-.text2{
-    font-size: 25px;
-   text-align: center;
-   margin-top: 180px;
-  font-family: var(--ff-bruno);
-
-}
-
 .linha2{
-    max-width: 1200px;
+  max-width: 1200px;
   margin-left:345px;
-
 }
 
 
 /*card3*/
 .caixa3{
-    background-image: url(../img/meteoro-mais-antigo.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 300px;
-    max-width: 600px;
-    margin-left: 200px;
-   margin-top: 70px;
-   box-shadow: 10px 10px 30px 5px hsl(0, 0%, 100%, 0.25);
-   border-radius: 10px;
+  background-image: url(../img/meteoro-mais-antigo.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  max-width: 600px;
+  margin-left: 200px;
+  margin-top: 70px;
+  border-radius: 10px;
+  transition: 1.5s;
 }
+
 .caixa3:hover{
   box-shadow: 10px 10px 35px 10px hsla(12, 77%, 41%, 0.5);
+  transition: 1.5s;
 }
 
 .Meteóros{
-    margin-left: 950px;
-    margin-top: -180px;
-    font-family: var(--ff-bruno);
-    font-size: 50px;
-}
-
-.text3{
-    font-size: 25px;
-   text-align: center;
-   margin-top: 180px;
-   font-family: var(--ff-bruno);
-   margin-bottom: 30px;
-  
-
+  margin-left: 950px;
+  margin-top: -180px;
+  font-family: var(--ff-bruno);
+  font-size: 50px;
 }
 
 .linha3{
@@ -383,87 +382,74 @@ height: auto;
 /*footer*/
 
 .card {
-    display: flex;
-    height: 70px;
-    width: 200px;
-    justify-self: center;
-    position: relative;
-    top: 20px;
-  }
-  
-  
-  
-  
+  display: flex;
+  height: 70px;
+  width: 200px;
+  justify-self: center;
+  position: relative;
+  top: 20px;
+}
+   
   /*copy*/
-
-  footer{
+footer{
     margin-bottom: 20px;
-  }
-  .agreement{
-   margin-left: 680px;
-   font-size: 17px;
-   font-family: var(--ff-poppins);
-   position: relative;
-   top: -4px;
-   margin-bottom: 20px;
-  }
+}
 
+.agreement{
+  font-size: 20px;
+  font-family: var(--ff-bruno-ace);
+  display: flex;
+  justify-self: center;
+}
 
 .card1{
   display: flex;
-   position: relative;
-   cursor: pointer;
-   width: 50px;
-   bottom: 9px;
-   right: 50px;
-   gap: 30px;
-   
- }
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  bottom: 9px;
+  right: 50px;
+  gap: 30px; 
+}
 
- .facebook{
+.facebook{
   height: 50px;
   width: 50px;
- }
+}
 
- .instagram{
+.instagram{
   height: 50px;
   width: 50px;
- }
+}
 
- .twitter{
+.twitter{
   height: 50px;
   width: 50px;
- }
+}
 
- .youtube{
+.youtube{
   height: 50px;
   width: 50px;
- }
+}
 
 .facebook:hover{
   background-color: #3d77cf;
   border-radius: 10px;
-  
 }
 
 
 .instagram:hover{
   background-color: #7a2d63;
-  border-radius: 10px;
-  
+  border-radius: 10px
 }
-
 
 .youtube:hover{
   background-color: #852121;
   border-radius: 10px;
-  
 }
 
 .twitter:hover{
   background-color: #b480cc;
   border-radius: 10px;
-  
-  
 }
   
