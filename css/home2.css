@@ -51,6 +51,9 @@
     text-decoration: none;
   }
   
+
+  
+  
   .menu{
   margin: 10px;
   justify-content: center;
@@ -71,9 +74,9 @@
   
   .logo{
     position: absolute;
-    top: -20px;
-    left: 10%;
-    width: 150px;
+    top: 20px;
+    left: 15%;
+    width: 90px;
     height: auto;
   }
   

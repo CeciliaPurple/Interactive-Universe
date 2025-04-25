@@ -54,12 +54,15 @@ body{
   margin-top: 90px;
 }
   
-.heading {
-  text-align: center;
-  font-weight: 900;
-  font-size: 50px;
-  color: rgb(255, 255, 255);
+.heading{
+  display: flex;
+  justify-content: center;
 }
+
+.logo {
+  width: 130px;
+  height: auto;
+} 
   
   .form {
     margin-top:20px;
