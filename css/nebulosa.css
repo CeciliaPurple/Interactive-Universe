@@ -11,7 +11,7 @@
    /*FONTES*/
    --ff-bruno: "Bruno Ace SC";
    --ff-poppins: "Poppins";
-   --ff-bruno-ace:" bruno sc";
+   --ff-smooch: 'Smooch Sans', sans-serif;
 
    /*TAMANHOS*/
    --h1-96: 6rem;
@@ -267,12 +267,13 @@ a{
 
 .text{
   width: 50%;
-  font-size: var(--h4-20);
   text-align: justify;
   justify-self: end;
   margin-right: 100px;
   margin-top: -250px;
-  font-family: var(--ff-bruno);
+  font-family: var(--ff-smooch);
+  font-weight: 400;
+  font-size: var(--h3-24);
 }
 
 /*card2*/
@@ -296,12 +297,13 @@ a{
 
 .text2{
   width: 50%;
-  font-size: var(--h4-20);
   position: relative;
   margin-top: -250px;
   margin-left: 100px;
-  font-family: var(--ff-bruno);
   text-align: justify;
+  font-family: var(--ff-smooch);
+  font-weight: 400;
+  font-size: var(--h3-24);
 }
 
 /*card3*/
@@ -326,11 +328,12 @@ a{
 
 .text3{
   width: 50%;
-  font-size: var(--h4-20);
   justify-self: center;
   text-align: justify;
   margin-top: 280px;
-  font-family: var(--ff-bruno);
+  font-family: var(--ff-smooch);
+  font-weight: 400;
+  font-size: var(--h3-24);
 }
 
 /*CHAT*/
@@ -397,7 +400,9 @@ button:hover {
 
 .comment-history {
   margin-top: 20px;
-  font-family: var(--ff-bruno);
+  font-family: var(--ff-smooch);
+  font-size: var(--h4-20);
+  font-weight: 600;
 }
 
 .comment {

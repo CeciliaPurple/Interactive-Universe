@@ -12,6 +12,7 @@
  /*FONTES*/
  --ff-bruno: "Bruno Ace SC";
  --ff-poppins: "Poppins";
+ --ff-smooch: 'Smooch Sans', sans-serif;
 
  /*TAMANHOS*/
  --h0-128: 8rem;
@@ -160,11 +161,11 @@ transform: translateY(0);
 opacity: 1;
 }
 
-.in:not(:checked) ~ .menu-container .menu-list:nth-child(1) {
-transition:
-  transform 0.4s var(--delay),
-  opacity 0.4s var(--delay);
-}
+.inp:not(:checked) ~ .menu-container .menu-list:nth-child(1) {
+  transition:
+    transform 0.4s calc(var(--delay) + (var(--trdelay) * 1)),
+    opacity 0.4s calc(var(--delay) + (var(--trdelay) * 1));
+  }
 
 .inp:not(:checked) ~ .menu-container .menu-list:nth-child(2) {
 transition:
@@ -247,17 +248,27 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 
 .titulo{
   position: relative;
-  top: 100px;
+  top: 200px;
   color: #fff;
   text-align: center;
   font-size: var(--h0-128);
   font-family: var(--ff-bruno);  
 }
 
+.sub-titulo{
+  position: relative;
+  top: 200px;
+  color: #fff;
+  text-align: center;
+  font-size: var(--h1-96);
+  font-family: var(--ff-smooch);  
+  font-weight: lighter;
+}
+
 .imagem{
   z-index: -1;
   position: relative;
-  top: -100px;
+  top: -200px;
 }
 
 .noticias{
@@ -341,8 +352,9 @@ margin-bottom: 30px;
 }
 
 .noticia-texto{
-  font-size: var(--h4-20);
-  font-family: var(--ff-bruno);
+  font-size: var(--h3-24);
+  font-family: var(--ff-smooch);
+  font-weight: 400;
   color: #fff;
 }
 
@@ -466,8 +478,9 @@ height: 100px;
 border-top: 1px solid #fff;
 text-align: justify;
 color: #fff;
-font-family: var(--ff-bruno);
-font-size: 14px;
+font-family: var(--ff-smooch);
+font-weight: 400;
+font-size: var(--h4-20);
 padding: 10px 25px;
 }
 
@@ -504,8 +517,9 @@ height: 100px;
 border-top: 1px solid #fff;
 text-align: justify;
 color: #fff;
-font-family: var(--ff-bruno);
-font-size: 12px;
+font-family: var(--ff-smooch);
+font-weight: 400;
+font-size: 18px;
 padding: 10px 25px;
 }
 
@@ -554,8 +568,9 @@ height: 70px;
 border-top: 1px solid #fff;
 text-align: justify;
 color: #fff;
-font-family: var(--ff-bruno);
-font-size: 9px;
+font-family: var(--ff-smooch);
+font-weight: 400;
+font-size: 13px;
 padding: 5px 20px;
 }
 
