@@ -639,6 +639,18 @@ z-index: 10;
   border-radius: 10px;
 }
 
- 
- 
- 
+/*-----MEDIA QUERY-----*/
+@media (max-width: 600px){
+  .logo{
+    width: 60px;
+  }
+
+  .menu{
+    font-size: 12px;
+  }
+
+  .login{
+    width: 4rem;
+    height: ;
+  }
+}
