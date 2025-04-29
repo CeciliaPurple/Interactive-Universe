@@ -25,7 +25,7 @@ const traducoes = {
 
 // Função para alternar o idioma
 function alternarIdioma() {
-    const elementos = document.querySelectorAll("p, h1, h2, a, span, label");
+    const elementos = document.querySelectorAll("p, h1, h2, span, label");
 
     elementos.forEach(el => {
         const texto = el.innerText.trim();
