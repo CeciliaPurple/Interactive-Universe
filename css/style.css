@@ -251,7 +251,7 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
   top: 200px;
   color: #fff;
   text-align: center;
-  font-size: var(--h0-128);
+  font-size: var(--h0-128 );
   font-family: var(--ff-bruno);  
 }
 
@@ -426,7 +426,7 @@ place-items: end;
 gap: 50px;
 }
 
-.seta{
+.seta-dire{
 position: relative;
 bottom: -70px;
 font-size: 75px;
@@ -434,6 +434,15 @@ font-family: var(--ff-bruno);
 color: #fff;
 cursor: pointer;
 }
+
+.seta-esq{
+  position: relative;
+  bottom: -70px;
+  font-size: 75px;
+  font-family: var(--ff-bruno);
+  color: #fff;
+  cursor: pointer;
+  }
 
 /*CAIXA GRANDE*/
 .caixa-G{
@@ -646,10 +655,176 @@ z-index: 10;
   }
 
   .menu{
-    font-size: 12px;
+    font-size: 14px;
+    gap: 8px;
+    position: relative;
+    right: 45px;
   }
 
   .login{
-    width: 4rem;
+    width: 6.0rem;
+    font-size: 14px;
+    position: relative;
+    left: 20px;
   }
+
+  .bar-list{
+    width: 10px;
+    height: 5px;
+    position: relative;
+    left:10px;
+  }
+
+  .bandeira1{
+    width: 40px;
+    position: relative;
+    left: 15px;
+  }
+
+  .titulo{
+    font-size: var(--h1-96);
+    position: relative;
+   
+  }
+
+  .sub-titulo{
+    font-size: 3rem;
+  }
+
+  .noticia2{
+    position: relative;
+    top:120px;
+    right: 13px;
+  }
+
+
+
+  .noticia-sub-titulo{
+    font-size: var(--h4-20);
+  }
+
+  .noticia-titulo{
+     font-size: 2rem;
+  }
+
+  .noticia-texto{
+    font-size:0.7rem;
+  }
+
+  .eclipse{
+    width: 20vh;
+  }
+
+.noticia1{
+  max-width: 100%;
+  margin-left: 50px;
+  margin-right: 50px;
+  position: relative;
+  top: 120px;
+}
+
+.nebu{
+  width: 180px;
+}
+
+/*CARROSSEL*/
+.carrossel{
+
+
+ /*CAIXA GRANDE*/
+ 
+}
+
+.seta-dire{
+  font-size: 2rem;
+  position: relative;
+  right: 250px;
+  top:120px;
+}
+
+.seta-esq{
+  font-size: 2rem;
+  position: relative;
+  left: 250px;
+  top:120px;
+}
+
+.caixa-G{
+  width: 150px;
+  height: 200px;
+}
+
+.nome-planeta{
+  width: 70px;
+  font-size: 1rem;
+
+}
+
+.planeta img{
+  width: 100px;
+}
+
+
+.meia-caixa-G{
+  height: 50px;
+  font-size: 0.5rem;
+  padding: 5px 15px;
+}
+
+/*CAIXA MÉDIA*/
+
+.caixa-M{
+  width: 100px;
+  height: 150px;
+  font-size: 1px;
+}
+
+.planeta-M img{
+  width: 59px;
+}
+
+.meia-caixa-M{
+  height: 30px;
+  font-size: 0.3rem;
+  padding: 3px  10px ;
+}
+
+/*CAIXA PEQUENA*/
+
+.caixa-P{
+  width: 70px;
+  height: 120px;
+}
+
+.nome-planeta-P{
+  width: 50px;
+  font-size: 7.9px;
+}
+
+.planeta-P img{
+  width: 50px;
+}
+
+.meia-caixa-P{
+  height: 30px;
+  font-size: 0.3rem;
+  padding: 2px 6.2px;
+}
+
+.sol {
+  width: 800px;
+}
+
+.card{
+  position: relative;
+  bottom:200px;
+}
+
+.copy{
+  position: relative;
+  top: 260px;
+}
+
+
+
 }
