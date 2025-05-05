@@ -19,8 +19,7 @@ const traducoes = {
     "Marte": "Mars",
     "Júpiter": "Jupiter",
     "Todos os direitos reservados.": "All rights reserved.",
-    "© 2025 Sistema Solar. Todos os direitos reservados.": "© 2025 Solar System. All rights reserved.",
-    "© 2025 Solar System. All rights reserved.": "© 2025 Sistema Solar. Todos os direitos reservados."
+    "© 2025 Sistema Solar. Todos os direitos reservados.": "© 2025 Solar System. All rights reserved."
 };
 
 // Função para alternar o idioma
@@ -38,22 +37,15 @@ function alternarIdioma() {
         }
     });
 
-    // Rodapé
-    const copyright = document.querySelector("footer p");
-    if (copyright) {
-        const textoAtual = copyright.innerText.trim();
-        const traducao = idiomaAtual === 'pt'
-            ? traducoes[textoAtual]
-            : obterChavePorValor(traducoes, textoAtual);
-
-        if (traducao) {
-            copyright.innerText = traducao;
-        }
-    }
-
     // Alterna o idioma atual
     idiomaAtual = idiomaAtual === 'pt' ? 'en' : 'pt';
 }
+
+
+
+document.addEventListener(('click'), function (e)  {
+    const tradutor = document.getElementById('tradutor');
+} )
 
 // Função auxiliar para achar chave pelo valor
 function obterChavePorValor(obj, valor) {
