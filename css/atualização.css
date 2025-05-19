@@ -71,11 +71,11 @@ body{
       background: linear-gradient(0deg, hsl(246, 21%, 29%,0.5)5%, hsl(246, 64%, 10%,0.5) 50%,hsl(250, 24%, 10%,0.5) 100%);
       border-radius: 20px; 
       padding: 70px;
-      max-height: 600px;
+      max-height: 1000px;
       border: 2px solid rgb(255, 255, 255);
       box-shadow: 0 0 30px rgba(255, 255, 255, 0.878) ;
       justify-self: center;
-      margin-top: 150px;
+      margin-top: 250px;
     }
     
     .heading {
