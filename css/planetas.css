@@ -394,44 +394,44 @@ li{
     gap: 15px;
   }
 
-
   .titulo{
     font-size: 30px;
-  
   }
 
   .text{
-    font-size: 8px;
+    font-size: 7px;
   }
 
   .caixa-menor{
-    width: 130px;
     position: relative;
-    top: 27rem;
-    height: 180px;
-   
+    top: 30vh;
   }
 
   .sub-titulo1{
-text-align: center;
-font-size: 10px;
+    text-align: center;
+    font-size: 10px;
   }
 
   .sub-titulo2{
     text-align: center;
-    font-size: 13px;
+    font-size: 10px;
   }
-
 
   .lista{
     gap: 7px;
   }
 
-
   .caixa-maior{
     position: relative;
-    top: 280px;
-    width: 350px;
+    top: 30vh;
+  }
+
+  ul{
+    padding: 0 6% 3%;
+  }
+
+  li{
+    font-size: 0.5rem;
   }
 
   .card{
@@ -451,16 +451,83 @@ font-size: 10px;
 
   .planeta-img{
     position: relative;
-    top: 50px;
-  
+    top: 5vh;
   }
-
 
 }
 
-@media (max-width: 768px){
-  html{
+@media (min-width: 600px) and (max-width: 768px){
+  .logo{
+    width: 70px;
+    position: relative;
+    gap: 20px;
+  }
+
+  .menu{
+    font-size: 0.8rem;
+    position: relative;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .titulo{
+    font-size: 30px;
+  }
+
+  .text{
+    font-size: 7px;
+  }
+
+  .caixa-menor{
+    position: relative;
+    top: 18vh;
+  }
+
+  .sub-titulo1{
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .sub-titulo2{
+    text-align: center;
     font-size: 10px;
+  }
+
+  .lista{
+    gap: 7px;
+  }
+
+  .caixa-maior{
+    position: relative;
+    top: 18vh;
+  }
+
+  ul{
+    padding: 0 6% 3%;
+  }
+
+  li{
+    font-size: 0.7rem;
+  }
+
+  .card{
+   position:relative; 
+   top:20vh;
+  }
+
+  .agreement{
+    font-size: 14px;
+    position: relative;
+    top: 20vh;
+  }
+
+  .icon-footer{
+    width: 37px;
+  }
+
+  .planeta-img{
+    position: relative;
+    top: 0;
   }
 }
 
