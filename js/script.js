@@ -1,0 +1,1 @@
+const nomePlaneta = document.querySelector('.nome-planeta-P p')
