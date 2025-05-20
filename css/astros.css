@@ -266,9 +266,9 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 }
 
 .text{
-  width: 70%;
+  width: 50%;
   justify-self: center;
-  text-align: justify;
+  text-align: and;
   margin-top: 180px;
   margin-bottom: 50px;
   font-family: var(--ff-smooch);

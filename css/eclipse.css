@@ -250,7 +250,7 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 .caixa:hover{
   box-shadow: 15px 15px 40px 15px hsla(9, 72%, 52%, 0.5);
   transition: all 0.9s ease;
-  transform: scale(1.05);
+  transform: rotate(360deg);
 }
 
 
@@ -273,7 +273,7 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
     background-size: cover;
     height: 400px;
     max-width: 500px;
-    margin-left: 1200px;
+    margin-left:  75rem;
     margin-top: 200px;
     border-radius: 10px;
     transition: all 1.5s ease;
@@ -281,8 +281,8 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 
 .caixa2:hover{
   box-shadow: 15px 15px 40px 15px hsl(219, 42%, 28%);
-  transition: all 0.7s ease;
-  transform: scale(1.05);
+  transform: rotateY(360deg);
+  transition: all 1.5s ease;
 }
 
 .text2{
@@ -520,10 +520,16 @@ button:hover {
   right:120px ;
  }
 
+ .caixa:hover{
+  box-shadow: 9px 9px 37px 11px hsla(9, 72%, 52%, 0.5);
+  transition: all 0.9s ease;
+  transform: rotate(360deg);
+}
+
  .text{
-  font-size: 10px;
+  font-size: 12px;
   position: relative;
-  top: 150px;
+  top: 130px;
   width: 40%;
  }
 
@@ -533,17 +539,22 @@ button:hover {
   max-width: 150px;
   height: 150px;
   position: relative;
-  right:120px ;
+  margin-left:  24rem;
  }
+ 
+ .caixa2:hover{
+  box-shadow: 9px 9px 37px 11px hsl(219, 42%, 28%);
+  transform: rotateY(360deg);
+  transition: all 1.5s ease;
+}
 
  .text2{
-  font-size: 10px;
+  font-size: 12px;
   position: relative;
-  top: 150px;
+  top: 130px;
   width: 40%;
  }
 
- 
 
  
    /*caixa 3*/
@@ -551,20 +562,23 @@ button:hover {
   max-width: 150px;
   height: 150px;
   position: relative;
-  right:120px ;
-  margin-top: 80px;
+  right:120px;
  }
+ .caixa3:hover{
+  box-shadow:9px 9px 37px 11px hsla(198, 39%, 51%, 0.5);
+  transition: all 0.7s ease;
+  transform: scale(1.05);
+}
 
  .text3{
-  font-size: 10px;
+  font-size: 12px;
   position: relative;
-  bottom: 120px;
+  bottom: 140px;
   left: 80px;
   width: 40%;
- 
  }
  
- 
+
    /*chat*/
 
    .container{
@@ -572,11 +586,12 @@ button:hover {
     position: relative;
     height: 400px;
     bottom: 25px;
+    left: 5px;
    }
 
    .card1{
     left: 170px;
-
+    cursor: pointer;
    }
 
    .facebook{
@@ -599,5 +614,134 @@ button:hover {
     width: 40px;
    }
   
+ }
 
+ @media (max-width:768px) {
+  
+ .logo{
+  width: 70px;
+  margin-right: 10px;
+ }
+
+ .menu{
+    font-size: 13px;
+    margin-right: 55px;
+    gap: 10px;
+ }
+
+ .login{
+  height: 1,5rem;
+  width: 100px;
+  font-size: 10px;
+  margin-left: 25px;
+ }
+
+
+ .title{
+  font-size: 50px;
+ }
+
+   /*caixa 1*/
+ .caixa{
+  max-width: 150px;
+  height: 150px;
+  position: relative;
+  right:120px ;
+ }
+
+ .caixa:hover{
+  box-shadow: 9px 9px 37px 11px hsla(9, 72%, 52%, 0.5);
+  transition: all 0.9s ease;
+  transform: rotate(360deg);
+}
+
+ .text{
+  font-size: 12px;
+  position: relative;
+  top: 130px;
+  width: 40%;
+ }
+
+ 
+   /*caixa 2*/
+ .caixa2{
+  max-width: 150px;
+  height: 150px;
+  position: relative;
+  margin-left:  24rem;
+ }
+ 
+ .caixa2:hover{
+  box-shadow: 9px 9px 37px 11px hsl(219, 42%, 28%);
+  transform: rotateY(360deg);
+  transition: all 1.5s ease;
+}
+
+ .text2{
+  font-size: 12px;
+  position: relative;
+  top: 130px;
+  width: 40%;
+ }
+
+
+ 
+   /*caixa 3*/
+ .caixa3{
+  max-width: 150px;
+  height: 150px;
+  position: relative;
+  right:120px;
+ }
+ .caixa3:hover{
+  box-shadow:9px 9px 37px 11px hsla(198, 39%, 51%, 0.5);
+  transition: all 0.7s ease;
+  transform: scale(1.05);
+}
+
+ .text3{
+  font-size: 12px;
+  position: relative;
+  bottom: 140px;
+  left: 80px;
+  width: 40%;
+ }
+ 
+
+   /*chat*/
+
+   .container{
+    width: 500px;
+    position: relative;
+    height: 400px;
+    bottom: 25px;
+    left: 5px;
+   }
+
+   .card1{
+    left: 170px;
+    cursor: pointer;
+   }
+
+   .facebook{
+    height: 40px;
+    width: 40px;
+   }
+
+   .instagram{
+    height: 40px;
+    width: 40px;
+   }
+  
+   .twitter{
+    height: 40px;
+    width: 40px;
+   }
+  
+   .youtube{
+    height: 40px;
+    width: 40px;
+   }
+  
+  
  }
