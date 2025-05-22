@@ -464,7 +464,7 @@ text-align: center;
 border-radius: 10px;
 background-color: #fff;
 font-family: var(--ff-bruno);
-font-size: var(--h4-20);
+font-size: 1rem;
 justify-self: center;
 }
 
@@ -704,12 +704,17 @@ z-index: 10;
 
   .noticia2{
     position: relative;
-    right: 13px;
-    top: 50px;
+    margin: 0 50px 0 20px;
+    top: 70px;
+    max-width: 100%;
+  }
+
+  .grupo-noticia2{
+    margin-left: 30px;
   }
 
   .noticia-sub-titulo{
-    font-size: var(--h4-20);
+    font-size: 1rem;
   }
 
   .noticia-titulo{
@@ -727,7 +732,7 @@ z-index: 10;
   .noticia1{
     max-width: 100%;
     margin-left: 50px;
-    margin-right: 50px;
+    margin-right: 10px;
     position: relative;
     top: 50px;
   }
@@ -764,8 +769,8 @@ z-index: 10;
 
   .nome-planeta{
     width: 60px;
-    font-size: 0.8rem;
-    top: -30px;
+    font-size: 0.6rem;
+    top: -20px;
   }
 
   .planeta img{
@@ -804,7 +809,8 @@ z-index: 10;
 
   .nome-planeta-P{
     width: 50px;
-    font-size: 7px;
+    font-size: 0.4rem;
+    top: -15px;
   }
 
   .planeta-P img{
@@ -889,10 +895,10 @@ z-index: 10;
   }
 
   .noticia2{
-    max-width: 70%;
+    max-width: 80%;
     position: relative;
     top:120px;
-    right: 13px;
+    right: 20px;
     margin-top: 80px;
   }
 
@@ -909,18 +915,18 @@ z-index: 10;
   }
 
   .eclipse{
-    width: 20vh;
+    width: 30vh;
   }
 
   .noticia1{
-    max-width: 70%;
-    margin-right: 50px;
+    max-width: 80%;
+    margin-right: 60px;
     position: relative;
     top: 120px;
   }
 
   .nebu{
-    width: 180px;
+    width: 30vh;
   }
 
   /*CARROSSEL*/
@@ -952,7 +958,7 @@ z-index: 10;
   .nome-planeta{
     top: -20px;
     width: 80px;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .planeta img{
