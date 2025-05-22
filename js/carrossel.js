@@ -3,42 +3,50 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             nome: "Mercúrio",
             imagem: "img/mercurio.png",
-            descricao: "Mercúrio é pequeno, muito quente durante o dia e extremamente frio à noite,devido à falta de atmosfera."
+            descricao: "Mercúrio é pequeno, muito quente durante o dia e extremamente frio à noite,devido à falta de atmosfera.",
+            link: "mercurio.html"
         },
         {
             nome: "Vênus",
             imagem: "img/venus.png",
-            descricao: "Vênus é o segundo planeta do Sistema Solar,perto da Terra, mas com condições muito diferentes."
+            descricao: "Vênus é o segundo planeta do Sistema Solar,perto da Terra, mas com condições muito diferentes.",
+            link: "venus.html"
         },
         {
             nome: "Terra",
             imagem: "img/terra.png",
-            descricao: "O planeta Terra é o terceiro planeta do Sistema Solar e o único conhecido até agora que possui vida."
+            descricao: "O planeta Terra é o terceiro planeta do Sistema Solar e o único conhecido até agora que possui vida.",
+            link: "terra.html"
         },
         {
             nome: "Marte",
             imagem: "img/marte.png",
-            descricao: "Marte é o quarto planeta do Sistema Solar. Conhecido como o 'planeta vermelho' devido à sua cor,causada pelo óxido de ferro."
+            descricao: "Marte é o quarto planeta do Sistema Solar. Conhecido como o 'planeta vermelho' devido à sua cor,causada pelo óxido de ferro.",
+            link: "marte.html"
         },
         {
             nome: "Júpiter",
             imagem: "img/jupiter.png",
-            descricao: "Júpiter é o maior planeta do Sistema Solar. Ele é um gigante gasoso,composto principalmente de hidrogênio e hélio."
+            descricao: "Júpiter é o maior planeta do Sistema Solar. Ele é um gigante gasoso,composto principalmente de hidrogênio e hélio.",
+            link: "jupiter.html"
         },
         {
             nome: "Saturno",
             imagem: "img/saturno.png",
-            descricao: "Saturno é o sexto planeta a partir do Sol e o segundo maior do Sistema Solar, atrás apenas de Júpiter."
+            descricao: "Saturno é o sexto planeta a partir do Sol e o segundo maior do Sistema Solar, atrás apenas de Júpiter.",
+            link: "saturno.html"
         },
         {
             nome: "Urano",
             imagem: "img/urano.png",
-            descricao: "Urano é o sétimo planeta a contar do Sol, um gigante gasoso azul-esverdeado, e o terceiro maior do nosso sistema solar."
+            descricao: "Urano é o sétimo planeta a contar do Sol, um gigante gasoso azul-esverdeado, e o terceiro maior do nosso sistema solar.",
+            link: "urano.html"
         },
         {
             nome: "Netuno",
             imagem: "img/netuno.png",
-            descricao: "Netuno é o oitavo planeta do Sistema Solar,o mais distante do Sol e é um gigante gasoso devido à presença de metano."
+            descricao: "Netuno é o oitavo planeta do Sistema Solar,o mais distante do Sol e é um gigante gasoso devido à presença de metano.",
+            link: "netuno.html"
         }
     ];
 
@@ -73,6 +81,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const descricaoPlaneta = caixa.querySelector('.meia-caixa-P p, .meia-caixa-M p, .meia-caixa-G p');
         if (descricaoPlaneta) {
             descricaoPlaneta.textContent = planeta.descricao;
+        }
+
+        const linkPlaneta = caixa.querySelector('a');
+        if (linkPlaneta) {
+            linkPlaneta.href = planeta.link;
         }
     }
     
