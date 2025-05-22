@@ -1,68 +1,68 @@
 :root{
-    /*CORES*/
-   --cinza:  #404041;
+  /*CORES*/
+ --cinza:  #404041;
 
-   /*BORDA*/
-   --borda: 1px solid #fff;
-   --borda-curva: 5px;
-   --brilho: 0px 0px 30px 5px hsl(0, 0%, 100%, 0.25);
-   --brilho-2: 0px 0px 60px 5px hsl(0, 0%, 100%, 0.5);
+ /*BORDA*/
+ --borda: 1px solid #fff;
+ --borda-curva: 5px;
+ --brilho: 0px 0px 30px 5px hsl(0, 0%, 100%, 0.25);
+ --brilho-2: 0px 0px 60px 5px hsl(0, 0%, 100%, 0.5);
 
-   /*FONTES*/
-   --ff-bruno: "Bruno Ace SC";
-   --ff-poppins: "Poppins";
-   --ff-smooch: 'Smooch Sans', sans-serif;
+ /*FONTES*/
+ --ff-bruno: "Bruno Ace SC";
+ --ff-poppins: "Poppins";
+ --ff-smooch: 'Smooch Sans', sans-serif;
 
-   /*TAMANHOS*/
-   --h1-96: 6rem;
-   --h2-32: 2rem;
-   --h3-24: 1.5rem;
-   --h4-20: 1.25rem;
+ /*TAMANHOS*/
+ --h1-96: 6rem;
+ --h2-32: 2rem;
+ --h3-24: 1.5rem;
+ --h4-20: 1.25rem;
 }
 
 /*-----RESET-----*/
 *,
 *::before,
 *::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body{
-    background-image: url(../img/aleksandar.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
+  background-image: url(../img/aleksandar.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
 }
 
 a{
-  text-decoration: none;
+text-decoration: none;
 }
 
 .header{
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5%;
-  color: aliceblue;
-  margin-top: 20px;
+max-width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 5%;
+color: aliceblue;
+margin-top: 20px;
 }
 
 .logo{
-  width: 80px;
-  height: auto;
-  margin-right: 50px;
+width: 80px;
+height: auto;
+margin-right: 50px;
 }
 
 .menu{
-  width: 25%;
-  display: flex;
-  justify-content: space-around;
-  font-size: var(--h4-20);
-  font-family: var(--ff-bruno);  
+width: 25%;
+display: flex;
+justify-content: space-around;
+font-size: var(--h4-20);
+font-family: var(--ff-bruno);  
 }
 
 .menu a {
@@ -70,8 +70,8 @@ color:  #fff;
 }
 
 .menu a:hover {
-  color: #006eff;
-  text-decoration: underline;
+color: #006eff;
+text-decoration: underline;
 }
 
 
@@ -97,7 +97,7 @@ transform: scale(1.0);
 }
 
 .login:hover{
-  transform: scale(1.03);
+transform: scale(1.03);
 }
 
 .login > .inp:checked + .arrow {
@@ -160,27 +160,27 @@ opacity: 1;
 }
 
 .inp:not(:checked) ~ .menu-container .menu-list:nth-child(1) {
-  transition:
-    transform 0.4s calc(var(--delay) + (var(--trdelay) * 1)),
-    opacity 0.4s calc(var(--delay) + (var(--trdelay) * 1));
-  }
-
-.inp:not(:checked) ~ .menu-container .menu-list:nth-child(2) {
 transition:
   transform 0.4s calc(var(--delay) + (var(--trdelay) * 1)),
   opacity 0.4s calc(var(--delay) + (var(--trdelay) * 1));
 }
 
+.inp:not(:checked) ~ .menu-container .menu-list:nth-child(2) {
+transition:
+transform 0.4s calc(var(--delay) + (var(--trdelay) * 1)),
+opacity 0.4s calc(var(--delay) + (var(--trdelay) * 1));
+}
+
 .inp:not(:checked) ~ .menu-container .menu-list:nth-child(3) {
 transition:
-  transform 0.4s calc(var(--delay) + (var(--trdelay) * 2)),
-  opacity 0.4s calc(var(--delay) + (var(--trdelay) * 2));
+transform 0.4s calc(var(--delay) + (var(--trdelay) * 2)),
+opacity 0.4s calc(var(--delay) + (var(--trdelay) * 2));
 }
 
 .inp:not(:checked) ~ .menu-container .menu-list:nth-child(4) {
 transition:
-  transform 0.4s calc(var(--delay) + (var(--trdelay) * 3)),
-  opacity 0.4s calc(var(--delay) + (var(--trdelay) * 3));
+transform 0.4s calc(var(--delay) + (var(--trdelay) * 3)),
+opacity 0.4s calc(var(--delay) + (var(--trdelay) * 3));
 }
 
 .bar-inp {
@@ -225,50 +225,44 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 
 
 /*titulo*/
+
 .title{
   font-family: var(--ff-bruno);
   justify-self: center;
-  margin-top: 2%;
-  font-size: var(--h1-96);
-}
-
-.title2{
-  font-family: var(--ff-bruno);
-  justify-self: center;
-  margin-top: -20px;
+  margin-top: 70px;
   font-size: 90px;
 }
-
 
 /*card1*/
 
 .caixa{
-  background-image: url(../img/nebulosa1.jpg);
+ background-image: url(../img/nebulosa1.jpg);
   background-position: center;
   background-size: cover;
   height: 400px;
   max-width: 500px;
   margin-left: 200px;
-  margin-top: 150px;
-  transition: all 1.5s ease;
+  margin-top: 100px;
   border-radius: 10px;
+  transition: all 1.5s ease;
 }
 
 .caixa:hover{
-  box-shadow: 15px 15px 40px 15px hsla(281, 68%, 67%, 0.5);
-  transform: translateX(100px);
+box-shadow: 15px 15px 40px 15px hsla(9, 72%, 52%, 0.5);
+transition: all 0.9s ease;
+transform: rotate(360deg);
 }
 
 
 .text{
-  width: 50%;
-  text-align: justify;
-  justify-self: end;
-  margin-right: 100px;
-  margin-top: -250px;
-  font-family: var(--ff-smooch);
-  font-weight: 400;
-  font-size: var(--h3-24);
+width: 50%;
+text-align: justify;
+justify-self: end;
+margin-right: 100px;
+margin-top: -250px;
+font-family: var(--ff-smooch);
+font-weight: 400;
+font-size: var(--h2-32);
 }
 
 /*card2*/
@@ -279,278 +273,466 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
   background-size: cover;
   height: 400px;
   max-width: 500px;
-  margin-left: 1200px;
+  margin-left:  75rem;
   margin-top: 200px;
-  transition: all 1.5s ease;
   border-radius: 10px;
+  transition: all 1.5s ease;
 }
 
 .caixa2:hover{
-  box-shadow: 15px 15px 40px 15px hsla(41, 54%, 55%, 0.5);
- transform: rotateX(190deg);
+box-shadow: 15px 15px 40px 15px hsl(219, 42%, 28%);
+transform: rotateY(360deg);
+transition: all 1.5s ease;
 }
 
 .text2{
-  width: 50%;
-  position: relative;
-  margin-top: -250px;
-  margin-left: 100px;
-  text-align: justify;
-  font-family: var(--ff-smooch);
-  font-weight: 400;
-  font-size: var(--h3-24);
+width: 50%;
+position: relative;
+margin-top: -250px;
+margin-left: 100px;
+text-align: justify;
+font-family: var(--ff-smooch);
+font-weight: 400;
+font-size: var(--h2-32);
 }
 
 /*card3*/
 .caixa3{
-    background-image: url(../img/galaxy-nebulosa.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 250px;
-    max-width: 1500px;
-    margin-left: 200px;
-    position: relative;
-    bottom: -250px;
-    border-radius: 10px;
-    transition: all 1.5s ease;
-    
+  background-image: url(../img/galaxy-nebulosa.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 250px;
+  max-width: 1500px;
+  margin-left: 200px;
+  position: relative;
+  bottom: -250px;
+  border-radius: 10px;
+  transition: all 1.5s ease;
 }
-
 .caixa3:hover{
-  transform: scaleX(360);
-  box-shadow:15px 15px 35px 15px hsla(283, 64%, 44%, 0.5);
+box-shadow:15px 15px 40px 15px hsla(198, 39%, 51%, 0.5);
+transition: all 0.7s ease;
+transform: scale(1.05);
 }
 
 .text3{
-  width: 50%;
-  justify-self: center;
-  text-align: justify;
-  margin-top: 280px;
-  font-family: var(--ff-smooch);
-  font-weight: 400;
-  font-size: var(--h3-24);
+width: 70%;
+justify-self: center;
+text-align: justify;
+margin-top: 280px;
+font-family: var(--ff-smooch);
+font-weight: 400;
+font-size: var(--h2-32);
 }
 
 /*CHAT*/
 
 .container {
-  background-color: rgb(0, 0, 0);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgb(255, 255, 255);
-  width: 100%;
-  max-width: 1200px;
-  height: 700px;
-  margin-top: 80px;
-  text-align: center;
-  justify-self: center;
-  border: #fff;
-  transition: all 1.5s ease;
+background-color: rgb(0, 0, 0);
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgb(255, 255, 255);
+width: 100%;
+max-width: 1200px;
+height: 700px;
+margin-top: 70px;
+text-align: center;
+justify-self: center;
+border: #fff;
+transition: all 1.5s ease;
 }
-
 .container:hover{
-  box-shadow: 0 0 50px rgb(255, 255, 255, 0.75);
-  transition: all 0.7s ease;
+box-shadow: 0 0 70px rgb(255, 255, 255, 0.75);
+transition: all 0.7s ease;
 }
 
 h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-family: var(--ff-bruno);
+text-align: center;
+margin-bottom: 20px;
+font-family: var(--ff-bruno);
 }
 
 .comment-form {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
+display: flex;
+flex-direction: column;
+margin-bottom: 20px;
 }
 
 textarea {
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  resize: none;
-  position: relative;
-  max-height: 50px;
+padding: 10px;
+border-radius: 10px;
+border: 1px solid #ccc;
+resize: none;
+position: relative;
+max-height: 50px;
 }
 
 button {
-  padding: 10px;
-  background: linear-gradient(0deg, hsl(246, 21%, 29%,0.5)100%, hsl(246, 64%, 10%,0.5) 70%,hsl(250, 24%, 10%,0.5) 100%);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  margin-top: 10px;
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
+padding: 10px;
+background: linear-gradient(0deg, hsl(246, 21%, 29%,0.5)100%, hsl(246, 64%, 10%,0.5) 70%,hsl(250, 24%, 10%,0.5) 100%);
+color: white;
+border: none;
+border-radius: 5px;
+margin-top: 10px;
+cursor: pointer;
+font-size: 20px;
+font-weight: bold;
 
 }
 
 button:hover {
-  transform: scale(1.03);
-  box-shadow: rgba(255, 255, 255, 0.878) 0px 23px 10px -20px;
+transform: scale(1.03);
+box-shadow: rgba(255, 255, 255, 0.878) 0px 23px 10px -20px;
 
 }
 
 .comment-history {
-  margin-top: 20px;
-  font-family: var(--ff-smooch);
-  font-size: var(--h4-20);
-  font-weight: 600;
+margin-top: 20px;
+font-family: var(--ff-smooch);
+font-size: var(--h4-20);
+font-weight: 600;
 }
 
 .comment {
-  background-color: #f9f9f9;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  border-left: 5px solid #000000;
-  color: #000000;
-  max-width: 600px;
- position: relative;
- left:270px
+width: 75%;
+display: flex;
+justify-self: center;
+justify-content: center;
+background-color: #f9f9f9;
+padding: 10px;
+margin-bottom: 10px;
+border-radius: 10px;
+border-left: 5px solid #000000;
+color: #000000;
+max-width: 600px;
 }
 
 
 /*footer*/
-
-.card {
-    display: flex;
-    height: 70px;
-    width: 200px;
-    justify-self: center;
-    position: relative;
-    top: 30px;
-  }
-  
-  .card svg {
-    position: absolute;
-    display: flex;
-    width: 60%;
-    height: 40%;
-    font-size: 24px;
-    font-weight: 70;
-    opacity:1;
-    transition: opacity 0.25s;
-    z-index: 2;
-    cursor: pointer;
-  }
-  
-  .card .social-link1,.card .social-link2,.card .social-link3,.card .social-link4 {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 25%;
-    color: whitesmoke;
-    font-size: 20px;
-    text-decoration: none;
-    transition: 0.25s;
-    border-radius: 50px;
-  }
-  
-  .card svg {
-    transform: scale(1);
-  }
-  
-  .card .social-link1:hover {
-    background: #f09433;
-    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
-    animation: bounce_613 0.4s linear;
-  }
-  
-  .card .social-link2:hover {
-    background-color: #00ccff;
-    animation: bounce_613 0.4s linear;
-  }
-  
-  .card .social-link3:hover {
-    background-color: #5865f2;
-    animation: bounce_613 0.4s linear;
-  }
-  
-  .card .social-link4:hover {
-    background-color: #12a50b;
-    animation: bounce_613 0.4s linear;
-  }
-  
-  @keyframes bounce_613 {
-  
-    100% {
-      transform: scale(1);
-    }
-  }
-
-  /*copy*/
-.agreement{
-  font-size: 20px;
-  font-family: var(--ff-bruno-ace);
+.card{
   display: flex;
-  justify-self: center;
-  padding-bottom: 20px;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  margin-top: 50px;
+  gap: 20px;
 }
 
-  footer{
-    clear: both;
-    margin-top: 27px;
-  }
-  
-/*footer*/
-.card1{
-  display: flex;
-   position: relative;
-   cursor: pointer;
-   width: 50px;
-   bottom: 7px;
-   right: 50px;
-   gap: 30px;
-}
-
-.facebook{
-  height: 50px;
-  width: 50px;
-}
-
- .instagram{
-  height: 50px;
-  width: 50px;
- }
-
-.twitter{
-  height: 50px;
-  width: 50px;
-}
-
-.youtube{
-  height: 50px;
+.icon-footer{
   width: 50px;
 }
 
 .facebook:hover{
   background-color: #3d77cf;
-  border-radius: 10px;
-  
+  border-radius: 10px; 
 }
 
 .instagram:hover{
   background-color: #7a2d63;
-  border-radius: 10px;
-  
+  border-radius: 10px; 
 }
 
 .youtube:hover{
   background-color: #852121;
   border-radius: 10px;
-  
 }
 
 .twitter:hover{
   background-color: #b480cc;
   border-radius: 10px;
-  
 }
 
+ @keyframes bounce_613 {
+   100% {
+     transform: scale(1);
+   }
+ }
+ 
+ /*copy*/
+ .agreement{
+  font-size: 20px;
+  font-family: var(--ff-bruno-ace);
+  display: flex;
+  justify-self: center;
+  padding: 20px 0px;
+ }
+ 
+ footer{
+  clear: both;
+  position: relative;
+  bottom: 0px;
+ }
+ 
+ .icons{
+  position: relative;
+  bottom: 0px;
+ }
+
+
+/*responsividade*/
+@media (max-width:600px) {
+
+  .logo{
+  width: 60px;
+  margin-right: 10px;
+  }
+
+  .menu{
+    font-size: 13px;
+    margin-right: 55px;
+    gap: 10px;
+  }
+
+  .login{
+  height: 1,5rem;
+  width: 100px;
+  font-size: 10px;
+  margin-left: 25px;
+  }
+
+  .title{
+  margin-top: 45px;
+  font-size: var(--h2-32);
+  }
+
+  /*caixa 1*/
+  .caixa{
+  max-width: 150px;
+  height: 150px;
+  position: relative;
+  right:120px ;
+  margin-top: 20px;
+  }
+
+  .caixa:hover{
+  box-shadow: 9px 9px 37px 11px hsla(9, 72%, 52%, 0.5);
+  transition: all 0.9s ease;
+  transform: rotate(360deg);
+  }
+
+  .text{
+  font-size: 12px;
+  position: relative;
+  top: 130px;
+  width: 40%;
+  }
+
+
+  /*caixa 2*/
+  .caixa2{
+  max-width: 150px;
+  height: 150px;
+  position: relative;
+  margin-left:  24rem;
+  }
+
+  .caixa2:hover{
+  box-shadow: 9px 9px 37px 11px hsl(219, 42%, 28%);
+  transform: rotateY(360deg);
+  transition: all 1.5s ease;
+  }
+
+  .text2{
+  font-size: 12px;
+  position: relative;
+  top: 130px;
+  width: 40%;
+  }
+
+  /*caixa 3*/
+  .caixa3{
+  max-width: 150px;
+  height: 150px;
+  position: relative;
+  right:120px;
+  bottom: -200px;
+  }
+
+  .caixa3:hover{
+  box-shadow:9px 9px 37px 11px hsla(198, 39%, 51%, 0.5);
+  transition: all 0.7s ease;
+  transform: scale(1.05);
+  }
+
+  .text3{
+  font-size: 12px;
+  position: relative;
+  bottom: 140px;
+  left: 80px;
+  width: 40%;
+  margin-top: 220px;
+  }
+
+
+  /*chat*/
+  .container{
+    width: 500px;
+    position: relative;
+    height: 400px;
+    bottom: 100px;
+    left: 5px;
+  }
+
+  .card{
+    margin-top: 0;
+  }
+
+  .card1{
+    left: 170px;
+    cursor: pointer;
+  }
+
+  .facebook{
+    height: 40px;
+    width: 40px;
+  }
+
+  .instagram{
+    height: 40px;
+    width: 40px;
+  }
+
+  .twitter{
+    height: 40px;
+    width: 40px;
+  }
+
+  .youtube{
+    height: 40px;
+    width: 40px;
+  }
+
+}
+
+
+@media (min-width: 600px) and (max-width:768px) {
+  .logo{
+    width: 60px;
+    margin-right: 10px;
+  }
+  
+   .menu{
+      font-size: 13px;
+      margin-right: 55px;
+      gap: 10px;
+  }
+  
+  .login{
+    height: 1,5rem;
+    width: 100px;
+    font-size: 10px;
+    margin-left: 25px;
+  }
+  
+  .title{
+    margin-top: 45px;
+    font-size: var(--h2-32);
+  }
+  
+  /*caixa 1*/
+  .caixa{
+    max-width: 150px;
+    height: 150px;
+    position: relative;
+    right: 10px ;
+    margin-top: 20px;
+  }
+  
+  .caixa:hover{
+    box-shadow: 9px 9px 37px 11px hsla(9, 72%, 52%, 0.5);
+    transition: all 0.9s ease;
+    transform: rotate(360deg);
+  }
+  
+  .text{
+    font-size: 12px;
+    position: relative;
+    top: 130px;
+    width: 40%;
+  }
+  
+  
+  /*caixa 2*/
+  .caixa2{
+    max-width: 150px;
+    height: 150px;
+    position: relative;
+    margin-left:  24rem;
+  }
+  
+  .caixa2:hover{
+    box-shadow: 9px 9px 37px 11px hsl(219, 42%, 28%);
+    transform: rotateY(360deg);
+    transition: all 1.5s ease;
+  }
+  
+  .text2{
+    font-size: 12px;
+    position: relative;
+    top: 130px;
+    width: 40%;
+  }
+  
+  /*caixa 3*/
+  .caixa3{
+    max-width: 150px;
+    height: 150px;
+    position: relative;
+    right:120px;
+    bottom: -200px;
+  }
+  
+  .caixa3:hover{
+    box-shadow:9px 9px 37px 11px hsla(198, 39%, 51%, 0.5);
+    transition: all 0.7s ease;
+    transform: scale(1.05);
+  }
+  
+  .text3{
+    font-size: 12px;
+    position: relative;
+    bottom: 140px;
+    left: 80px;
+    width: 40%;
+    margin-top: 220px;
+  }
+  
+  
+  /*chat*/
+  .container{
+      width: 500px;
+      position: relative;
+      height: 400px;
+      bottom: 100px;
+      left: 5px;
+  }
+  
+  .card{
+      margin-top: 0;
+  }
+  
+  .card1{
+      left: 170px;
+      cursor: pointer;
+  }
+  
+  .facebook{
+      height: 40px;
+      width: 40px;
+  }
+  
+  .instagram{
+      height: 40px;
+      width: 40px;
+  }
+  
+  .twitter{
+      height: 40px;
+      width: 40px;
+  }
+  
+  .youtube{
+      height: 40px;
+      width: 40px;
+  }
+}
