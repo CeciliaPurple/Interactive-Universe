@@ -278,7 +278,7 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 
 .caixa-maior{
   justify-self: center;
-  width: 60%;
+  width: 70%;
   align-self: end;
   margin-top: 70px;
   color: white;
@@ -307,7 +307,7 @@ ul{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   place-items: start;
-  padding: 0 10% 3%;
+  padding: 0 5% 3%;
   font-family: var(--ff-poppins);
 }
 
@@ -430,6 +430,7 @@ li{
   }
 
   .caixa-maior{
+    width: 85%;
     position: relative;
     top: 25vh;
   }
@@ -517,8 +518,9 @@ li{
   }
 
   .caixa-maior{
+    width: 80%;
     position: relative;
-    top: 18vh;
+    top: 20vh;
   }
 
   ul{
