@@ -277,8 +277,8 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 }
 
 .linha{
-  max-width: 1000px;
-  margin-left: 450px;
+  max-width: 1200px;
+  
 }
 
 /*card2*/
@@ -308,7 +308,7 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 
 .linha2{
   max-width: 1200px;
-  margin-left:345px;
+  margin-left:350px;
 }
 
 
