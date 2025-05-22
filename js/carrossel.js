@@ -3,42 +3,42 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             nome: "Mercúrio",
             imagem: "img/mercurio.png",
-            descricao: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime at perferendis obcaecati, earum porro."
+            descricao: "Mercúrio é pequeno, muito quente durante o dia e extremamente frio à noite,devido à falta de atmosfera."
         },
         {
             nome: "Vênus",
             imagem: "img/venus.png",
-            descricao: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime at perferendis obcaecati, earum porro."
+            descricao: "Vênus é o segundo planeta do Sistema Solar,perto da Terra, mas com condições muito diferentes."
         },
         {
             nome: "Terra",
             imagem: "img/terra.png",
-            descricao: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime at perferendis obcaecati, earum porro."
+            descricao: "O planeta Terra é o terceiro planeta do Sistema Solar e o único conhecido até agora que possui vida."
         },
         {
             nome: "Marte",
             imagem: "img/marte.png",
-            descricao: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime at perferendis obcaecati, earum porro."
+            descricao: "Marte é o quarto planeta do Sistema Solar. Conhecido como o 'planeta vermelho' devido à sua cor,causada pelo óxido de ferro."
         },
         {
             nome: "Júpiter",
             imagem: "img/jupiter.png",
-            descricao: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime at perferendis obcaecati, earum porro."
+            descricao: "Júpiter é o maior planeta do Sistema Solar. Ele é um gigante gasoso,composto principalmente de hidrogênio e hélio."
         },
         {
             nome: "Saturno",
             imagem: "img/saturno.png",
-            descricao: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime at perferendis obcaecati, earum porro."
+            descricao: "Saturno é o sexto planeta a partir do Sol e o segundo maior do Sistema Solar, atrás apenas de Júpiter."
         },
         {
             nome: "Urano",
             imagem: "img/urano.png",
-            descricao: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime at perferendis obcaecati, earum porro."
+            descricao: "Urano é o sétimo planeta a contar do Sol, um gigante gasoso azul-esverdeado, e o terceiro maior do nosso sistema solar."
         },
         {
             nome: "Netuno",
             imagem: "img/netuno.png",
-            descricao: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime at perferendis obcaecati, earum porro."
+            descricao: "Netuno é o oitavo planeta do Sistema Solar,o mais distante do Sol e é um gigante gasoso devido à presença de metano."
         }
     ];
 
