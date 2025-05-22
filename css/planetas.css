@@ -381,17 +381,25 @@ li{
  /*MEDIA QUERY*/
 @media (max-width: 600px){
   .logo{
-    width: 50px;
-    position: relative;
-    right: 35px;
-    gap: 20px;
+    width: 60px;
   }
 
   .menu{
-    font-size: 10px;
+    font-size: 14px;
+    gap: 8px;
     position: relative;
-    right: 35px;
-    gap: 15px;
+    right: 45px;
+  }
+
+  .login{
+    width: 6.0rem;
+    font-size: 14px;
+    position: relative;
+    left: 20px;
+  }
+
+  .bar{
+    display: none;
   }
 
   .titulo{
@@ -404,7 +412,7 @@ li{
 
   .caixa-menor{
     position: relative;
-    top: 30vh;
+    top: 25vh;
   }
 
   .sub-titulo1{
@@ -423,7 +431,7 @@ li{
 
   .caixa-maior{
     position: relative;
-    top: 30vh;
+    top: 25vh;
   }
 
   ul{
@@ -451,7 +459,7 @@ li{
 
   .planeta-img{
     position: relative;
-    top: 5vh;
+    top: 0vh;
   }
 
 }
@@ -470,6 +478,17 @@ li{
     gap: 15px;
   }
 
+  .login{
+    width: 6.0rem;
+    font-size: 14px;
+    position: relative;
+    left: 20px;
+  }
+
+  .bar{
+    display: none;
+  }
+  
   .titulo{
     font-size: 30px;
   }
@@ -480,17 +499,17 @@ li{
 
   .caixa-menor{
     position: relative;
-    top: 18vh;
+    top: 20vh;
   }
 
   .sub-titulo1{
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.6rem;
   }
 
   .sub-titulo2{
     text-align: center;
-    font-size: 10px;
+    font-size: 0.6rem;
   }
 
   .lista{
@@ -531,5 +550,87 @@ li{
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px){
+  .logo{
+    width: 70px;
+    position: relative;
+    gap: 20px;
+  }
 
+  .menu{
+    font-size: 0.8rem;
+    position: relative;
+    justify-content: center;
+    gap: 15px;
+  }
 
+  .login{
+    width: 6.0rem;
+    font-size: 14px;
+    position: relative;
+    left: 20px;
+  }
+
+  .bar{
+    display: none;
+  }
+  
+  .titulo{
+    font-size: 3rem;
+  }
+
+  .text{
+    font-size: 0.7rem;
+  }
+
+  .caixa-menor{
+    position: relative;
+    top: 20vh;
+  }
+
+  .sub-titulo1{
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .sub-titulo2{
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .lista{
+    gap: 7px;
+  }
+
+  .caixa-maior{
+    position: relative;
+    top: 20vh;
+  }
+
+  ul{
+    padding: 0 6% 3%;
+  }
+
+  li{
+    font-size: 0.7rem;
+  }
+
+  .card{
+   position:relative; 
+   top: 20vh;
+  }
+
+  .agreement{
+    font-size: 14px;
+    position: relative;
+    top: 20vh;
+  }
+
+  .icon-footer{
+    width: 37px;
+  }
+
+  .planeta-img{
+    top: 0;
+  }
+}
