@@ -656,10 +656,9 @@ button:hover {
 }
 
  .text{
-  font-size: 12px;
+  font-size: 1rem;
   position: relative;
   top: 130px;
-  width: 40%;
  }
 
  
@@ -668,7 +667,7 @@ button:hover {
   max-width: 150px;
   height: 150px;
   position: relative;
-  margin-left:  24rem;
+  margin-left:  35rem;
  }
  
  .caixa2:hover{
@@ -678,10 +677,9 @@ button:hover {
 }
 
  .text2{
-  font-size: 12px;
+  font-size: 1rem;
   position: relative;
   top: 130px;
-  width: 40%;
  }
 
 
@@ -700,11 +698,11 @@ button:hover {
 }
 
  .text3{
-  font-size: 12px;
+  font-size: 1rem;
   position: relative;
   bottom: 140px;
   left: 80px;
-  width: 40%;
+  width: 50%;
  }
  
 

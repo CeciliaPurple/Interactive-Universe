@@ -269,18 +269,20 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 
 .caixa-menor{
   align-self: self-start;
+  position: relative;
   justify-self: end;
   margin-right: 20%;
   margin-bottom: 5%;
-  margin-top: 90px;
+  top: 10vh;
   color: white;
 }
 
 .caixa-maior{
+  position: relative;
+  top: 10vh;
   justify-self: center;
   width: 70%;
   align-self: end;
-  margin-top: 70px;
   color: white;
 }
 
@@ -325,6 +327,7 @@ li{
   cursor: pointer;
   margin-top: 50px;
   gap: 20px;
+  top: 10vh;
 }
 
 .icon-footer{
@@ -364,6 +367,8 @@ li{
   display: flex;
   justify-self: center;
   padding: 20px 0px;
+  position: relative;
+  top: 10vh;
  }
  
  footer{
@@ -379,7 +384,7 @@ li{
 
 
  /*MEDIA QUERY*/
-@media (max-width: 600px){
+@media (max-width: 649px){
   .logo{
     width: 60px;
   }
@@ -465,7 +470,7 @@ li{
 
 }
 
-@media (min-width: 600px) and (max-width: 768px){
+@media (min-width: 650px) and (max-width: 767px){
   .logo{
     width: 70px;
     position: relative;
@@ -552,7 +557,7 @@ li{
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 1023px){
   .logo{
     width: 70px;
     position: relative;
