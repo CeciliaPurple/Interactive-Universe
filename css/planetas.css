@@ -231,6 +231,24 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
   
 
 /*PLANETA*/
+.circulo{
+  position: relative;
+  bottom: 30px;
+  margin-left: 20vw;
+  margin-bottom: 50px;
+  width: 350px;
+  height: 350px;
+  border-radius: 100%;
+  background-position: center;
+  background-size: cover;
+  transition: 5s ease;
+}
+
+.circulo:hover{
+  transition: all 5s ease;
+  transform: rotate(360deg);
+}
+
 .titulo{
   text-align: center;
   margin-top: 2%;
@@ -243,12 +261,13 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
   position: relative;
   bottom: 30px;
   margin-left: 10vw;
-  width: 50%;
+  width: 500px;
 }
 
 .planeta-info{
   position: relative;
   top: -450px;
+  z-index: -100;
 }
 
 .caixa-menor,
@@ -401,6 +420,7 @@ li{
     font-size: 14px;
     position: relative;
     left: 20px;
+    z-index: 100;
   }
 
   .bar{
@@ -415,9 +435,13 @@ li{
     font-size: 7px;
   }
 
+  .planeta-info{
+    z-index: -100;
+  }
+
   .caixa-menor{
     position: relative;
-    top: 25vh;
+    top: 35vh;
   }
 
   .sub-titulo1{
@@ -437,7 +461,8 @@ li{
   .caixa-maior{
     width: 85%;
     position: relative;
-    top: 25vh;
+    top: 35vh;
+    z-index: -100;
   }
 
   ul{
@@ -450,13 +475,13 @@ li{
 
   .card{
    position:relative; 
-   top:27rem;
+   top:35vh;
   }
 
   .agreement{
     font-size: 14px;
     position: relative;
-    top: 27rem;
+    top: 35vh;
   }
 
   .icon-footer{
@@ -489,6 +514,7 @@ li{
     font-size: 14px;
     position: relative;
     left: 20px;
+    z-index: 100;
   }
 
   .bar{
@@ -503,9 +529,13 @@ li{
     font-size: 7px;
   }
 
+  .planeta-info{
+    z-index: -100;
+  }
+
   .caixa-menor{
     position: relative;
-    top: 20vh;
+    top: 35vh;
   }
 
   .sub-titulo1{
@@ -523,9 +553,9 @@ li{
   }
 
   .caixa-maior{
-    width: 80%;
+    width: 90%;
     position: relative;
-    top: 20vh;
+    top: 35vh;
   }
 
   ul{
@@ -533,18 +563,18 @@ li{
   }
 
   li{
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 
   .card{
    position:relative; 
-   top:20vh;
+   top: 35vh;
   }
 
   .agreement{
     font-size: 14px;
     position: relative;
-    top: 20vh;
+    top: 35vh;
   }
 
   .icon-footer{
@@ -576,6 +606,7 @@ li{
     font-size: 14px;
     position: relative;
     left: 20px;
+    z-index: 100;
   }
 
   .bar{
@@ -590,9 +621,13 @@ li{
     font-size: 0.7rem;
   }
 
+  .planeta-info{
+    z-index: -100;
+  }
+
   .caixa-menor{
     position: relative;
-    top: 20vh;
+    top: 30vh;
   }
 
   .sub-titulo1{
@@ -611,7 +646,7 @@ li{
 
   .caixa-maior{
     position: relative;
-    top: 20vh;
+    top: 30vh;
   }
 
   ul{
@@ -624,13 +659,13 @@ li{
 
   .card{
    position:relative; 
-   top: 20vh;
+   top: 30vh;
   }
 
   .agreement{
     font-size: 14px;
     position: relative;
-    top: 20vh;
+    top: 30vh;
   }
 
   .icon-footer{
