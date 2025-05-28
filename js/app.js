@@ -1,13 +1,16 @@
 const express = require('express');
-const HomeRoutes = require('./js/Routes/Home.Routes');
-const UsuarioRoutes = require('./js/Routes/Usuario.Routes'); // ajuste o caminho se necessário
+const cors = require('cors')
+
+// const HomeRoutes = require('./js/Routes/Home.Routes');
+const UsuarioRoutes = require('./Routes/Usuario.routes')
 
 const app = express();
 
+app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/', HomeRoutes);
-app.use('/usuario', UsuarioRoutes);
+// app.use('/', HomeRoutes);
+app.use('/usuarios', UsuarioRoutes);
 
 module.exports = app;

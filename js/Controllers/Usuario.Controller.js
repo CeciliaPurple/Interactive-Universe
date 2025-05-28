@@ -8,6 +8,7 @@ const UsuarioController = {
             const usuarios = await Usuario.findAll();
             res.status(200).json(usuarios);
         } catch (error) {
+            console.error(error)
             res.status(500).json({ error: 'Erro ao listar usuários.' });
         }
     },
@@ -19,6 +20,7 @@ const UsuarioController = {
             const novoUsuario = await Usuario.create({ NOME, EMAIL, SENHA, TIPO_USUARIO });
             res.status(201).json(novoUsuario);
         } catch (error) {
+            console.error(error)
             res.status(500).json({ error: 'Erro ao criar usuário.' });
         }
     },
@@ -37,6 +39,7 @@ const UsuarioController = {
             const usuarioAtualizado = await Usuario.findByPk(id); // Busca o usuário atualizado
             res.status(200).json(usuarioAtualizado);
         } catch (error) {
+            console.error(error)
             res.status(500).json({ error: 'Erro ao atualizar usuário.' });
         }
     },
@@ -48,6 +51,7 @@ const UsuarioController = {
             await Usuario.destroy({ where: { ID: id } });
             res.status(200).json({ message: 'Usuário deletado com sucesso.' });
         } catch (error) {
+            console.error(error)
             res.status(500).json({ error: 'Erro ao deletar usuário.' });
         }
     },

@@ -23,10 +23,11 @@ const Usuario = sequelize.define('Usuario', {
         type: DataTypes.ENUM('USUARIO', 'ADM'),
         allowNull: true,
     },
-}, {
-    tableName: 'USUARIO',
-    schema: 'Sistem',
+}, 
+{
+    tableName: 'usuario',
     timestamps: false,
-});
+}
+);
 
 module.exports = Usuario;
