@@ -18,7 +18,7 @@ const UsuarioController = {
         try {
             const { NOME, EMAIL, SENHA, TIPO_USUARIO } = req.body;
             const novoUsuario = await Usuario.create({ NOME, EMAIL, SENHA, TIPO_USUARIO });
-            res.status(201).json(novoUsuario);
+            res.status(200).json({ message: 'Usuário cadastrado com sucesso.', usuario: novoUsuario });
         } catch (error) {
             console.error(error)
             res.status(500).json({ error: 'Erro ao criar usuário.' });
@@ -37,7 +37,8 @@ const UsuarioController = {
             );
     
             const usuarioAtualizado = await Usuario.findByPk(id); // Busca o usuário atualizado
-            res.status(200).json(usuarioAtualizado);
+            console.log('oi')
+            res.status(200).json({ message: 'Usuário atualizado com sucesso.', usuario: usuarioAtualizado });
         } catch (error) {
             console.error(error)
             res.status(500).json({ error: 'Erro ao atualizar usuário.' });
@@ -49,7 +50,7 @@ const UsuarioController = {
         try {
             const { id } = req.params;
             await Usuario.destroy({ where: { ID: id } });
-            res.status(200).json({ message: 'Usuário deletado com sucesso.' });
+            res.status(200).json({ message: 'Usuário deletado com sucesso.', usuarioId: id });
         } catch (error) {
             console.error(error)
             res.status(500).json({ error: 'Erro ao deletar usuário.' });
