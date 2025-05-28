@@ -1,19 +1,13 @@
-class app{
-    constructor(){
-        this.app = express()
-        this.middlawares()
-        this.routes()
-    }
-    
-    middlawares(){
-    this.app.use(express.json())
-    this.app.use(express.urlencoded({extended:true}))
-   }
+const express = require('express');
+const HomeRoutes = require('./js/Routes/Home.Routes');
+const UsuarioRoutes = require('./js/Routes/Usuario.Routes'); // ajuste o caminho se necessário
 
-routes(){
-    this.app.use("/",homeRoutes)
-    this.app.use("/usuario",usuarioRoutes)
-  }
-}
+const app = express();
 
-export default new app().app
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.use('/', HomeRoutes);
+app.use('/usuario', UsuarioRoutes);
+
+module.exports = app;

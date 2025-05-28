@@ -1,6 +1,6 @@
 // filepath: /c:/Users/cg3036626/Desktop/projeto/Interactive-Universe/js/routes/UsuarioRoutes.js
 const express = require('express');
-const UsuarioController = require('../controllers/UsuarioController');
+const UsuarioController = require('../Controllers/UsuarioController');
 
 const router = express.Router();
 

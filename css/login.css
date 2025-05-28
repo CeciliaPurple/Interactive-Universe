@@ -262,10 +262,23 @@ ul {
   }
 
 
-  @media (max-width:300px){
-    .container{
-      max-width: 30px;
+ /* Media Queries para Telas Maiores (Cadastro/Login) */
+@media (min-width: 768px) {
+    .container {
+        padding: 50px;
     }
-  }
+
+    .logo {
+        width: 120px;
+    }
+
+    .input {
+        padding: 15px 20px;
+    }
+
+    .login-button {
+        padding: 15px 25px;
+    }
+}
   
   
