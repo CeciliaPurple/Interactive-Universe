@@ -231,24 +231,6 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
   
 
 /*PLANETA*/
-.circulo{
-  position: relative;
-  bottom: 30px;
-  margin-left: 20vw;
-  margin-bottom: 50px;
-  width: 350px;
-  height: 350px;
-  border-radius: 100%;
-  background-position: center;
-  background-size: cover;
-  transition: 5s ease;
-}
-
-.circulo:hover{
-  transition: all 5s ease;
-  transform: rotate(360deg);
-}
-
 .titulo{
   text-align: center;
   margin-top: 2%;
@@ -261,7 +243,7 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
   position: relative;
   bottom: 30px;
   margin-left: 10vw;
-  width: 500px;
+  width: 50%;
 }
 
 .planeta-info{
