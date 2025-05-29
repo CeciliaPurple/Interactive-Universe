@@ -32,31 +32,33 @@ const traducoes = {
     "© 2025 Sistema Solar. Todos os direitos reservados.": "© 2025 Solar System. All rights reserved."
 };
 
-// Função para alternar o idioma
-function alternarIdioma() {
-    const elementos = document.querySelectorAll("p, h1, h2, span, label,div");
+// Função para alternar o idioma com base na bandeira clicada
+function alternarIdioma(idioma) {
+    const elementos = document.querySelectorAll("p, h1, h2, span, label, div");
 
     elementos.forEach(el => {
         const texto = el.innerText.trim();
-        const traducao = idiomaAtual === 'pt'
-            ? traducoes[texto]
-            : obterChavePorValor(traducoes, texto);
+        const traducao = idioma === 'pt'
+            ? obterChavePorValor(traducoes, texto) // Traduz para português
+            : traducoes[texto]; // Traduz para inglês
 
         if (traducao) {
             el.innerText = traducao;
         }
     });
 
-    // Alterna o idioma atual
-    idiomaAtual = idiomaAtual === 'pt' ? 'en' : 'pt';
+    // Atualiza o idioma atual
+    idiomaAtual = idioma;
 }
 
+// Adiciona eventos de clique às imagens das bandeiras
+document.querySelector('.bandeira1[src="../img/brasil.png"]').addEventListener('click', () => {
+    alternarIdioma('pt'); // Altera para português
+});
 
-
-
-document.addEventListener(('click'), function (e)  {
-    const tradutor = document.getElementById('tradutor');
-} )
+document.querySelector('.bandeira1[src="../img/of-america.png"]').addEventListener('click', () => {
+    alternarIdioma('en'); // Altera para inglês
+});
 
 // Função auxiliar para achar chave pelo valor
 function obterChavePorValor(obj, valor) {
