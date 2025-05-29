@@ -266,7 +266,7 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 }
 
 .text{
-  width: 50%;
+  width:33%;
   justify-self: center;
   text-align: and;
   margin-top: 180px;
@@ -277,8 +277,10 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 }
 
 .linha{
-  max-width: 1200px;
-  
+  max-width: 800px;
+  position: relative;
+  right:16% ;
+ 
 }
 
 /*card2*/
@@ -294,6 +296,19 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
   transition: 1.5s;
 }
 
+
+
+.text2{
+  width:45%;
+  justify-self: center;
+  text-align: and;
+  margin-top: 180px;
+  margin-bottom: 50px;
+  font-family: var(--ff-smooch);
+  font-weight: 400;
+  font-size: 26px;
+}
+
 .caixa2:hover{
   box-shadow: 10px 10px 35px 10px hsla(231, 73%, 55%, 0.5);
   transition: 1.5s;
@@ -307,8 +322,10 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 }
 
 .linha2{
-  max-width: 1200px;
-  margin-left:350px;
+ max-width: 1000px;
+ position: relative;
+ left: 23%;
+ bottom: 45px;
 }
 
 
@@ -336,13 +353,24 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
   font-family: var(--ff-bruno);
   font-size: 50px;
 }
+.text3{
+  width:52%;
+  justify-self: center;
+  text-align: and;
+  margin-top: 180px;
+  margin-bottom: 50px;
+  font-family: var(--ff-smooch);
+  font-weight: 400;
+  font-size: 26px;
+}
 
 .linha3{
-  max-width: 1900px;
+  max-width: 1400px;
   margin-left: 275px;
   justify-self: center;
   margin-top: -20px;
 }
+
 
 /*footer*/
 
