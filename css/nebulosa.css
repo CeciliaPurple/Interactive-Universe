@@ -248,9 +248,9 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 }
 
 .caixa:hover{
-box-shadow: 15px 15px 40px 15px hsla(9, 72%, 52%, 0.5);
+box-shadow: 15px 15px 40px 15px hsla(276, 92%, 41%, 0.4);
 transition: all 0.9s ease;
-transform: rotate(360deg);
+transform: translateX(100px);
 }
 
 
@@ -280,7 +280,7 @@ font-size: var(--h2-32);
 }
 
 .caixa2:hover{
-box-shadow: 15px 15px 40px 15px hsl(219, 42%, 28%);
+box-shadow: 15px 15px 40px 15px hsl(61, 23%, 43%);
 transform: rotateY(360deg);
 transition: all 1.5s ease;
 }
@@ -312,7 +312,7 @@ font-size: var(--h2-32);
 .caixa3:hover{
 box-shadow:15px 15px 40px 15px hsla(198, 39%, 51%, 0.5);
 transition: all 0.7s ease;
-transform: scale(1.05);
+transform: scaleX(2.5);
 }
 
 .text3{
