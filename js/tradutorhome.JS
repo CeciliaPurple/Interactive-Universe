@@ -52,11 +52,11 @@ function alternarIdioma(idioma) {
 }
 
 // Adiciona eventos de clique às imagens das bandeiras
-document.querySelector('.bandeira1[src="../img/brasil.png"]').addEventListener('click', () => {
+document.querySelector('.bandeira1[src="img/brasil.png"]').addEventListener('click', () => {
     alternarIdioma('pt'); // Altera para português
 });
 
-document.querySelector('.bandeira1[src="../img/of-america.png"]').addEventListener('click', () => {
+document.querySelector('.bandeira1[src="img/of-america.png"]').addEventListener('click', () => {
     alternarIdioma('en'); // Altera para inglês
 });
 

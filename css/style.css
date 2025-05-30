@@ -457,7 +457,7 @@ cursor: pointer;
 .caixa-G{
 justify-self: center;
 width: 300px;
-height: 350px;
+height: 360px;
 border: 1px solid #fff;
 border-radius: 10px;
 box-shadow: var(--brilho-2);
@@ -498,7 +498,7 @@ width: 200px;
 background-color: hsl(246, 20%, 47%, 0.5);
 border-radius: 0px 0px 10px 10px;
 box-shadow: none;
-height: 100px;
+height: 110px;
 border-top: 1px solid #fff;
 text-align: justify;
 color: #fff;
@@ -1086,7 +1086,7 @@ z-index: 10;
 
 
 /*Tablet*/
-@media(min-width: 768px) and (max-width: 1023px) {
+@media(min-width: 768px) and (max-width: 1024px) {
   .menu{
     font-size: 1rem;
     gap: 8px;
