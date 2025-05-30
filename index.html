@@ -177,5 +177,25 @@
     <script src="../js/tradutorhome.JS"></script>
     <script src="../js/carrossel.js"></script>
     
+    <script>
+        // Verifica se o token está presente no localStorage
+        const token = localStorage.getItem('token');
+    
+        // Seleciona os elementos necessários
+        const loginLabel = document.querySelector('.login');
+        const menuDiv = document.querySelector('.login');
+    
+        if (token) {
+            // Se o token existir, substitui o conteúdo do login por uma imagem de usuário
+            loginLabel.innerHTML = `
+                <img src="../img/usuario-64.png" alt="Usuário" style="cursor: pointer;" />
+            `;
+            menuDiv.style.display = 'none'; // Oculta o menu
+        } else {
+            // Se o token não existir, mantém o menu visível
+            menuDiv.style.display = 'flex';
+        }
+    </script>
+
 </body>
 </html>
