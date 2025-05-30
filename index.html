@@ -181,21 +181,20 @@
         // Verifica se o token está presente no localStorage
         const token = localStorage.getItem('token');
     
-        // Seleciona os elementos necessários
+        // Seleciona o elemento de login
         const loginLabel = document.querySelector('.login');
-        const menuDiv = document.querySelector('.login');
     
         if (token) {
             // Se o token existir, substitui o conteúdo do login por uma imagem de usuário
-            loginLabel.innerHTML = `
-                <img src="../img/usuario-64.png" alt="Usuário" style="cursor: pointer;" />
+            loginLabel.outerHTML = `
+                <a href="atualização.html">
+                    <img src="img/usuário-64.png" alt="Usuário" class="login1";" />
+                </a>
             `;
-            menuDiv.style.display = 'none'; // Oculta o menu
-        } else {
-            // Se o token não existir, mantém o menu visível
-            menuDiv.style.display = 'flex';
         }
     </script>
+
+
 
 </body>
 </html>
