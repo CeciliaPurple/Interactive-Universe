@@ -59,6 +59,13 @@ text-decoration: none;
   margin-right: 50px;
 }
 
+
+.login {
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+}
+
 .menu{
   width: 25%;
   display: flex;

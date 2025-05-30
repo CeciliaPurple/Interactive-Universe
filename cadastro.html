@@ -89,22 +89,18 @@
         },
         body: JSON.stringify(payload)
       });
-
       if (response.ok) {
-        const data = await response.json();
-        // alert(`Usuário ${data.NOME} cadastrado com sucesso!`);
-        // form.reset(); 
-        // opcional: redirecionar para outra página
-        window.location.href = "/HMTL/login.html";
-      } else {
-        const errorData = await response.json();
-        alert(`Erro ao cadastrar usuário: ${errorData.error || 'Erro desconhecido'}`);
-      }
+    const data = await response.json();
+    // Redireciona para a página de login após o cadastro bem-sucedido
+   window.location.href = "./login.html"; // Certifique-se de que o caminho está correto
+} else {
+    const errorData = await response.json();
+    alert(`Erro ao cadastrar usuário: ${errorData.error || 'Erro desconhecido'}`);
+}
     } catch (error) {
       console.error('Erro na requisição:', error);
       alert('Erro ao conectar com a API.');
     }
   });
-</script>
-
+   </script>
 </html>
