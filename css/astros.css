@@ -278,9 +278,8 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 
 .linha{
   max-width: 800px;
-  position: relative;
-  right:16% ;
- 
+  display: flex;
+  justify-self: center;
 }
 
 /*card2*/
@@ -373,82 +372,213 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 
 
 /*footer*/
-
-.card {
+.card{
   display: flex;
-  height: 70px;
-  width: 200px;
-  justify-self: center;
+  justify-content: center;
   position: relative;
-  top: 20px;
-}
-   
-  /*copy*/
-footer{
-    margin-bottom: 20px;
+  cursor: pointer;
+  margin-top: 50px;
+  gap: 20px;
 }
 
-.agreement{
-  font-size: 20px;
-  font-family: var(--ff-bruno-ace);
+.icon-footer{
+  width: 50px;
+}
+
+footer {
   display: flex;
-  justify-self: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+  
+  footer p{
+  position: relative;
+  z-index: 6;
 }
 
 .card1{
-  display: flex;
+  display: flex;  
   position: relative;
-  cursor: pointer;
-  width: 50px;
-  bottom: 9px;
-  right: 50px;
-  gap: 30px; 
-}
-
-.facebook{
-  height: 50px;
-  width: 50px;
-}
-
-.instagram{
-  height: 50px;
-  width: 50px;
-}
-
-.twitter{
-  height: 50px;
-  width: 50px;
-}
-
-.youtube{
-  height: 50px;
-  width: 50px;
-}
-
-.facebook:hover{
-  background-color: #3d77cf;
-  border-radius: 10px;
-}
-
-
-.instagram:hover{
-  background-color: #7a2d63;
-  border-radius: 10px
-}
-
-.youtube:hover{
-  background-color: #852121;
-  border-radius: 10px;
-}
-
-.twitter:hover{
-  background-color: #b480cc;
-  border-radius: 10px;
-}
+  gap: 18px;
+  z-index: 10;
+  }
+  
+  .facebook:hover{
+    background-color: #3d77cf;
+    border-radius: 10px; 
+  }
+  
+  .instagram:hover{
+    background-color: #7a2d63;
+    border-radius: 10px; 
+  }
+  
+  .youtube:hover{
+    background-color: #852121;
+    border-radius: 10px;
+  }
+  
+  .twitter:hover{
+    background-color: #b480cc;
+    border-radius: 10px;
+  }
   
 /*responsividade*/
-@media (max-width:600px) {
 
+@media (max-width: 480px) {
+  .logo{
+    position: relative;
+    left: -30px;
+    width: 40px;
+    margin-right: 10px;
+  }
+
+  .menu{
+    font-size: 10px;
+    gap: 8px;
+    position: relative;
+    right: 40px;
+  }
+
+  .login{
+    width: 3.5rem;
+    height: 2rem;
+    font-size: 8px;
+    position: relative;
+    left: 25px;
+  }
+
+  .bar{
+    display: none;
+  }
+
+  .title{
+    margin-top: 45px;
+  }
+
+  .title2{
+    margin-top: 0;
+  }
+
+  .title, .title2{
+  font-size: var(--h2-32);
+  }
+
+  h1{
+    margin-left: 20px;
+    margin-top: -70px;
+    font-size: var(--h4-20);
+  }
+
+  /*card1*/
+  .caixa{
+  width: 200px;
+  height: 100px;
+  margin-left: 200px;
+  margin-top: 80px;
+  }
+
+  .text{
+  width: 70%;
+  margin-top: 60px;
+  font-size: 12px;
+  }
+
+  .linha{
+  max-width: 400px;
+  position: relative;
+  }
+
+/*card2*/
+.caixa2{
+  height: 300px;
+  max-width: 600px;
+  margin-left: 700px;
+  margin-top: 70px;
+  border-radius: 10px;
+  transition: 1.5s;
+}
+
+.text2{
+  width:45%;
+  justify-self: center;
+  text-align: and;
+  margin-top: 180px;
+  margin-bottom: 50px;
+  font-family: var(--ff-smooch);
+  font-weight: 400;
+  font-size: 26px;
+}
+
+.caixa2:hover{
+  box-shadow: 10px 10px 35px 10px hsla(231, 73%, 55%, 0.5);
+  transition: 1.5s;
+}
+
+.Cometas{
+    margin-left: 200px;
+    margin-top: -160px;
+    font-family: var(--ff-bruno);
+    font-size: 50px;
+}
+
+.linha2{
+ max-width: 1000px;
+ position: relative;
+ left: 23%;
+ bottom: 45px;
+}
+
+
+/*card3*/
+.caixa3{
+  background-image: url(../img/meteoro-mais-antigo.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  max-width: 600px;
+  margin-left: 200px;
+  margin-top: 70px;
+  border-radius: 10px;
+  transition: 1.5s;
+}
+
+.caixa3:hover{
+  box-shadow: 10px 10px 35px 10px hsla(12, 77%, 41%, 0.5);
+  transition: 1.5s;
+}
+
+.Meteóros{
+  margin-left: 950px;
+  margin-top: -180px;
+  font-family: var(--ff-bruno);
+  font-size: 50px;
+}
+.text3{
+  width:52%;
+  justify-self: center;
+  text-align: and;
+  margin-top: 180px;
+  margin-bottom: 50px;
+  font-family: var(--ff-smooch);
+  font-weight: 400;
+  font-size: 26px;
+}
+
+.linha3{
+  max-width: 1400px;
+  margin-left: 275px;
+  justify-self: center;
+  margin-top: -20px;
+}
+
+}
+
+
+@media (min-width: 481px) and (max-width:600px) {
   .logo{
   width: 60px;
   margin-right: 10px;
