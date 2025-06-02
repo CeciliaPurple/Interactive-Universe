@@ -517,12 +517,12 @@ footer {
 
   /*caixa 1*/
   .caixa{
-  max-width: 170px;
-  height: 150px;
-  position: relative;
-  margin-left: 5px;
-  margin-top: 20px;
-  }
+    max-width: 150px;
+    height: 150px;
+    position: relative;
+    margin-left: 5px;
+    margin-top: 20px;
+    }
 
   .caixa:hover{
   box-shadow: 9px 9px 37px 11px hsla(9, 72%, 52%, 0.5);
@@ -539,13 +539,13 @@ footer {
   }
 
 
-  /*caixa 2*/
-  .caixa2{
-  max-width: 200px;
-  height: 150px;
-  position: relative;
-  margin-left:  15rem;
-  }
+   /*caixa 2*/
+   .caixa2{
+    max-width: 150px;
+    height: 150px;
+    position: relative;
+    margin-left:  17rem;
+    }
 
   .caixa2:hover{
   box-shadow: 9px 9px 37px 11px hsl(219, 42%, 28%);
@@ -561,9 +561,9 @@ footer {
   margin-left: 20px;
   }
 
-  /*caixa 3*/
-  .caixa3{
-  max-width: 170px;
+ /*caixa 3*/
+ .caixa3{
+  max-width: 150px;
   height: 150px;
   position: relative;
   right: 195px;

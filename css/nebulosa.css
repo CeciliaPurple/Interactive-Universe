@@ -506,7 +506,7 @@ footer {
 
   /*caixa 1*/
   .caixa{
-  max-width: 170px;
+  max-width: 150px;
   height: 150px;
   position: relative;
   margin-left: 5px;
@@ -524,7 +524,7 @@ footer {
 
   /*caixa 2*/
   .caixa2{
-  max-width: 170px;
+  max-width: 150px;
   height: 150px;
   position: relative;
   margin-left:  17rem;
@@ -540,7 +540,7 @@ footer {
 
   /*caixa 3*/
   .caixa3{
-  max-width: 170px;
+  max-width: 150px;
   height: 150px;
   position: relative;
   right: 195px;
