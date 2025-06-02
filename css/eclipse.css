@@ -410,15 +410,31 @@ button:hover {
 
 /*footer*/
 
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  
+  }
+  
+footer p{
+  position: relative;
+  z-index: 6;
+}
+
 
 .card1{
+  justify-self: center;
   display: flex;
-   position: relative;
-   cursor: pointer;
-   width: 50px;
-   top: -10px;
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  top: -10px;
   left: 50rem;
-   gap: 30px;
+  gap: 30px;
    
  }
 
@@ -468,27 +484,169 @@ button:hover {
   
 }
 
-
-
-  /*copy*/
-
-.agreement{
-  font-size: 20px;
-  font-family: var(--ff-bruno-ace);
-  display: flex;
-  justify-self: center;
-  padding-bottom: 20px;
-}
-
-  footer{
-    clear: both;
-    margin-top: 37px;
- 
+/*footer*/
+.card1{
+  display: flex;  
+  position: relative;
+  gap: 18px;
+  z-index: 10;
+  }
+  
+  .facebook:hover{
+    background-color: #3d77cf;
+    border-radius: 10px; 
+  }
+  
+  .instagram:hover{
+    background-color: #7a2d63;
+    border-radius: 10px; 
+  }
+  
+  .youtube:hover{
+    background-color: #852121;
+    border-radius: 10px;
+  }
+  
+  .twitter:hover{
+    background-color: #b480cc;
+    border-radius: 10px;
   }
 
-  /*responsividade*/
-@media (max-width:600px) {
 
+  /*responsividade*/
+@media (max-width: 480px){
+  .logo{
+    position: relative;
+    left: -30px;
+    width: 40px;
+    margin-right: 10px;
+  }
+
+  .menu{
+    font-size: 10px;
+    gap: 8px;
+    position: relative;
+    right: 40px;
+  }
+
+  .login{
+    width: 3.5rem;
+    height: 2rem;
+    font-size: 8px;
+    position: relative;
+    left: 25px;
+  }
+
+  .bar{
+    display: none;
+  }
+
+  .title{
+  margin-top: 45px;
+  font-size: var(--h2-32);
+  }
+
+  /*caixa 1*/
+  .caixa{
+  max-width: 200px;
+  height: 150px;
+  position: relative;
+  margin-left: 0px;
+  margin-top: 20px;
+  }
+
+  .caixa:hover{
+  box-shadow: 9px 9px 37px 11px hsla(9, 72%, 52%, 0.5);
+  transition: all 0.9s ease;
+  transform: rotate(360deg);
+  }
+
+  .text{
+  font-size: 12px;
+  position: relative;
+  top: 130px;
+  width: 50%;
+  margin-right: 20px;
+  }
+
+
+  /*caixa 2*/
+  .caixa2{
+  max-width: 200px;
+  height: 150px;
+  position: relative;
+  margin-left:  15rem;
+  }
+
+  .caixa2:hover{
+  box-shadow: 9px 9px 37px 11px hsl(219, 42%, 28%);
+  transform: rotateY(360deg);
+  transition: all 1.5s ease;
+  }
+
+  .text2{
+  font-size: 12px;
+  position: relative;
+  top: 130px;
+  width: 50%;
+  margin-left: 20px;
+  }
+
+  /*caixa 3*/
+  .caixa3{
+  max-width: 170px;
+  height: 150px;
+  position: relative;
+  right: 195px;
+  bottom: -200px;
+  }
+
+  .caixa3:hover{
+  box-shadow:9px 9px 37px 11px hsla(198, 39%, 51%, 0.5);
+  transition: all 0.7s ease;
+  transform: scale(1.05);
+  }
+
+  .text3{
+  font-size: 12px;
+  position: relative;
+  bottom: 140px;
+  left: 85px;
+  width: 50%;
+  margin-top: 220px;
+  }
+
+
+  /*chat*/
+  .container{
+    width: 500px;
+    position: relative;
+    height: 400px;
+    bottom: 100px;
+    left: 5px;
+  }
+
+  .card1{
+    position: relative;
+    top: 0px;
+    left: -2.5rem;
+  }
+
+  .copy{
+    position: relative;
+    font-size: 0.5rem;
+  }
+
+  .facebook, 
+  .instagram, 
+  .youtube, 
+  .twitter{
+    width: 20px;
+  }
+}
+
+
+@media (min-width: 480px) and (max-width:600px) {
   .logo{
   width: 60px;
   margin-right: 10px;
@@ -591,32 +749,29 @@ button:hover {
   }
 
   .card{
-    margin-top: 0;
+    position: relative;
+    bottom:200px;
   }
 
-  .card1{
-    left: 170px;
-    cursor: pointer;
+  .copy{
+    position: relative;
+    top: 260px;
   }
 
   .facebook{
-    height: 40px;
-    width: 40px;
+    width: 30px;
   }
 
   .instagram{
-    height: 40px;
-    width: 40px;
-  }
-
-  .twitter{
-    height: 40px;
-    width: 40px;
+    width: 30px;
   }
 
   .youtube{
-    height: 40px;
-    width: 40px;
+    width: 30px;
+  }
+
+  .twitter{
+    width: 30px;
   }
 
 }
@@ -726,32 +881,29 @@ button:hover {
   }
   
   .card{
-      margin-top: 0;
+    position: relative;
+    bottom:200px;
   }
-  
-  .card1{
-      left: 170px;
-      cursor: pointer;
+
+  .copy{
+    position: relative;
+    top: 260px;
   }
-  
+
   .facebook{
-      height: 40px;
-      width: 40px;
+    width: 30px;
   }
-  
+
   .instagram{
-      height: 40px;
-      width: 40px;
+    width: 30px;
   }
-  
-  .twitter{
-      height: 40px;
-      width: 40px;
-  }
-  
+
   .youtube{
-      height: 40px;
-      width: 40px;
+    width: 30px;
+  }
+
+  .twitter{
+    width: 30px;
   }
 }
 
@@ -864,31 +1016,12 @@ button:hover {
   }
   
   .card{
-      margin-top: 0;
+    position: relative;
+    bottom:200px;
   }
-  
-  .card1{
-      left: 170px;
-      cursor: pointer;
-  }
-  
-  .facebook{
-      height: 40px;
-      width: 40px;
-  }
-  
-  .instagram{
-      height: 40px;
-      width: 40px;
-  }
-  
-  .twitter{
-      height: 40px;
-      width: 40px;
-  }
-  
-  .youtube{
-      height: 40px;
-      width: 40px;
+
+  .copy{
+    position: relative;
+    top: 260px;
   }
 }
