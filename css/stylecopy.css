@@ -686,12 +686,12 @@ z-index: 10;
   .logo{
     position: relative;
     left: -15px;
-    width: 30px;
+    width: 40px;
     margin-right: 10px;
   }
 
   .menu{
-    font-size: 8px;
+    font-size: 8.5px;
     gap: 8px;
     position: relative;
     right: 30px;
@@ -702,7 +702,7 @@ z-index: 10;
     height: 2rem;
     font-size: 8px;
     position: relative;
-    left: 20px;
+    left: 25px;
   }
 
   .bar{
@@ -710,21 +710,21 @@ z-index: 10;
   }
 
   .bandeira1{
-    width: 20px;
+    width: 25px;
     height: auto;
     position: relative;
     left: 15px;
   }
 
   .titulo{
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     position: relative;
-    top: 50px;
+    top: 80px;
   }
 
   .sub-titulo{
-    font-size: 1rem;
-    top: 50px;
+    font-size: 2rem;
+    top: 80px;
   }
   
   .imagem{
@@ -732,27 +732,31 @@ z-index: 10;
   }
 
   .noticia-sub-titulo{
-    font-size: 0.5rem;
+    font-size: 0.75rem;
   }
 
   .noticia-titulo{
-     font-size: 1rem;
+     font-size: 1.5rem;
   }
 
   .noticia-texto{
-    font-size:0.4rem;
+    font-size:0.8rem;
   }
   
  .noticia1{
     max-width: 100%;
-    margin-left: 25px;
+    margin-left: 15px;
     margin-right: 5px;
     position: relative;
     top: 100px;
   }
 
+  .grupo-noticia1{
+    width: 100%;
+  }
+
   .eclipse{
-    width: 100px;
+    width: 150px;
   }
 
   .noticia2{
@@ -767,7 +771,7 @@ z-index: 10;
   }
 
   .nebu{
-    width: 100px;
+    width: 150px;
   }
 
   /*CARROSSEL*/
@@ -778,75 +782,74 @@ z-index: 10;
 
   /*CAIXA GRANDE*/
   .seta-dire{
-    font-size: 1rem;
+    font-size: 2rem;
     position: relative;
-    top: 55px;
+    top: 70px;
   }
 
   .seta-esq{
-    font-size: 1rem;
+    font-size: 2rem;
     position: relative;
-    top :55px;
+    top: 70px;
   }
 
   .caixa-G{
-    width: 80px;
-    height: 100px;
+    width: 120px;
+    height: 140px;
     position: relative;
     bottom: -30px; 
   }
 
   .nome-planeta{
-    width: 40px;
-    font-size: 0.35rem;
-    top: -12px;
+    width: 60px;
+    font-size: 0.5rem;
+    top: -18px;
   }
 
   .planeta img{
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
   }
 
   .meia-caixa-G{
-    height: 24px;
-    font-size: 0.3rem;
+    height: 30px;
+    font-size: 0.4rem;
     padding: 2px 10px;
   }
 
   /*CAIXA MÉDIA*/
   .caixa-M{
-    width: 60px;
-    height: 80px;
-    font-size: 1px;
-    bottom: -50px;
+    width: 80px;
+    height: 100px;
+    bottom: -60px;
   }
 
   .planeta-M img{
-    width: 30px;
+    width: 40px;
   }
 
   .meia-caixa-M{
-    height: 17px;
-    font-size: 0.17rem;
+    height: 20px;
+    font-size: 0.25rem;
     padding: 3px  10px ;
   }
 
   /*CAIXA PEQUENA*/
   .caixa-P{
-    width: 40px;
-    height: 45px;
-    bottom: -70px;
+    width: 50px;
+    height: 55px;
+    bottom: -80px;
   }
 
   .nome-planeta-P{
-    width: 30px;
-    font-size: 0.2rem;
+    width: 40px;
+    font-size: 0.3rem;
     top: -10px;
     padding: 4px;
   }
 
   .planeta-P img{
-    width: 20px;
+    width: 30px;
   }
 
   .meia-caixa-P{
@@ -854,27 +857,30 @@ z-index: 10;
   }
 
   .sol {
-    width: 320px;
+    width: 400px;
   }
 
   .card{
     position: relative;
-    bottom: 340px;
+    bottom: 320px;
   }
 
   .copy{
     position: relative;
-    top: 110px;
-    font-size: 0.4rem;
+    top: 140px;
+    font-size: 0.5rem;
   }
 
   .facebook, 
   .instagram, 
   .youtube, 
   .twitter{
-    width: 10px;
+    width: 20px;
   }
 }
+
+
+/*---------------------------------------------*/
 
 /*Celular*/
 @media (min-width: 481px) and (max-width: 649px){
