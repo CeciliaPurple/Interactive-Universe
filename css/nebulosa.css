@@ -422,26 +422,6 @@ max-width: 600px;
   width: 50px;
 }
 
-.facebook:hover{
-  background-color: #3d77cf;
-  border-radius: 10px; 
-}
-
-.instagram:hover{
-  background-color: #7a2d63;
-  border-radius: 10px; 
-}
-
-.youtube:hover{
-  background-color: #852121;
-  border-radius: 10px;
-}
-
-.twitter:hover{
-  background-color: #b480cc;
-  border-radius: 10px;
-}
-
  @keyframes bounce_613 {
    100% {
      transform: scale(1);
@@ -533,12 +513,6 @@ footer {
   margin-top: 20px;
   }
 
-  .caixa:hover{
-  box-shadow: 9px 9px 37px 11px hsla(9, 72%, 52%, 0.5);
-  transition: all 0.9s ease;
-  transform: rotate(360deg);
-  }
-
   .text{
   font-size: 12px;
   position: relative;
@@ -553,13 +527,7 @@ footer {
   max-width: 170px;
   height: 150px;
   position: relative;
-  margin-left:  15rem;
-  }
-
-  .caixa2:hover{
-  box-shadow: 9px 9px 37px 11px hsl(219, 42%, 28%);
-  transform: rotateY(360deg);
-  transition: all 1.5s ease;
+  margin-left:  17rem;
   }
 
   .text2{
@@ -577,12 +545,6 @@ footer {
   position: relative;
   right: 195px;
   bottom: -200px;
-  }
-
-  .caixa3:hover{
-  box-shadow:9px 9px 37px 11px hsla(198, 39%, 51%, 0.5);
-  transition: all 0.7s ease;
-  transform: scale(1.05);
   }
 
   .text3{
@@ -614,7 +576,6 @@ footer {
 
   .container button{
     font-size: 1rem;
-
   }
 
   .container h2{
@@ -681,12 +642,6 @@ footer {
   margin-top: 20px;
   }
 
-  .caixa:hover{
-  box-shadow: 9px 9px 37px 11px hsla(9, 72%, 52%, 0.5);
-  transition: all 0.9s ease;
-  transform: rotate(360deg);
-  }
-
   .text{
   font-size: 12px;
   position: relative;
@@ -703,12 +658,6 @@ footer {
   margin-left:  24rem;
   }
 
-  .caixa2:hover{
-  box-shadow: 9px 9px 37px 11px hsl(219, 42%, 28%);
-  transform: rotateY(360deg);
-  transition: all 1.5s ease;
-  }
-
   .text2{
   font-size: 12px;
   position: relative;
@@ -723,12 +672,6 @@ footer {
   position: relative;
   right:120px;
   bottom: -200px;
-  }
-
-  .caixa3:hover{
-  box-shadow:9px 9px 37px 11px hsla(198, 39%, 51%, 0.5);
-  transition: all 0.7s ease;
-  transform: scale(1.05);
   }
 
   .text3{
@@ -755,30 +698,15 @@ footer {
   }
 
   .card1{
-    left: 170px;
     cursor: pointer;
   }
 
-  .facebook{
-    height: 40px;
-    width: 40px;
-  }
-
-  .instagram{
-    height: 40px;
-    width: 40px;
-  }
-
-  .twitter{
-    height: 40px;
-    width: 40px;
-  }
-
+  .facebook,  
+  .instagram, 
+  .twitter, 
   .youtube{
-    height: 40px;
-    width: 40px;
+    width: 30px;
   }
-
 }
 
 
@@ -816,12 +744,6 @@ footer {
     margin-left: 100px;
   }
   
-  .caixa:hover{
-    box-shadow: 9px 9px 37px 11px hsla(9, 72%, 52%, 0.5);
-    transition: all 0.9s ease;
-    transform: rotate(360deg);
-  }
-  
   .text{
     font-size: 12px;
     position: relative;
@@ -838,12 +760,6 @@ footer {
     margin-left:  28rem;
   }
   
-  .caixa2:hover{
-    box-shadow: 9px 9px 37px 11px hsl(219, 42%, 28%);
-    transform: rotateY(360deg);
-    transition: all 1.5s ease;
-  }
-  
   .text2{
     font-size: 12px;
     position: relative;
@@ -858,12 +774,6 @@ footer {
     position: relative;
     right:120px;
     bottom: -200px;
-  }
-  
-  .caixa3:hover{
-    box-shadow:9px 9px 37px 11px hsla(198, 39%, 51%, 0.5);
-    transition: all 0.7s ease;
-    transform: scale(1.05);
   }
   
   .text3{
@@ -890,7 +800,6 @@ footer {
   }
   
   .card1{
-      left: 170px;
       cursor: pointer;
   }
   
@@ -952,12 +861,6 @@ footer {
     margin-left: 100px;
   }
   
-  .caixa:hover{
-    box-shadow: 9px 9px 37px 11px hsla(9, 72%, 52%, 0.5);
-    transition: all 0.9s ease;
-    transform: rotate(360deg);
-  }
-  
   .text{
     font-size: 1rem;
     position: relative;
@@ -976,12 +879,6 @@ footer {
     margin-right: 5vw;
   }
   
-  .caixa2:hover{
-    box-shadow: 9px 9px 37px 11px hsl(219, 42%, 28%);
-    transform: rotateY(360deg);
-    transition: all 1.5s ease;
-  }
-  
   .text2{
     font-size: 1rem;
     position: relative;
@@ -997,13 +894,7 @@ footer {
     right:120px;
     bottom: -200px;
   }
-  
-  .caixa3:hover{
-    box-shadow:9px 9px 37px 11px hsla(198, 39%, 51%, 0.5);
-    transition: all 0.7s ease;
-    transform: scale(1.05);
-  }
-  
+
   .text3{
     font-size: 1rem;
     position: relative;
@@ -1028,7 +919,6 @@ footer {
   }
   
   .card1{
-      left: 170px;
       cursor: pointer;
   }
   

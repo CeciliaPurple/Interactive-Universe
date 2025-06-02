@@ -408,36 +408,6 @@ button:hover {
 }
 
 
-/*footer*/
-
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  
-  }
-  
-footer p{
-  position: relative;
-  z-index: 6;
-}
-
-
-.card1{
-  justify-self: center;
-  display: flex;
-  position: relative;
-  cursor: pointer;
-  width: 50px;
-  top: -10px;
-  left: 50rem;
-  gap: 30px;
-   
- }
-
  .facebook{
   height: 50px;
   width: 50px;
@@ -458,33 +428,17 @@ footer p{
   width: 50px;
  }
 
-.facebook:hover{
-  background-color: #3d77cf;
-  border-radius: 10px;
-  
-}
-
-
-.instagram:hover{
-  background-color: #7a2d63;
-  border-radius: 10px;
-  
-}
-
-
-.youtube:hover{
-  background-color: #852121;
-  border-radius: 10px;
-  
-}
-
-.twitter:hover{
-  background-color: #b480cc;
-  border-radius: 10px;
-  
-}
 
 /*footer*/
+.card{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  margin-top: 50px;
+  gap: 20px;
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -563,10 +517,10 @@ footer {
 
   /*caixa 1*/
   .caixa{
-  max-width: 200px;
+  max-width: 170px;
   height: 150px;
   position: relative;
-  margin-left: 0px;
+  margin-left: 5px;
   margin-top: 20px;
   }
 
@@ -667,7 +621,6 @@ footer {
   .card1{
     position: relative;
     top: 7px;
-    left: -2.5rem;
   }
 
   .copy{
@@ -787,35 +740,23 @@ footer {
   }
 
   .card{
-    position: relative;
-    bottom:200px;
+    margin-top: 0;
   }
 
-  .copy{
-    position: relative;
-    top: 260px;
+  .card1{
+    cursor: pointer;
   }
 
-  .facebook{
-    width: 30px;
-  }
-
-  .instagram{
-    width: 30px;
-  }
-
+  .facebook,  
+  .instagram, 
+  .twitter, 
   .youtube{
     width: 30px;
   }
-
-  .twitter{
-    width: 30px;
-  }
-
 }
 
 
-@media (min-width: 601px) and (max-width:768px) {
+@media (min-width: 601px) and (max-width:767px) {
   .logo{
     width: 60px;
     margin-right: 10px;
@@ -911,38 +852,40 @@ footer {
   
   /*chat*/
   .container{
-      width: 500px;
-      position: relative;
-      height: 400px;
-      bottom: 100px;
-      left: 5px;
-  }
-  
-  .card{
+    width: 500px;
     position: relative;
-    bottom:200px;
-  }
+    height: 400px;
+    bottom: 100px;
+    left: 5px;
+}
 
-  .copy{
-    position: relative;
-    top: 260px;
-  }
+.card{
+    margin-top: 0;
+}
 
-  .facebook{
-    width: 30px;
-  }
+.card1{
+    cursor: pointer;
+}
 
-  .instagram{
-    width: 30px;
-  }
+.facebook{
+    height: 40px;
+    width: 40px;
+}
 
-  .youtube{
-    width: 30px;
-  }
+.instagram{
+    height: 40px;
+    width: 40px;
+}
 
-  .twitter{
-    width: 30px;
-  }
+.twitter{
+    height: 40px;
+    width: 40px;
+}
+
+.youtube{
+    height: 40px;
+    width: 40px;
+}
 }
 
 @media(min-width: 768px) and (max-width: 1024px){
@@ -1054,12 +997,30 @@ footer {
   }
   
   .card{
-    position: relative;
-    bottom:200px;
+      margin-top: 0;
   }
-
-  .copy{
-    position: relative;
-    top: 260px;
+  
+  .card1{
+      cursor: pointer;
+  }
+  
+  .facebook{
+      height: 40px;
+      width: 40px;
+  }
+  
+  .instagram{
+      height: 40px;
+      width: 40px;
+  }
+  
+  .twitter{
+      height: 40px;
+      width: 40px;
+  }
+  
+  .youtube{
+      height: 40px;
+      width: 40px;
   }
 }
