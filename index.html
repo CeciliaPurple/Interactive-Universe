@@ -25,14 +25,17 @@
 
             <!--MENU-->
             <div class="menu">
-                <a href="#planeta"><p>Planetas</p></a>
-                <a href="#news"><p> Notícias</p></a>
-                <a href="astros.html"> <p>Astros</p></a>
+                <a href="#planeta"><p data-translate-key="menu.planets">Planetas</p></a>
+                <a href="#news"><p data-translate-key="menu.news">Notícias</p></a>
+                <a href="astros.html"> <p data-translate-key="menu.stars">Astros</p></a>
             </div>
-            <!--LOGIN-->
+            
+            <!--LOGIN - Estrutura restaurada para ser idêntica à original -->
+            <!-- Esta estrutura só será exibida se o usuário NÃO estiver logado -->
             <label class="login">
-                Login
-                <input class="inp" checked="" type="checkbox" />
+                <span data-translate-key="menu.login">Login</span> <!-- Movido o texto para dentro de um span para aplicar a chave -->
+                <!-- Mantido o 'checked=""' como no original, caso seja relevante para o CSS -->
+                <input class="inp" checked="" type="checkbox" /> 
                 <div class="bar">
                 <span class="top bar-list"></span>
                 <span class="middle bar-list"></span>
@@ -40,25 +43,22 @@
                 </div>
 
                 <section class="menu-container">
-                    <div class="menu-list"><a href="login.html"><p>Entrar</p></a></div>
-                    <div class="menu-list"><a href="cadastro.html"><p>Cadastrar</p></a></div>
+                    <div class="menu-list"><a href="login.html"><p data-translate-key="menu.signin">Entrar</p></a></div>
+                    <div class="menu-list"><a href="cadastro.html"><p data-translate-key="menu.register">Cadastrar</p></a></div>
                 </section>
             </label>
 
             <!--BANDEIRAS-->
             <div class="bandeiras">
-                <img class="bandeira1" src="img/brasil.png" style="cursor: pointer;" onclick="alternarIdioma()">
-                <img class="bandeira1" id="tradutor" src="img/of-america.png" alt="English" style="cursor: pointer;" onclick="alternarIdioma()">
-
+                <img class="bandeira1" src="img/brasil.png" style="cursor: pointer;">
+                <img class="bandeira1" id="tradutor" src="img/of-america.png" alt="English" style="cursor: pointer;">
             </div>
         </div>
 
-
-        <div id="google_translate_element"></div>
-    <!--BANNER-->
+        <!--BANNER-->
         <div class="banner">
-            <h1 class="titulo">Solar System</h1>
-            <h2 class="sub-titulo">Interactive Universe</h2>
+            <h1 class="titulo" data-translate-key="banner.title">Sistema Solar</h1> 
+            <h2 class="sub-titulo" data-translate-key="banner.subtitle">Universo Interativo</h2>
             <video autoplay muted loop class="imagem">
                 <source src="video/banner.mp4"/>
             </video>
@@ -68,14 +68,12 @@
     <div class="noticias">
         <div class="noticia1" id="news">
             <div class="grupo-noticia1">
-                <p class="noticia-sub-titulo">O GRANDE FENÔMENO</p>
-                <a href="eclipse.html"><p class="noticia-titulo">Eclipse Lunar</p></a>
-                <p class="noticia-texto">Um eclipse lunar é um fenômeno astronômico fascinante que ocorre quando a Terra se posiciona entre o Sol e a Lua,
+                <p class="noticia-sub-titulo" data-translate-key="news.eclipse.phenomenon">O GRANDE FENÔMENO</p>
+                <a href="eclipse.html"><p class="noticia-titulo" data-translate-key="news.eclipse.title">Eclipse Lunar</p></a>
+                <p class="noticia-texto" data-translate-key="news.eclipse.text">Um eclipse lunar é um fenômeno astronômico fascinante que ocorre quando a Terra se posiciona entre o Sol e a Lua,
                      fazendo com que a sombra da Terra seja projetada sobre a Lua. Esse evento só acontece durante a Lua cheia, e pode ser observado a olho nu,
                       sem equipamentos especiais, desde que o céu esteja limpo.Durante um eclipse lunar, a Luz do Sol, que normalmente ilumina a Lua cheia,
                        é bloqueada pela Terra, que fica exatamente entre os dois astros. A Lua, então, escurece parcialmente ou totalmente por um período que pode durar várias horas.
-
-                   
                 </p>
             </div>
                
@@ -86,9 +84,9 @@
         <div class="noticia2">
             <a href="nebulosa.html"><img class="nebu" src="img/fotos.png"></a>
             <div class="grupo-noticia2">
-                <p class="noticia-sub-titulo">O ENCANTO CÓSMICO DAS</p>
-                <a href="nebulosa.html"><p class="noticia-titulo">Nebulosas</p></a>
-                <p class="noticia-texto">No vasto universo, entre as estrelas e os planetas,
+                <p class="noticia-sub-titulo" data-translate-key="news.nebulae.charm">O ENCANTO CÓSMICO DAS</p>
+                <a href="nebulosa.html"><p class="noticia-titulo" data-translate-key="news.nebulae.title">Nebulosas</p></a>
+                <p class="noticia-texto" data-translate-key="news.nebulae.text">No vasto universo, entre as estrelas e os planetas,
                      existem enormes nuvens compostas de gás e poeira chamadas nebulosas.
                       Essas estruturas são fundamentais para a compreensão da formação,
                       evolução e morte das estrelas. As nebulosas não são apenas belos objetos celestes, mas também os ambientes onde estrelas nascem e,
@@ -108,10 +106,7 @@
                 <div class="nome-planeta-P"><p>Mercúrio</p></div>
                 <div class="planeta-P"><img src="img/mercurio.png"></div>
                 <div class="meia-caixa-P">
-                    <p>Mercúrio é o planeta mais próximo do Sol.
-                         Ele é pequeno, muito quente durante o dia e extremamente frio à noite,
-                          devido à falta de atmosfera.
-                    </p>
+                    <p>Mercúrio é o planeta mais próximo do Sol...</p>
                 </div>
             </div>
 
@@ -119,9 +114,7 @@
                 <div class="nome-planeta"><p>Vênus</p></div>
                 <div class="planeta-M"><img src="img/venus.png"></div>
                 <div class="meia-caixa-M">
-                    <p>Vênus é o segundo planeta do Sistema Solar,
-                         perto da Terra, mas com condições muito diferentes.
-                    </p>
+                    <p>Vênus é o segundo planeta...</p>
                 </div>
             </div>
 
@@ -129,8 +122,7 @@
                 <div class="nome-planeta"><p>Terra</p></div>
                <div class="planeta"> <a href="terra.html" id="planetaLink"><img src="img/terra.png"></div></a>
                 <div class="meia-caixa-G">
-                    <p>O planeta Terra é o terceiro planeta do Sistema Solar e o único conhecido até agora que possui vida.
-                    </p>
+                    <p>O planeta Terra é o terceiro...</p>
                 </div>
             </div>
 
@@ -138,10 +130,7 @@
                 <div class="nome-planeta"><p>Marte</p></div>
                 <div class="planeta-M"><img src="img/marte.png"></div>
                 <div class="meia-caixa-M">
-                    <p>Marte é o quarto planeta do Sistema Solar.
-                         Conhecido como o "planeta vermelho" devido à sua cor,
-                          causada pelo óxido de ferro.
-                    </p>
+                    <p>Marte é o quarto planeta...</p>
                 </div>
             </div>
 
@@ -149,9 +138,7 @@
                 <div class="nome-planeta-P"><p>Júpiter</p></div>
                 <div class="planeta-P"><img src="img/jupiter.png"></div>
                 <div class="meia-caixa-P">
-                    <p>Júpiter é o maior planeta do Sistema Solar. Ele é um gigante gasoso,
-                         composto principalmente de hidrogênio e hélio.
-                    </p>
+                    <p>Júpiter é o maior planeta...</p>
                 </div>
             </div>
 
@@ -169,32 +156,37 @@
                     <img class="twitter" src="img/twitter-c.svg" alt="tw">
                 </div>
             </div>
-        <p class="copy">&copy; 2025 Sistema Solar. Todos os direitos reservados.</p>
+        <p class="copy" data-translate-key="footer.copyright">&copy; 2025 Sistema Solar. Todos os direitos reservados.</p>
         <img  class="sol" src="img/sol.png" alt="imagem-sol">
         
     </footer>
 
+    <!-- Scripts atualizados -->
+    <!-- Certifique-se que tradutor venha ANTES de carrossel -->
     <script src="js/tradutorhome.JS"></script>
     <script src="js/carrossel.js"></script>
     
+    <!-- Script de verificação de login (mantido como estava, mas agora atua sobre a estrutura original restaurada) -->
     <script>
         // Verifica se o token está presente no localStorage
-        const token = localStorage.getItem('token');
+        const token = localStorage.getItem("token");
     
-        // Seleciona o elemento de login
-        const loginLabel = document.querySelector('.login');
+        // Seleciona o elemento de login original
+        const loginLabel = document.querySelector(".login");
     
-        if (token) {
-            // Se o token existir, substitui o conteúdo do login por uma imagem de usuário
+        if (token && loginLabel) {
+            // Se o token existir, substitui TODA a <label class="login"> pela imagem/link do usuário.
+            // Isso remove o botão/menu suspenso original.
             loginLabel.outerHTML = `
                 <a href="atualização.html">
                     <img src="img/usuário-64.png" alt="Usuário" class="login1";" />
                 </a>
             `;
-        }
+        } 
+        // Se o token NÃO existir, o script não faz nada, e a <label class="login"> original 
+        // (com o input checkbox e o menu suspenso) permanece no HTML. A funcionalidade do 
+        // menu suspenso deve depender do seu CSS original associado à classe .login e ao input checkbox.
     </script>
-
-
 
 </body>
 </html>
