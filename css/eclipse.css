@@ -485,6 +485,21 @@ footer p{
 }
 
 /*footer*/
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  
+}
+  
+  footer p{
+  position: relative;
+  z-index: 6;
+}
+
 .card1{
   display: flex;  
   position: relative;
@@ -617,18 +632,41 @@ footer p{
   }
 
 
-  /*chat*/
-  .container{
-    width: 500px;
+   /*chat*/
+   .container{
+    width: 300px;
     position: relative;
     height: 400px;
     bottom: 100px;
     left: 5px;
   }
 
+  .container h1{
+    font-size: 18px;
+  }
+
+  .container textarea{
+    height: 45px;
+  }
+
+  .container button{
+    font-size: 1rem;
+
+  }
+
+  .container h2{
+    font-size: 1rem;
+  }
+
+  .comment{
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  /*fotter*/
   .card1{
     position: relative;
-    top: 0px;
+    top: 7px;
     left: -2.5rem;
   }
 
@@ -646,7 +684,7 @@ footer p{
 }
 
 
-@media (min-width: 480px) and (max-width:600px) {
+@media (min-width: 481px) and (max-width:600px) {
   .logo{
   width: 60px;
   margin-right: 10px;

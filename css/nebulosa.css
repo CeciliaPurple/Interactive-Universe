@@ -448,29 +448,206 @@ max-width: 600px;
    }
  }
  
- /*copy*/
- .agreement{
-  font-size: 20px;
-  font-family: var(--ff-bruno-ace);
-  display: flex;
-  justify-self: center;
-  padding: 20px 0px;
- }
- 
- footer{
-  clear: both;
-  position: relative;
-  bottom: 0px;
- }
- 
- .icons{
-  position: relative;
-  bottom: 0px;
- }
 
+/*footer*/
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+  
+  footer p{
+  position: relative;
+  z-index: 6;
+}
+
+.card1{
+  display: flex;  
+  position: relative;
+  gap: 18px;
+  z-index: 10;
+  }
+  
+  .facebook:hover{
+    background-color: #3d77cf;
+    border-radius: 10px; 
+  }
+  
+  .instagram:hover{
+    background-color: #7a2d63;
+    border-radius: 10px; 
+  }
+  
+  .youtube:hover{
+    background-color: #852121;
+    border-radius: 10px;
+  }
+  
+  .twitter:hover{
+    background-color: #b480cc;
+    border-radius: 10px;
+  }
 
 /*responsividade*/
-@media (max-width:600px) {
+@media (max-width: 480px){
+  .logo{
+    position: relative;
+    left: -30px;
+    width: 40px;
+    margin-right: 10px;
+  }
+
+  .menu{
+    font-size: 10px;
+    gap: 8px;
+    position: relative;
+    right: 40px;
+  }
+
+  .login{
+    width: 3.5rem;
+    height: 2rem;
+    font-size: 8px;
+    position: relative;
+    left: 25px;
+  }
+
+  .bar{
+    display: none;
+  }
+
+  .title{
+  margin-top: 45px;
+  font-size: var(--h2-32);
+  }
+
+  /*caixa 1*/
+  .caixa{
+  max-width: 170px;
+  height: 150px;
+  position: relative;
+  margin-left: 5px;
+  margin-top: 20px;
+  }
+
+  .caixa:hover{
+  box-shadow: 9px 9px 37px 11px hsla(9, 72%, 52%, 0.5);
+  transition: all 0.9s ease;
+  transform: rotate(360deg);
+  }
+
+  .text{
+  font-size: 12px;
+  position: relative;
+  top: 130px;
+  width: 50%;
+  margin-right: 20px;
+  }
+
+
+  /*caixa 2*/
+  .caixa2{
+  max-width: 170px;
+  height: 150px;
+  position: relative;
+  margin-left:  15rem;
+  }
+
+  .caixa2:hover{
+  box-shadow: 9px 9px 37px 11px hsl(219, 42%, 28%);
+  transform: rotateY(360deg);
+  transition: all 1.5s ease;
+  }
+
+  .text2{
+  font-size: 12px;
+  position: relative;
+  top: 130px;
+  width: 50%;
+  margin-left: 20px;
+  }
+
+  /*caixa 3*/
+  .caixa3{
+  max-width: 170px;
+  height: 150px;
+  position: relative;
+  right: 195px;
+  bottom: -200px;
+  }
+
+  .caixa3:hover{
+  box-shadow:9px 9px 37px 11px hsla(198, 39%, 51%, 0.5);
+  transition: all 0.7s ease;
+  transform: scale(1.05);
+  }
+
+  .text3{
+  font-size: 12px;
+  position: relative;
+  bottom: 140px;
+  left: 85px;
+  width: 50%;
+  margin-top: 220px;
+  }
+
+
+  /*chat*/
+  .container{
+    width: 300px;
+    position: relative;
+    height: 400px;
+    bottom: 100px;
+    left: 5px;
+  }
+
+  .container h1{
+    font-size: 18px;
+  }
+
+  .container textarea{
+    height: 45px;
+  }
+
+  .container button{
+    font-size: 1rem;
+
+  }
+
+  .container h2{
+    font-size: 1rem;
+  }
+
+  .comment{
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  /*fotter*/
+  .card1{
+    position: relative;
+    top: -5px;
+  }
+
+  .copy{
+    position: relative;
+    font-size: 0.5rem;
+  }
+
+  .facebook, 
+  .instagram, 
+  .youtube, 
+  .twitter{
+    width: 20px;
+  }
+}
+
+
+
+@media (min-width: 481px) and (max-width:600px) {
 
   .logo{
   width: 60px;
