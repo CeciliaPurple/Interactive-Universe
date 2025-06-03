@@ -1,95 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saturno</title>
     <!--LINK CSS-->
-    <link rel="stylesheet" href="css/planetas.css">
+    <link rel="stylesheet" href="css/planetas.css" />
 
     <!--LOGO GUIA-->
-    <link rel="shortcut icon" href="img/favicon.ico" width="120px"  heigth="120px" type="image/png">
+    <link
+      rel="shortcut icon"
+      href="img/favicon.ico"
+      width="120px"
+      heigth="120px"
+      type="image/png"
+    />
 
     <!--FONTES-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-<!--HEADER-->
+  <body>
+    <!--HEADER-->
     <main>
-        <div class="header">
-            <a href="index.html"><img class="logo" src="img/logo.png"></a>
+      <div class="header">
+        <a href="index.html"><img class="logo" src="img/logo.png" /></a>
 
-            <!--MENU-->
-            <div class="menu">
-                <a href="index.html#planeta">Planetas</a>
-                <a href="index.html#news">Notícias</a>
-                <a href="astros.html">Astros</a>
+        <!--MENU-->
+        <div class="menu">
+          <a href="index.html#planeta">Planetas</a>
+          <a href="index.html#news">Notícias</a>
+          <a href="astros.html">Astros</a>
+        </div>
+        <!--LOGIN-->
+        <label class="login">
+          Login
+          <input class="inp" checked="" type="checkbox" />
+          <div class="bar">
+            <span class="top bar-list"></span>
+            <span class="middle bar-list"></span>
+            <span class="bottom bar-list"></span>
+          </div>
+
+          <section class="menu-container">
+            <div class="menu-list">
+              <a href="login.html"><p>Entrar</p></a>
             </div>
-            <!--LOGIN-->
-            <label class="login">
-                Login
-                <input class="inp" checked="" type="checkbox" />
-                <div class="bar">
-                <span class="top bar-list"></span>
-                <span class="middle bar-list"></span>
-                <span class="bottom bar-list"></span>
-                </div>
+            <div class="menu-list">
+              <a href="cadastro.html"><p>Cadastrar</p></a>
+            </div>
+          </section>
+        </label>
+      </div>
 
-                <section class="menu-container">
-                    <div class="menu-list"><a href="login.html"><p>Entrar</p></a></div>
-                    <div class="menu-list"><a href="cadastro.html"><p>Cadastrar</p></a></div>
-                </section>
-            </label>
+      <!--PLANETA-->
+      <p class="titulo">Saturno</p>
+      <img src="img/saturno.png" alt="saturno" class="planeta-img" />
+
+      <div class="planeta-info">
+        <div class="caixa-menor">
+          <div class="sub-titulo1" style="background-color: #aa773c">
+            <p>DADOS DE SATURNO</p>
+          </div>
+          <div class="texto">
+            <p class="text">
+              Marte é o quarto planeta a partir do Sol, o segundo menor do
+              Sistema Solar, atrás apenas de Mercúrio. Batizado em homenagem a
+              divindade romana da guerra, muitas vezes é descrito como o
+              "Planeta Vermelho", porque o óxido de ferro predominante em sua
+              superfície lhe dá uma aparência avermelhada
+            </p>
+          </div>
         </div>
 
-<!--PLANETA-->
-        <p class="titulo">Saturno</p>
-            <img src="img/saturno.png" alt="saturno" class="planeta-img">  
-
-        <div class="planeta-info">
-            <div class="caixa-menor">
-                <div class="sub-titulo1" style="background-color: #aa773c;">
-                    <p>DADOS DE SATURNO</p>
-                </div>
-                <div class="texto">
-                    <p class="text">Marte é o quarto planeta a partir do Sol,
-                         o segundo menor do Sistema Solar, atrás apenas de Mercúrio.
-                          Batizado em homenagem a divindade romana da guerra,
-                           muitas vezes é descrito como o "Planeta Vermelho",
-                            porque o óxido de ferro predominante em sua superfície lhe dá uma aparência avermelhada</p>
-                </div>
-            </div>
-
-            <div class="caixa-maior">
-                <div class="sub-titulo2" style="background-color: #aa773c;">
-                    <p >INFORMAÇÕES GERAIS</p>
-                </div>
-                <ul class="lista">
-                    <li><b>Distância do Sol: </b>149.600.000 km</li>
-                    <li><b>Período orbital: </b>365 dias</li>
-                    <li><b>Área da superfície: </b>148.900.000 km²</li>
-                    <li><b>Duração do dia: </b>0 24h 0m</li>
-                    <li><b>Massa: </b>5,972 × 10^24 kg</li>
-                </ul>
-            </div>
+        <div class="caixa-maior">
+          <div class="sub-titulo2" style="background-color: #aa773c">
+            <p>INFORMAÇÕES GERAIS</p>
+          </div>
+          <ul class="lista">
+            <li><b>Distância do Sol: </b>149.600.000 km</li>
+            <li><b>Período orbital: </b>365 dias</li>
+            <li><b>Área da superfície: </b>148.900.000 km²</li>
+            <li><b>Duração do dia: </b>0 24h 0m</li>
+            <li><b>Massa: </b>5,972 × 10^24 kg</li>
+          </ul>
         </div>
-  
-        <footer class="icons">
-            <div class="card">
-                <img class="icon-footer facebook" src="img/icons8-facebook-novo.svg"  alt="facebook">
-                <img class="icon-footer instagram" src="img/icons8-instagram.svg" alt="INSTA">
-                <img class="icon-footer youtube" src="img/youtube-c.svg" alt="tube">  
-                <img class="icon-footer twitter" src="img/twitter-c.svg" alt="tw">
-            </div>
+      </div>
 
-            <span class="agreement"></a>Copyright © 2025 Solar System. Todos os direitos reservados.</span>
-        </footer>
+      <footer class="icons">
+        <div class="card">
+          <img
+            class="icon-footer facebook"
+            src="img/icons8-facebook-novo.svg"
+            alt="facebook"
+          />
+          <img
+            class="icon-footer instagram"
+            src="img/icons8-instagram.svg"
+            alt="INSTA"
+          />
+          <img class="icon-footer youtube" src="img/youtube-c.svg" alt="tube" />
+          <img class="icon-footer twitter" src="img/twitter-c.svg" alt="tw" />
+        </div>
 
+        <span class="agreement"
+          >Copyright © 2025 Solar System. Todos os direitos reservados.</span
+        >
+      </footer>
     </main>
     <script src="js/tradutorhome.JS"></script>
-</body>
-
+  </body>
 </html>

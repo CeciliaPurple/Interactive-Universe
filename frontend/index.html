@@ -1,190 +1,262 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
 
     <!--LINK CSS-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
 
     <!--LOGO GUIA-->
-    <link rel="shortcut icon" href="img/favicon.ico" width="120px"  heigth="120px" type="image/png">
+    <link
+      rel="shortcut icon"
+      href="img/favicon.ico"
+      width="120px"
+      heigth="120px"
+      type="image/png"
+    />
 
     <!--FONTES-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <main>
-        <div class="header">
-            <a href="index.html"><img class="logo" src="img/logo.png"></a>
+      <div class="header">
+        <a href="index.html"><img class="logo" src="img/logo.png" /></a>
 
-            <!--MENU-->
-            <div class="menu">
-                <a href="#planeta"><p data-translate-key="menu.planets">Planetas</p></a>
-                <a href="#news" class="animacao" data-translate-key="menu.news">Notícias</a>
-                <a href="astros.html"> <p data-translate-key="menu.stars">Astros</p></a>
-            </div>
-            
-            
-            <label class="login">
-                <span data-translate-key="menu.login">Login</span> <!-- Movido o texto para dentro de um span para aplicar a chave -->
-                <!-- Mantido o 'checked=""' como no original, caso seja relevante para o CSS -->
-                <input class="inp" checked="" type="checkbox" /> 
-                <div class="bar">
-                <span class="top bar-list"></span>
-                <span class="middle bar-list"></span>
-                <span class="bottom bar-list"></span>
-                </div>
-
-                <section class="menu-container">
-                    <div class="menu-list"><a href="login.html"><p data-translate-key="menu.signin">Entrar</p></a></div>
-                    <div class="menu-list"><a href="cadastro.html"><p data-translate-key="menu.register">Cadastrar</p></a></div>
-                </section>
-            </label>
-
-            <!--BANDEIRAS-->
-            <div class="bandeiras">
-                <img class="bandeira1" src="img/brasil.png" style="cursor: pointer;">
-                <img class="bandeira1" id="tradutor" src="img/of-america.png" alt="English" style="cursor: pointer;">
-            </div>
+        <!--MENU-->
+        <div class="menu">
+          <a href="#planeta"
+            ><p data-translate-key="menu.planets">Planetas</p></a
+          >
+          <a href="#news" class="animacao" data-translate-key="menu.news"
+            >Notícias</a
+          >
+          <a href="astros.html">
+            <p data-translate-key="menu.stars">Astros</p></a
+          >
         </div>
 
-        <!--BANNER-->
-        <div class="banner">
-            <h1 class="titulo" data-translate-key="banner.title">Sistema Solar</h1> 
-            <h2 class="sub-titulo" data-translate-key="banner.subtitle">Universo Interativo</h2>
-            <video autoplay muted loop class="imagem">
-                <source src="video/banner.mp4"/>
-            </video>
-        </div>
+        <label class="login">
+          <span data-translate-key="menu.login">Login</span>
+          <!-- Movido o texto para dentro de um span para aplicar a chave -->
+          <!-- Mantido o 'checked=""' como no original, caso seja relevante para o CSS -->
+          <input class="inp" checked="" type="checkbox" />
+          <div class="bar">
+            <span class="top bar-list"></span>
+            <span class="middle bar-list"></span>
+            <span class="bottom bar-list"></span>
+          </div>
 
-    <!--NOTÍCIAS-->
-    <div class="noticias">
+          <section class="menu-container">
+            <div class="menu-list">
+              <a href="login.html"
+                ><p data-translate-key="menu.signin">Entrar</p></a
+              >
+            </div>
+            <div class="menu-list">
+              <a href="cadastro.html"
+                ><p data-translate-key="menu.register">Cadastrar</p></a
+              >
+            </div>
+          </section>
+        </label>
+
+        <!--BANDEIRAS-->
+        <div class="bandeiras">
+          <img class="bandeira1" src="img/brasil.png" style="cursor: pointer" />
+          <img
+            class="bandeira1"
+            id="tradutor"
+            src="img/of-america.png"
+            alt="English"
+            style="cursor: pointer"
+          />
+        </div>
+      </div>
+
+      <!--BANNER-->
+      <div class="banner">
+        <h1 class="titulo" data-translate-key="banner.title">Sistema Solar</h1>
+        <h2 class="sub-titulo" data-translate-key="banner.subtitle">
+          Universo Interativo
+        </h2>
+        <video autoplay muted loop class="imagem">
+          <source src="video/banner.mp4" />
+        </video>
+      </div>
+
+      <!--NOTÍCIAS-->
+      <div class="noticias">
         <div class="noticia1" id="news">
-            <div class="grupo-noticia1">
-                <p class="noticia-sub-titulo anima" style="--i: 3" data-translate-key="news.eclipse.phenomenon">O GRANDE FENÔMENO</p>
-                <a href="eclipse.html"><p class="noticia-titulo anima" style="--i: 2" data-translate-key="news.eclipse.title">Eclipse Lunar</p></a>
-                <p class="noticia-texto anima" style="--i: 1" data-translate-key="news.eclipse.text">Um eclipse lunar é um fenômeno astronômico fascinante que ocorre quando a Terra se posiciona entre o Sol e a Lua,
-                     fazendo com que a sombra da Terra seja projetada sobre a Lua. Esse evento só acontece durante a Lua cheia, e pode ser observado a olho nu,
-                      sem equipamentos especiais, desde que o céu esteja limpo.Durante um eclipse lunar, a Luz do Sol, que normalmente ilumina a Lua cheia,
-                       é bloqueada pela Terra, que fica exatamente entre os dois astros. A Lua, então, escurece parcialmente ou totalmente por um período que pode durar várias horas.
-                </p>
-            </div>
-               
-            <a href="eclipse.html"><img  class="eclipse anima" style="--i: 0" src="img/ecipse01.png"></a>
-            <img class="linhas">
+          <div class="grupo-noticia1">
+            <p
+              class="noticia-sub-titulo anima"
+              style="--i: 3"
+              data-translate-key="news.eclipse.phenomenon"
+            >
+              O GRANDE FENÔMENO
+            </p>
+            <a href="eclipse.html"
+              ><p
+                class="noticia-titulo anima"
+                style="--i: 2"
+                data-translate-key="news.eclipse.title"
+              >
+                Eclipse Lunar
+              </p></a
+            >
+            <p
+              class="noticia-texto anima"
+              style="--i: 1"
+              data-translate-key="news.eclipse.text"
+            >
+              Um eclipse lunar é um fenômeno astronômico fascinante que ocorre
+              quando a Terra se posiciona entre o Sol e a Lua, fazendo com que a
+              sombra da Terra seja projetada sobre a Lua. Esse evento só
+              acontece durante a Lua cheia, e pode ser observado a olho nu, sem
+              equipamentos especiais, desde que o céu esteja limpo.Durante um
+              eclipse lunar, a Luz do Sol, que normalmente ilumina a Lua cheia,
+              é bloqueada pela Terra, que fica exatamente entre os dois astros.
+              A Lua, então, escurece parcialmente ou totalmente por um período
+              que pode durar várias horas.
+            </p>
+          </div>
+
+          <a href="eclipse.html"
+            ><img class="eclipse anima" style="--i: 0" src="img/ecipse01.png"
+          /></a>
+          <img class="linhas" />
         </div>
 
         <div class="noticia2">
-            <a href="nebulosa.html"><img class="nebu anima" style="--i: 0" src="img/fotos.png"></a>
-            <div class="grupo-noticia2">
-                <p class="noticia-sub-titulo anima" style="--i: 3" data-translate-key="news.nebulae.charm">O ENCANTO CÓSMICO DAS</p>
-                <a href="nebulosa.html"><p class="noticia-titulo anima" style="--i: 2" data-translate-key="news.nebulae.title">Nebulosas</p></a>
-                <p class="noticia-texto anima" style="--i: 1" data-translate-key="news.nebulae.text">No vasto universo, entre as estrelas e os planetas,
-                     existem enormes nuvens compostas de gás e poeira chamadas nebulosas.
-                      Essas estruturas são fundamentais para a compreensão da formação,
-                      evolução e morte das estrelas. As nebulosas não são apenas belos objetos celestes, mas também os ambientes onde estrelas nascem e,
-                       em muitos casos, onde elas terminam suas vidas. Vamos explorar, em detalhes, o que são as nebulosas, como se formam,
-                        seus diferentes tipos e seu papel essencial no ciclo de vida estelar
-                </p>
-            </div>
-               
-            <img class="linhas">
+          <a href="nebulosa.html"
+            ><img class="nebu anima" style="--i: 0" src="img/fotos.png"
+          /></a>
+          <div class="grupo-noticia2">
+            <p
+              class="noticia-sub-titulo anima"
+              style="--i: 3"
+              data-translate-key="news.nebulae.charm"
+            >
+              O ENCANTO CÓSMICO DAS
+            </p>
+            <a href="nebulosa.html"
+              ><p
+                class="noticia-titulo anima"
+                style="--i: 2"
+                data-translate-key="news.nebulae.title"
+              >
+                Nebulosas
+              </p></a
+            >
+            <p
+              class="noticia-texto anima"
+              style="--i: 1"
+              data-translate-key="news.nebulae.text"
+            >
+              No vasto universo, entre as estrelas e os planetas, existem
+              enormes nuvens compostas de gás e poeira chamadas nebulosas. Essas
+              estruturas são fundamentais para a compreensão da formação,
+              evolução e morte das estrelas. As nebulosas não são apenas belos
+              objetos celestes, mas também os ambientes onde estrelas nascem e,
+              em muitos casos, onde elas terminam suas vidas. Vamos explorar, em
+              detalhes, o que são as nebulosas, como se formam, seus diferentes
+              tipos e seu papel essencial no ciclo de vida estelar
+            </p>
+          </div>
+
+          <img class="linhas" />
         </div>
-    </div>
-            <!--CARROSSEL DE PLANETAS-->
-        <div id="planeta" class="carrossel">
-            <span class="seta-esq"><</span>
+      </div>
+      <!--CARROSSEL DE PLANETAS-->
+      <div id="planeta" class="carrossel">
+        <span class="seta-esq"><</span>
 
-            <div class="caixa-P">
-                <div class="nome-planeta-P"><p>Mercúrio</p></div>
-                <div class="planeta-P"><img src="img/mercurio.png"></div>
-                <div class="meia-caixa-P">
-                    <p>Mercúrio é o planeta mais próximo do Sol...</p>
-                </div>
-            </div>
+        <div class="caixa-P">
+          <div class="nome-planeta-P"><p>Mercúrio</p></div>
+          <div class="planeta-P"><img src="img/mercurio.png" /></div>
+          <div class="meia-caixa-P">
+            <p>Mercúrio é o planeta mais próximo do Sol...</p>
+          </div>
+        </div>
 
-            <div class="caixa-M">
-                <div class="nome-planeta"><p>Vênus</p></div>
-                <div class="planeta-M"><img src="img/venus.png"></div>
-                <div class="meia-caixa-M">
-                    <p>Vênus é o segundo planeta...</p>
-                </div>
-            </div>
+        <div class="caixa-M">
+          <div class="nome-planeta"><p>Vênus</p></div>
+          <div class="planeta-M"><img src="img/venus.png" /></div>
+          <div class="meia-caixa-M">
+            <p>Vênus é o segundo planeta...</p>
+          </div>
+        </div>
 
-            <div class="caixa-G">
-                <div class="nome-planeta"><p>Terra</p></div>
-               <div class="planeta"> <a href="terra.html" id="planetaLink"><img src="img/terra.png"></div></a>
-                <div class="meia-caixa-G">
-                    <p>O planeta Terra é o terceiro...</p>
-                </div>
-            </div>
+        <div class="caixa-G">
+          <div class="nome-planeta"><p>Terra</p></div>
+          <div class="planeta">
+            <a href="terra.html" id="planetaLink"
+              ><img src="img/terra.png" />
+              <div class="meia-caixa-G">
+                <p>O planeta Terra é o terceiro...</p>
+              </div>
 
-            <div class="caixa-M">
+              <div class="caixa-M">
                 <div class="nome-planeta"><p>Marte</p></div>
-                <div class="planeta-M"><img src="img/marte.png"></div>
+                <div class="planeta-M"><img src="img/marte.png" /></div>
                 <div class="meia-caixa-M">
-                    <p>Marte é o quarto planeta...</p>
+                  <p>Marte é o quarto planeta...</p>
                 </div>
-            </div>
+              </div>
 
-            <div class="caixa-P">
+              <div class="caixa-P">
                 <div class="nome-planeta-P"><p>Júpiter</p></div>
-                <div class="planeta-P"><img src="img/jupiter.png"></div>
+                <div class="planeta-P"><img src="img/jupiter.png" /></div>
                 <div class="meia-caixa-P">
-                    <p>Júpiter é o maior planeta...</p>
+                  <p>Júpiter é o maior planeta...</p>
                 </div>
-            </div>
+              </div>
 
-            <span class="seta-dire">></span>
+              <span class="seta-dire">></span>
+
+              <footer>
+                <footer class="icons">
+                  <div class="card">
+                    <div class="card1">
+                      <img
+                        class="facebook"
+                        src="img/icons8-facebook-novo.svg"
+                        alt="facebook"
+                      />
+                      <img
+                        class="instagram"
+                        src="img/icons8-instagram.svg"
+                        alt="INSTA"
+                      />
+                      <img class="youtube" src="img/youtube-c.svg" alt="tube" />
+                      <img class="twitter" src="img/twitter-c.svg" alt="tw" />
+                    </div>
+                  </div>
+                  <p class="copy" data-translate-key="footer.copyright">
+                    &copy; 2025 Sistema Solar. Todos os direitos reservados.
+                  </p>
+                  <img class="sol" src="img/sol.png" alt="imagem-sol" />
+                </footer></footer
+            ></a>
+          </div>
         </div>
+      </div>
     </main>
-
-    <footer>
-        <footer class="icons">
-            <div class="card">
-                <div class="card1">
-                    <img class="facebook" src="img/icons8-facebook-novo.svg"  alt="facebook">
-                    <img class="instagram" src="img/icons8-instagram.svg" alt="INSTA">
-                    <img class="youtube" src="img/youtube-c.svg" alt="tube">  
-                    <img class="twitter" src="img/twitter-c.svg" alt="tw">
-                </div>
-            </div>
-        <p class="copy" data-translate-key="footer.copyright">&copy; 2025 Sistema Solar. Todos os direitos reservados.</p>
-        <img  class="sol" src="img/sol.png" alt="imagem-sol">
-        
-    </footer>
-
     <script src="js/script.js"></script>
     <script src="js/tradutorhome.JS"></script>
     <script src="js/carrossel.js"></script>
-    
-    <!-- Script de verificação de login (mantido como estava, mas agora atua sobre a estrutura original restaurada) -->
-    <script>
-        // Verifica se o token está presente no localStorage
-        const token = localStorage.getItem("token");
-    
-        // Seleciona o elemento de login original
-        const loginLabel = document.querySelector(".login");
-    
-        if (token && loginLabel) {
-            // Se o token existir, substitui TODA a <label class="login"> pela imagem/link do usuário.
-            // Isso remove o botão/menu suspenso original.
-            loginLabel.outerHTML = `
-                <a href="atualização.html">
-                    <img src="img/usuário-64.png" alt="Usuário" class="login1";" />
-                </a>
-            `;
-        } 
-        // Se o token NÃO existir, o script não faz nada, e a <label class="login"> original 
-        // (com o input checkbox e o menu suspenso) permanece no HTML. A funcionalidade do 
-        // menu suspenso deve depender do seu CSS original associado à classe .login e ao input checkbox.
-    </script>
-
-</body>
+  </body>
 </html>

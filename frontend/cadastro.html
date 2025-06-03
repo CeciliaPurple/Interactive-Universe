@@ -1,62 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <!--LINK CSS-->
+    <link rel="stylesheet" href="css/cadastro.css" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro</title>
-  <!--LINK CSS-->
-  <link rel="stylesheet" href="css/cadastro.css">
+    <!--LOGO GUIA-->
+    <link
+      rel="shortcut icon"
+      href="img/favicon.ico"
+      width="120px"
+      heigth="120px"
+      type="image/png"
+    />
 
-  <!--LOGO GUIA-->
-  <link rel="shortcut icon" href="img/favicon.ico" width="120px" heigth="120px" type="image/png">
+    <!--FONTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <head>
+      <body>
+        <div class="container">
+          <div class="heading">
+            <a href="index.html"><img class="logo" src="img/logo.png" /></a>
+          </div>
+          <form action="" class="form">
+            <input
+              required=""
+              class="input"
+              type="text"
+              name="nome"
+              id="nome"
+              placeholder="Nome:"
+            />
+            <input
+              required=""
+              class="input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail:"
+            />
+            <input
+              required=""
+              class="input"
+              type="password"
+              name="senha"
+              id="senha"
+              placeholder="Senha:"
+            />
+            <a href="home2.html"
+              ><input class="login-button" type="submit" value="Cadastrar"
+            /></a>
+          </form>
 
-  <!--FONTES-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-<head>
+          <ul class="example-2">
+            <li class="icon-content">
+              <a href="#" aria-label="Pinterest" data-social="pinterest">
+                <div class="filled"></div>
+                <img src="img/002-google.png" alt="" />
+              </a>
+              <div class="tooltip">Google</div>
+            </li>
 
-<body>
-  <div class="container">
-    <div class="heading"><a href="index.html"><img class="logo" src="img/logo.png"></a></div>
-    <form action="" class="form">
-      <input required="" class="input" type="text" name="nome" id="nome" placeholder="Nome:">
-      <input required="" class="input" type="email" name="email" id="email" placeholder="E-mail:">
-      <input required="" class="input" type="password" name="senha" id="senha" placeholder="Senha:">
-      <a href="home2.html"><input class="login-button" type="submit" value="Cadastrar"></a>
-    </form>
+            <li class="icon-content">
+              <a href="#" aria-label="Dribbble" data-social="dribbble">
+                <div class="filled"></div>
+                <img src="img/001-facebook.png" alt="" />
+              </a>
+              <div class="tooltip">Facebook</div>
+            </li>
+          </ul>
 
-
-    <ul class="example-2">
-      <li class="icon-content">
-        <a href="#" aria-label="Pinterest" data-social="pinterest">
-          <div class="filled"></div>
-          <img src="img/002-google.png" alt="">
-        </a>
-        <div class="tooltip">Google</div>
-      </li>
-
-
-      <li class="icon-content">
-        <a href="#" aria-label="Dribbble" data-social="dribbble">
-          <div class="filled"></div>
-          <img src="img/001-facebook.png" alt="">
-        </a>
-        <div class="tooltip">Facebook</div>
-      </li>
-    </ul>
-
-  
-
- 
-  <span class="agreement"><a href="index.html"></a>© 2025 Solar System. Todos os direitos reservados.</span>
-  </div>
-</body>
-</head>
-<script src="js/tradutorhome.JS"></script>
-<script src="/frontend/js/serviçoCdastro.js"></script>
-
+          <span class="agreement"
+            ><a href="index.html"></a>© 2025 Solar System. Todos os direitos
+            reservados.</span
+          >
+        </div>
+      </body>
+    </head>
+    <script src="js/tradutorhome.JS"></script>
+    <script src="js/serviçoCadastro.js"></script>
+  </head>
 </html>
