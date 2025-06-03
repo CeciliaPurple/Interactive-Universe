@@ -26,12 +26,11 @@
             <!--MENU-->
             <div class="menu">
                 <a href="#planeta"><p data-translate-key="menu.planets">Planetas</p></a>
-                <a href="#news"><p data-translate-key="menu.news">Notícias</p></a>
+                <a href="#news" class="animacao" data-translate-key="menu.news">Notícias</a>
                 <a href="astros.html"> <p data-translate-key="menu.stars">Astros</p></a>
             </div>
             
-            <!--LOGIN - Estrutura restaurada para ser idêntica à original -->
-            <!-- Esta estrutura só será exibida se o usuário NÃO estiver logado -->
+            
             <label class="login">
                 <span data-translate-key="menu.login">Login</span> <!-- Movido o texto para dentro de um span para aplicar a chave -->
                 <!-- Mantido o 'checked=""' como no original, caso seja relevante para o CSS -->
@@ -68,25 +67,25 @@
     <div class="noticias">
         <div class="noticia1" id="news">
             <div class="grupo-noticia1">
-                <p class="noticia-sub-titulo" data-translate-key="news.eclipse.phenomenon">O GRANDE FENÔMENO</p>
-                <a href="eclipse.html"><p class="noticia-titulo" data-translate-key="news.eclipse.title">Eclipse Lunar</p></a>
-                <p class="noticia-texto" data-translate-key="news.eclipse.text">Um eclipse lunar é um fenômeno astronômico fascinante que ocorre quando a Terra se posiciona entre o Sol e a Lua,
+                <p class="noticia-sub-titulo anima" style="--i: 3" data-translate-key="news.eclipse.phenomenon">O GRANDE FENÔMENO</p>
+                <a href="eclipse.html"><p class="noticia-titulo anima" style="--i: 2" data-translate-key="news.eclipse.title">Eclipse Lunar</p></a>
+                <p class="noticia-texto anima" style="--i: 1" data-translate-key="news.eclipse.text">Um eclipse lunar é um fenômeno astronômico fascinante que ocorre quando a Terra se posiciona entre o Sol e a Lua,
                      fazendo com que a sombra da Terra seja projetada sobre a Lua. Esse evento só acontece durante a Lua cheia, e pode ser observado a olho nu,
                       sem equipamentos especiais, desde que o céu esteja limpo.Durante um eclipse lunar, a Luz do Sol, que normalmente ilumina a Lua cheia,
                        é bloqueada pela Terra, que fica exatamente entre os dois astros. A Lua, então, escurece parcialmente ou totalmente por um período que pode durar várias horas.
                 </p>
             </div>
                
-            <a href="eclipse.html"><img  class="eclipse" src="img/ecipse01.png"></a>
+            <a href="eclipse.html"><img  class="eclipse anima" style="--i: 0" src="img/ecipse01.png"></a>
             <img class="linhas">
         </div>
 
         <div class="noticia2">
-            <a href="nebulosa.html"><img class="nebu" src="img/fotos.png"></a>
+            <a href="nebulosa.html"><img class="nebu anima" style="--i: 0" src="img/fotos.png"></a>
             <div class="grupo-noticia2">
-                <p class="noticia-sub-titulo" data-translate-key="news.nebulae.charm">O ENCANTO CÓSMICO DAS</p>
-                <a href="nebulosa.html"><p class="noticia-titulo" data-translate-key="news.nebulae.title">Nebulosas</p></a>
-                <p class="noticia-texto" data-translate-key="news.nebulae.text">No vasto universo, entre as estrelas e os planetas,
+                <p class="noticia-sub-titulo anima" style="--i: 3" data-translate-key="news.nebulae.charm">O ENCANTO CÓSMICO DAS</p>
+                <a href="nebulosa.html"><p class="noticia-titulo anima" style="--i: 2" data-translate-key="news.nebulae.title">Nebulosas</p></a>
+                <p class="noticia-texto anima" style="--i: 1" data-translate-key="news.nebulae.text">No vasto universo, entre as estrelas e os planetas,
                      existem enormes nuvens compostas de gás e poeira chamadas nebulosas.
                       Essas estruturas são fundamentais para a compreensão da formação,
                       evolução e morte das estrelas. As nebulosas não são apenas belos objetos celestes, mas também os ambientes onde estrelas nascem e,
@@ -161,8 +160,7 @@
         
     </footer>
 
-    <!-- Scripts atualizados -->
-    <!-- Certifique-se que tradutor venha ANTES de carrossel -->
+    <script src="js/script.js"></script>
     <script src="js/tradutorhome.JS"></script>
     <script src="js/carrossel.js"></script>
     
