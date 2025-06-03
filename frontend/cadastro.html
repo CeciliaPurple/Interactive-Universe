@@ -17,7 +17,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-</head>
+<head>
 
 <body>
   <div class="container">
@@ -31,76 +31,32 @@
 
 
     <ul class="example-2">
-
-      </li>
       <li class="icon-content">
         <a href="#" aria-label="Pinterest" data-social="pinterest">
           <div class="filled"></div>
           <img src="img/002-google.png" alt="">
-          </svg>
         </a>
         <div class="tooltip">Google</div>
-
       </li>
+
+
       <li class="icon-content">
         <a href="#" aria-label="Dribbble" data-social="dribbble">
           <div class="filled"></div>
           <img src="img/001-facebook.png" alt="">
         </a>
         <div class="tooltip">Facebook</div>
-
       </li>
-
     </ul>
 
-    </button>
-  </div>
-  </div>
+  
+
+ 
   <span class="agreement"><a href="index.html"></a>© 2025 Solar System. Todos os direitos reservados.</span>
   </div>
 </body>
+</head>
 <script src="js/tradutorhome.JS"></script>
+<script src="/frontend/js/serviçoCdastro.js"></script>
 
-
-<script>
-  const form = document.querySelector('.form');
-
-  form.addEventListener('submit', async (event) => {
-    event.preventDefault(); // evita recarregar a página
-
-    // Pega os valores do formulário
-    const nome = document.getElementById('nome').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const senha = document.getElementById('senha').value.trim();
-
-    // Monta o payload conforme esperado pela API
-    const payload = {
-      NOME: nome,
-      EMAIL: email,
-      SENHA: senha,
-      TIPO_USUARIO: "USUARIO"  // pode mudar se quiser
-    };
-
-    try {
-      const response = await fetch('http://localhost:4000/usuarios/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(payload)
-      });
-      if (response.ok) {
-    const data = await response.json();
-    // Redireciona para a página de login após o cadastro bem-sucedido
-   window.location.href = "./login.html"; // Certifique-se de que o caminho está correto
-} else {
-    const errorData = await response.json();
-    alert(`Erro ao cadastrar usuário: ${errorData.error || 'Erro desconhecido'}`);
-}
-    } catch (error) {
-      console.error('Erro na requisição:', error);
-      alert('Erro ao conectar com a API.');
-    }
-  });
-   </script>
 </html>
