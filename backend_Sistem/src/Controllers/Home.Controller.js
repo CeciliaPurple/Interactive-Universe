@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 // Exemplo: importando um modelo do banco de dados (Mongoose)
-const User = require('../Models/Usuario.js'); // ajuste o caminho conforme seu projeto
+const User = require('../Models/Usuario'); // ajuste o caminho conforme seu projeto
 
 // Rota principal do Home
 router.get('/home', async (req, res) => {

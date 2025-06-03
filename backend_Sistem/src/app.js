@@ -1,7 +1,5 @@
 const express = require('express');
 const cors = require('cors')
-
-// const HomeRoutes = require('./js/Routes/Home.Routes');
 const UsuarioRoutes = require('./Routes/Usuario.routes')
 
 const app = express();

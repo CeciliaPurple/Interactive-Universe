@@ -1,5 +1,7 @@
 // filepath: /c:/Users/cg3036626/Desktop/projeto/Interactive-Universe/js/controllers/UsuarioController.js
 const Usuario = require('../Models/Usuario');
+const jwt = require('jsonwebtoken');
+
 
 const UsuarioController = {
     // Listar todos os usuários
@@ -37,7 +39,6 @@ const UsuarioController = {
             );
     
             const usuarioAtualizado = await Usuario.findByPk(id); // Busca o usuário atualizado
-            console.log('oi')
             res.status(200).json({ message: 'Usuário atualizado com sucesso.', usuario: usuarioAtualizado });
         } catch (error) {
             console.error(error)
@@ -56,6 +57,32 @@ const UsuarioController = {
             res.status(500).json({ error: 'Erro ao deletar usuário.' });
         }
     },
+
+    async login(req, res) {
+        const {nome,senha } = req.body;
+        console.log(nome, senha)
+    
+        try {
+            const usuario = await Usuario.findOne({ where: { NOME: nome } });
+            console.log("USUARIO", usuario);
+            
+            if (!usuario) {
+                return res.status(404).json({ error: 'Usuário não encontrado' });
+            }
+    
+            const isPasswordValid = usuario.SENHA === senha;
+            if (!isPasswordValid) {
+                return res.status(401).json({ error: 'Senha inválida' });
+            }
+    
+            const token = jwt.sign({ id: usuario.id, nome: usuario.nome }, "segredo", { expiresIn: '1h' });
+    
+            res.json({ token });
+        } catch (error) {
+            console.error(error)
+            res.status(500).json({ error: 'Erro ao autenticar usuário' });
+        }
+    }
 };
 
 module.exports = UsuarioController;
