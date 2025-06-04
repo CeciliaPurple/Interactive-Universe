@@ -427,21 +427,6 @@ max-width: 600px;
      transform: scale(1);
    }
  }
- 
-
-/*footer*/
-.card{
-  display: flex;
-  justify-content: center;
-  position: relative;
-  cursor: pointer;
-  margin-top: 50px;
-  gap: 20px;
-}
-
-.icon-footer{
-  width: 50px;
-}
 
 footer {
   display: flex;
@@ -483,6 +468,8 @@ footer {
     background-color: #b480cc;
     border-radius: 10px;
   }
+
+
 
 /*responsividade*/
 @media (max-width: 480px){
