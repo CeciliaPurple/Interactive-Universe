@@ -437,8 +437,6 @@ button2:hover {
 }
 
 
-
-
 .comment {
   width: 75%;
   display: flex;
@@ -497,6 +495,7 @@ footer {
   footer p{
   position: relative;
   z-index: 6;
+  margin-bottom: 50px;
 }
 
 .card1{
