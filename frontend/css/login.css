@@ -35,7 +35,7 @@ a{
 body{
   height: 100%;
   width: 100%;
-  background-image: url(../img/matt_gross.jpg);
+  background-image: url(../img/backLogin.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -150,11 +150,7 @@ body{
     font-family: var(--ff-poppins);
   }
 
-  .social-account-container .title a{
-    font-size: 27px;
-    color: #feffff;
-    text-decoration: none;
-  }
+
   
   .social-account-container .social-accounts {
     width: 100%;
