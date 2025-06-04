@@ -75,14 +75,23 @@ const UsuarioController = {
 
             // Verifica se a senha está correta
             const isPasswordValid = usuario.SENHA === senha;
-            if (senha !== usuario.SENHA) {
+            if (!isPasswordValid) {
                 return res.status(401).json({ error: 'Senha inválida' });
             }
 
             // Gera o token JWT
             const token = jwt.sign(
-                { id: usuario.id, nome: usuario.nome, senha: usuario.SENHA }
-                , config.JWT_SECRET, { expiresIn: config.JWT_ESPIRES_IN || '1h' });
+                {
+                    id: usuario.ID,
+                    nome: usuario.NOME,
+                    tipo_usuario: usuario.TIPO_USUARIO,
+                    email: usuario.EMAIL
+                },
+                "meusegredo",
+                {
+                    expiresIn: "1h"
+                }
+            );
 
             // Retorna o token JWT
             res.status(200).json({
@@ -99,10 +108,11 @@ const UsuarioController = {
     // Método para obter o perfil do usuário logado
     perfil: async (req, res) => {
         try {
-            const userId = req.user.userId;
+            const id = req.user.id;
 
             //buscar pelo nome
-            const usuario = await Usuario.findByPk(userId);
+            const usuario = await Usuario.findByPk(id);
+            console.log()
 
             if (!usuario) {
                 return res.status(404).json({ error: 'Usuário não encontrado' });

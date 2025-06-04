@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.json());
-app.use((jwt));
+//app.use((jwt));
 
 
 app.use('/usuarios', UsuarioRoutes);
