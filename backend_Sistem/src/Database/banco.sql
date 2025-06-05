@@ -106,7 +106,7 @@ ENGINE = InnoDB;
 SELECT * FROM COMENTARIO;
 
 INSERT INTO `COMENTARIO` (`TEXTO`, `USUARIO_ID`, `NOTICIAS_IDNOTICIAS`) VALUES
-('Ótima notícia!', 1, 1),
+('Ótima notícia!', 1,1 ),
 ('Parabéns pela matéria.', 2, 1),
 ('Gostei do conteúdo.', 3, 2);
 
@@ -126,7 +126,7 @@ CREATE TABLE IF NOT EXISTS `Sistem`.`midia` (
   CONSTRAINT `fk_midia_NOTICIAS1`
     FOREIGN KEY (`NOTICIAS_idNOTICIAS`)
     REFERENCES `Sistem`.`NOTICIAS` (`idNOTICIAS`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 

@@ -158,31 +158,25 @@ const UsuarioController = {
         }
     },
 
-    //metodo para excluir o perfildo usuario logado
     excluirConta: async (req, res) => {
         try {
-            const id = req.user.id;
-
-            await COMENTARIO.destroy({ where: { USUARIO_ID: id } });
-
+            const userId = req.user.userId;
 
             const usuario = await Usuario.findByPk(userId);
-
+    
             if (!usuario) {
                 return res.status(404).json({ error: 'Usuário não encontrado' });
             }
 
-            
-
-
             await usuario.destroy();
-
-            res.status(200).json({ message: 'Conta excluida com sucesso.' });
+    
+            res.status(200).json({ message: 'Conta excluída com sucesso.' });
         } catch (error) {
-            console.error('Erro ao excluir conta do usuario', error)
+            console.error('Erro ao excluir conta do usuário', error);
+            res.status(500).json({ error: 'Erro ao excluir conta.' });
         }
     }
-
+    
 }
 
 
