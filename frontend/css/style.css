@@ -918,13 +918,6 @@ z-index: 10;
     display: none;
   }
 
-  .bar-list{
-    width: 10px;
-    height: 5px;
-    position: relative;
-    left:10px;
-  }
-
   .bandeira1{
     width: 40px;
     height: auto;
@@ -1078,18 +1071,9 @@ z-index: 10;
     top: 260px;
   }
 
-  .facebook{
-    width: 30px;
-  }
-
-  .instagram{
-    width: 30px;
-  }
-
-  .youtube{
-    width: 30px;
-  }
-
+  .facebook, 
+  .instagram, 
+  .youtube, 
   .twitter{
     width: 30px;
   }
@@ -1117,13 +1101,6 @@ z-index: 10;
 
   .bar{
     display: none;
-  }
-
-  .bar-list{
-    width: 10px;
-    height: 5px;
-    position: relative;
-    left:10px;
   }
 
   .bandeira1{
