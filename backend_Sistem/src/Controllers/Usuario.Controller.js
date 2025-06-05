@@ -160,21 +160,14 @@ const UsuarioController = {
 
     excluirConta: async (req, res) => {
         try {
-            const userId = req.user.id;
-    
+            const userId = req.user.userId;
+
             const usuario = await Usuario.findByPk(userId);
     
             if (!usuario) {
                 return res.status(404).json({ error: 'Usuário não encontrado' });
             }
-    
-            // Excluir comentários associados ao usuário
-            await Comentario.destroy({ where: { USUARIO_ID: userId } });
-    
-            // Excluir notícias associadas ao usuário (se necessário)
-            await Noticias.destroy({ where: { AUTOR_ID: userId } });
-    
-            // Excluir o usuário
+
             await usuario.destroy();
     
             res.status(200).json({ message: 'Conta excluída com sucesso.' });
