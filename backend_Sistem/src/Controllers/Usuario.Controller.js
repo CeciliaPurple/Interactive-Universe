@@ -161,13 +161,19 @@ const UsuarioController = {
     //metodo para excluir o perfildo usuario logado
     excluirConta: async (req, res) => {
         try {
-            const userId = req.user.userId;
+            const id = req.user.id;
+
+            await COMENTARIO.destroy({ where: { USUARIO_ID: id } });
+
 
             const usuario = await Usuario.findByPk(userId);
 
             if (!usuario) {
                 return res.status(404).json({ error: 'Usuário não encontrado' });
             }
+
+            
+
 
             await usuario.destroy();
 
