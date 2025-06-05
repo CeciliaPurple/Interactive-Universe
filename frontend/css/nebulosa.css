@@ -309,6 +309,7 @@ font-size: var(--h2-32);
   border-radius: 10px;
   transition: all 1.5s ease;
 }
+
 .caixa3:hover{
 box-shadow:15px 15px 40px 15px hsla(198, 39%, 51%, 0.5);
 transition: all 0.7s ease;
@@ -809,7 +810,6 @@ footer {
 
   /*caixa 3*/
   .caixa3{
-  max-width: 200px;
   height: 200px;
   position: relative;
   bottom: -200px;
@@ -930,7 +930,7 @@ footer {
   max-width: 250px;
   height: 250px;
   position: relative;
-  margin-left:  70%;
+  margin-left:  65%;
   margin-right: 5%;
   }
 
@@ -945,37 +945,33 @@ footer {
 
   /*caixa 3*/
   .caixa3{
-  max-width: 250px;
   height: 250px;
   position: relative;
-  bottom: -200px;
-  margin-right: 60%;
-  margin-left: 5%;
+  bottom: -250px;
+  margin-left: 20vw;
+  margin-right: 20vw;
   }
 
   .text3{
   font-size: 1.25rem;
   position: relative;
   bottom: 140px;
-  left: 100px;
-  width: 50%;
-  margin-top: 300px;
-  margin-right: 50px;
-  margin-left: 50px;
+  width: 70%;
+  margin-top: 410px;
   }
 
 
   /*chat*/
   .container{
-    width: 400px;
+    width: 600px;
     position: relative;
-    height: 400px;
+    height: 600px;
     bottom: 100px;
     left: 5px;
   }
 
   .container h1{
-    font-size: 18px;
+    font-size: 1.5rem;
   }
 
   .container textarea{
@@ -987,7 +983,7 @@ footer {
   }
 
   .container h2{
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .comment{
