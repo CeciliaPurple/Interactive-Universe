@@ -234,15 +234,22 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 }
 
 /*card1*/
+.info{
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  gap: 5%;
+}
 
 .caixa{
  background-image: url(../img/nebulosa1.jpg);
   background-position: center;
   background-size: cover;
   height: 400px;
-  max-width: 500px;
-  margin-left: 200px;
-  margin-top: 100px;
+  width: 500px;
   border-radius: 10px;
   transition: all 1.5s ease;
 }
@@ -253,28 +260,33 @@ transition: all 0.9s ease;
 transform: translateX(100px);
 }
 
-
 .text{
 width: 50%;
 text-align: justify;
 justify-self: end;
-margin-right: 100px;
-margin-top: -250px;
 font-family: var(--ff-smooch);
 font-weight: 400;
 font-size: var(--h2-32);
 }
 
 /*card2*/
+.info2{
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  margin-top: 10%;
+  gap: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
 
 .caixa2{
   background-image: url(../img/nebu2.png);
   background-position: center;
   background-size: cover;
   height: 400px;
-  max-width: 500px;
-  margin-left:  75rem;
-  margin-top: 200px;
+  width: 500px;
+  margin-left: ;
   border-radius: 10px;
   transition: all 1.5s ease;
 }
@@ -288,8 +300,6 @@ transition: all 1.5s ease;
 .text2{
 width: 50%;
 position: relative;
-margin-top: -250px;
-margin-left: 100px;
 text-align: justify;
 font-family: var(--ff-smooch);
 font-weight: 400;
@@ -297,17 +307,25 @@ font-size: var(--h2-32);
 }
 
 /*card3*/
+.info3{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
 .caixa3{
-  background-image: url(../img/galaxy-nebulosa.jpg);
+  background-image: url(../img/galaxy-nebulosa.jpg) !important; 
   background-position: center;
   background-size: cover;
   height: 250px;
-  max-width: 1500px;
-  margin-left: 200px;
-  position: relative;
-  bottom: -250px;
+  width: 75%;
   border-radius: 10px;
   transition: all 1.5s ease;
+  margin-bottom: 20px;
 }
 
 .caixa3:hover{
@@ -318,16 +336,13 @@ transform: scaleX(2.5);
 
 .text3{
 width: 70%;
-justify-self: center;
 text-align: justify;
-margin-top: 280px;
 font-family: var(--ff-smooch);
 font-weight: 400;
 font-size: var(--h2-32);
 }
 
 /*CHAT*/
-
 .container {
 background-color: rgb(0, 0, 0);
 padding: 20px;
@@ -342,6 +357,7 @@ justify-self: center;
 border: #fff;
 transition: all 1.5s ease;
 }
+
 .container:hover{
 box-shadow: 0 0 70px rgb(255, 255, 255, 0.75);
 transition: all 0.7s ease;
@@ -443,6 +459,10 @@ footer {
   z-index: 6;
 }
 
+.copy{
+  padding-bottom: 25px;
+}
+
 .card1{
   display: flex;  
   position: relative;
@@ -473,7 +493,7 @@ footer {
 
 
 /*responsividade*/
-@media (max-width: 500px){
+@media (max-width: 480px){
   .logo{
     position: relative;
     left: -30px;
@@ -507,54 +527,32 @@ footer {
 
   /*caixa 1*/
   .caixa{
-  max-width: 150px;
-  height: 150px;
-  position: relative;
-  margin-left: 5px;
-  margin-top: 20px;
+  width: 120px;
+  height: 120px;
   }
 
   .text{
   font-size: 12px;
-  position: relative;
-  top: 130px;
-  width: 50%;
-  margin-right: 20px;
   }
-
 
   /*caixa 2*/
   .caixa2{
-  max-width: 150px;
-  height: 150px;
-  position: relative;
-  margin-left:  60%;
+  width: 120px;
+  height: 120px;
   }
 
   .text2{
   font-size: 12px;
-  position: relative;
-  top: 130px;
-  width: 50%;
-  margin-left: 20px;
   }
 
   /*caixa 3*/
   .caixa3{
-  max-width: 150px;
-  height: 150px;
-  position: relative;
-  right: 195px;
-  bottom: -200px;
+  height: 120px;
+  margin-bottom: 10px;
   }
 
   .text3{
   font-size: 12px;
-  position: relative;
-  bottom: 140px;
-  left: 85px;
-  width: 50%;
-  margin-top: 220px;
   }
 
 
@@ -565,6 +563,7 @@ footer {
     height: 400px;
     bottom: 100px;
     left: 5px;
+    margin-top: 140px;
   }
 
   .container h1{
@@ -595,8 +594,7 @@ footer {
   }
 
   .copy{
-    position: relative;
-    font-size: 0.7rem;
+    padding-bottom: 50px;
   }
 
   .facebook, 
@@ -608,8 +606,7 @@ footer {
 }
 
 
-
-@media (min-width: 501px) and (max-width:649px) {
+@media (min-width: 481px) and (max-width:649px) {
   .logo{
     width: 60px;
   }
@@ -639,58 +636,32 @@ footer {
 
   /*caixa 1*/
   .caixa{
-  max-width: 150px;
+  width: 150px;
   height: 150px;
-  position: relative;
-  margin-left: 5%;
-  margin-right: 60%;
-  margin-top: 20px;
   }
 
   .text{
   font-size: 14px;
-  position: relative;
-  top: 130px;
-  width: 60%;
-  margin-right: 20px;
   }
 
 
   /*caixa 2*/
   .caixa2{
-  max-width: 150px;
+  width: 150px;
   height: 150px;
-  position: relative;
-  margin-left:  70%;
-  margin-right: 5%;
   }
 
   .text2{
   font-size: 14px;
-  position: relative;
-  top: 130px;
-  width: 60%;
-  margin-left: 20px;
   }
 
   /*caixa 3*/
   .caixa3{
-  max-width: 150px;
   height: 150px;
-  position: relative;
-  bottom: -200px;
-  margin-right: 60%;
-  margin-left: 5%;
   }
 
   .text3{
   font-size: 14px;
-  position: relative;
-  bottom: 140px;
-  left: 100px;
-  width: 60%;
-  margin-top: 220px;
-  margin-right: 20px;
   }
 
 
@@ -701,6 +672,7 @@ footer {
     height: 400px;
     bottom: 100px;
     left: 5px;
+    margin-top: 120px;
   }
 
   .container h1{
@@ -731,7 +703,6 @@ footer {
   }
 
   .copy{
-    position: relative;
     padding-bottom: 50px;
   }
 
@@ -739,12 +710,12 @@ footer {
   .instagram, 
   .youtube, 
   .twitter{
-    width: 30px;
+    width: 35px;
   }
 }
 
 
-@media (min-width: 650px) and (max-width:768px) {
+@media (min-width: 650px) and (max-width:767px) {
   .logo{
     width: 60px;
   }
@@ -763,10 +734,6 @@ footer {
     left: 20px;
   }
 
-  .bar{
-    display: none;
-  }
-
   .title{
   margin-top: 45px;
   font-size: 3rem;
@@ -774,58 +741,30 @@ footer {
 
   /*caixa 1*/
   .caixa{
-  max-width: 200px;
+  width: 200px;
   height: 200px;
-  position: relative;
-  margin-left: 5%;
-  margin-right: 60%;
-  margin-top: 50px;
   }
 
   .text{
   font-size: 1rem;
-  position: relative;
-  top: 130px;
-  width: 55%;
-  margin-right: 20px;
   }
-
 
   /*caixa 2*/
   .caixa2{
-  max-width: 200px;
+  width: 200px;
   height: 200px;
-  position: relative;
-  margin-left:  70%;
-  margin-right: 5%;
   }
 
   .text2{
   font-size: 1rem;
-  position: relative;
-  top: 130px;
-  width: 55%;
-  margin-left: 20px;
   }
 
   /*caixa 3*/
   .caixa3{
-  height: 200px;
-  position: relative;
-  bottom: -200px;
-  margin-right: 60%;
-  margin-left: 5%;
+    height: 200px;
   }
-
   .text3{
   font-size: 1rem;
-  position: relative;
-  bottom: 140px;
-  left: 100px;
-  width: 55%;
-  margin-top: 220px;
-  margin-right: 20px;
-  margin-left: 50px;
   }
 
 
@@ -836,6 +775,7 @@ footer {
     height: 400px;
     bottom: 100px;
     left: 5px;
+    margin-top: 140px;
   }
 
   .container h1{
@@ -878,10 +818,11 @@ footer {
   }
 }
 
-@media(min-width: 769px) and (max-width: 1024px){
+
+@media(min-width: 768px) and (max-width: 1024px){
   .menu{
     font-size: 1rem;
-    gap: 8px;
+    gap: 10px;
     position: relative;
     right: 45px;
   }
@@ -907,57 +848,32 @@ footer {
 
   /*caixa 1*/
   .caixa{
-  max-width: 250px;
+  width: 250px;
   height: 250px;
-  position: relative;
-  margin-left: 5%;
-  margin-right: 60%;
-  margin-top: 50px;
   }
 
   .text{
   font-size: 1.25rem;
-  position: relative;
-  top: 130px;
-  width: 50%;
-  margin-right: 50px;
-  margin-top: -300px;
   }
 
 
   /*caixa 2*/
   .caixa2{
-  max-width: 250px;
+  width: 250px;
   height: 250px;
-  position: relative;
-  margin-left:  65%;
-  margin-right: 5%;
   }
 
   .text2{
   font-size: 1.25rem;
-  position: relative;
-  top: 130px;
-  width: 50%;
-  margin-left: 50px;
-  margin-top: -300px;
   }
 
   /*caixa 3*/
   .caixa3{
   height: 250px;
-  position: relative;
-  bottom: -250px;
-  margin-left: 20vw;
-  margin-right: 20vw;
   }
 
   .text3{
   font-size: 1.25rem;
-  position: relative;
-  bottom: 140px;
-  width: 70%;
-  margin-top: 410px;
   }
 
 
@@ -968,6 +884,7 @@ footer {
     height: 600px;
     bottom: 100px;
     left: 5px;
+    margin-top: 160px;
   }
 
   .container h1{
@@ -998,7 +915,78 @@ footer {
   }
 
   .copy{
+    padding-bottom: 50px;
+  }
+}
+
+
+@media(min-width: 1025px) and (max-width: 1350px){
+  .logo{
+    margin-right: 0px;
+  }
+
+  .menu{
+    width: 35%;
+    font-size: 1rem;
+  }
+
+  .title{
+  margin-top: 45px;
+  font-size: 3rem;
+  }
+
+  /*caixa 1*/
+  .caixa{
+  width: 300px;
+  height: 300px;
+  }
+
+  .text{
+  font-size: 24px;
+  }
+
+
+  /*caixa 2*/
+  .caixa2{
+  width: 300px;
+  height: 300px;
+  }
+
+  .text2{
+  font-size: 24px;
+  }
+
+  /*caixa 3*/
+  .caixa3{
+  height: 300px;
+  }
+
+  .text3{
+  font-size: 24px;
+  }
+
+
+  /*chat*/
+  .container{
+    width: 800px;
     position: relative;
+    height: 600px;
+    bottom: 100px;
+    left: 5px;
+    margin-top: 160px;
+  }
+
+  .container h1{
+    font-size: 1.75rem;
+  }
+
+  /*fotter*/
+  .card1{
+    position: relative;
+    top: -5px;
+  }
+
+  .copy{
     padding-bottom: 50px;
   }
 }

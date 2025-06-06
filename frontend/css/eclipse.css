@@ -233,18 +233,26 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
     font-size: 90px;
 }
 
+
 /*card1*/
+.info{
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  gap: 5%;
+}
 
 .caixa{
-   background-image: url(../img/ecipse01.png);
-    background-position: center;
-    background-size: cover;
-    height: 400px;
-    max-width: 500px;
-    margin-left: 200px;
-    margin-top: 100px;
-    border-radius: 10px;
-    transition: all 1.5s ease;
+ background-image: url(../img/ecipse01.png);
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  width: 500px;
+  border-radius: 10px;
+  transition: all 1.5s ease;
 }
 
 .caixa:hover{
@@ -253,30 +261,36 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
   transform: rotate(360deg);
 }
 
-
 .text{
   width: 50%;
   text-align: justify;
   justify-self: end;
-  margin-right: 100px;
-  margin-top: -250px;
   font-family: var(--ff-smooch);
   font-weight: 400;
   font-size: var(--h2-32);
 }
 
+
 /*card2*/
+.info2{
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  margin-top: 10%;
+  gap: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
 
 .caixa2{
-    background-image: url(../img/eclipse-black.webp);
-    background-position: center;
-    background-size: cover;
-    height: 400px;
-    max-width: 500px;
-    margin-left:  75rem;
-    margin-top: 200px;
-    border-radius: 10px;
-    transition: all 1.5s ease;
+  background-image: url(../img/eclipse-black.webp);
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  width: 500px;
+  margin-left: ;
+  border-radius: 10px;
+  transition: all 1.5s ease;
 }
 
 .caixa2:hover{
@@ -288,8 +302,6 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 .text2{
   width: 50%;
   position: relative;
-  margin-top: -250px;
-  margin-left: 100px;
   text-align: justify;
   font-family: var(--ff-smooch);
   font-weight: 400;
@@ -297,18 +309,27 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 }
 
 /*card3*/
-.caixa3{
-    background-image: url(../img/eclipse3.png);
-    background-position: center;
-    background-size: cover;
-    height: 250px;
-    max-width: 1500px;
-    margin-left: 200px;
-    position: relative;
-    bottom: -250px;
-    border-radius: 10px;
-    transition: all 1.5s ease;
+.info3{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
+
+.caixa3{
+  background-image: url(../img/eclipse3.png) !important; 
+  background-position: center;
+  background-size: cover;
+  height: 250px;
+  width: 75%;
+  border-radius: 10px;
+  transition: all 1.5s ease;
+  margin-bottom: 20px;
+}
+
 .caixa3:hover{
   box-shadow:15px 15px 40px 15px hsla(198, 39%, 51%, 0.5);
   transition: all 0.7s ease;
@@ -317,9 +338,7 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 
 .text3{
   width: 70%;
-  justify-self: center;
   text-align: justify;
-  margin-top: 280px;
   font-family: var(--ff-smooch);
   font-weight: 400;
   font-size: var(--h2-32);
@@ -340,9 +359,9 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
   justify-self: center;
   border: #fff;
   transition: all 1.5s ease;
-  color:#ffffff;
-  font-family: var(--ff-poppins);
 }
+
+
 .container:hover{
   box-shadow: 0 0 70px rgb(255, 255, 255, 0.75);
   transition: all 0.7s ease;
@@ -525,8 +544,8 @@ footer {
     border-radius: 10px;
   }
 
-
-  /*responsividade*/
+  
+/*responsividade*/
 @media (max-width: 480px){
   .logo{
     position: relative;
@@ -561,82 +580,43 @@ footer {
 
   /*caixa 1*/
   .caixa{
-    max-width: 150px;
-    height: 150px;
-    position: relative;
-    margin-left: 5px;
-    margin-top: 20px;
-    }
-
-  .caixa:hover{
-  box-shadow: 9px 9px 37px 11px hsla(9, 72%, 52%, 0.5);
-  transition: all 0.9s ease;
-  transform: rotate(360deg);
+  width: 120px;
+  height: 120px;
   }
 
   .text{
   font-size: 12px;
-  position: relative;
-  top: 130px;
-  width: 50%;
-  margin-right: 20px;
   }
 
-
-   /*caixa 2*/
-   .caixa2{
-    max-width: 150px;
-    height: 150px;
-    position: relative;
-    margin-left:  17rem;
-    }
-
-  .caixa2:hover{
-  box-shadow: 9px 9px 37px 11px hsl(219, 42%, 28%);
-  transform: rotateY(360deg);
-  transition: all 1.5s ease;
+  /*caixa 2*/
+  .caixa2{
+  width: 120px;
+  height: 120px;
   }
 
   .text2{
   font-size: 12px;
-  position: relative;
-  top: 130px;
-  width: 50%;
-  margin-left: 20px;
   }
 
- /*caixa 3*/
- .caixa3{
-  max-width: 150px;
-  height: 150px;
-  position: relative;
-  right: 195px;
-  bottom: -200px;
-  }
-
-  .caixa3:hover{
-  box-shadow:9px 9px 37px 11px hsla(198, 39%, 51%, 0.5);
-  transition: all 0.7s ease;
-  transform: scale(1.05);
+  /*caixa 3*/
+  .caixa3{
+  height: 120px;
+  margin-bottom: 10px;
   }
 
   .text3{
   font-size: 12px;
-  position: relative;
-  bottom: 140px;
-  left: 85px;
-  width: 50%;
-  margin-top: 220px;
   }
 
 
-   /*chat*/
-   .container{
+  /*chat*/
+  .container{
     width: 300px;
     position: relative;
     height: 400px;
     bottom: 100px;
     left: 5px;
+    margin-top: 140px;
   }
 
   .container h1{
@@ -649,7 +629,6 @@ footer {
 
   .container button{
     font-size: 1rem;
-
   }
 
   .container h2{
@@ -664,12 +643,11 @@ footer {
   /*fotter*/
   .card1{
     position: relative;
-    top: 7px;
+    top: -5px;
   }
 
   .copy{
-    position: relative;
-    font-size: 0.7rem;
+    padding-bottom: 50px;
   }
 
   .facebook, 
@@ -681,23 +659,27 @@ footer {
 }
 
 
-@media (min-width: 481px) and (max-width:600px) {
+@media (min-width: 481px) and (max-width:649px) {
   .logo{
-  width: 60px;
-  margin-right: 10px;
+    width: 60px;
   }
 
   .menu{
-    font-size: 13px;
-    margin-right: 55px;
-    gap: 10px;
+    font-size: 14px;
+    gap: 8px;
+    position: relative;
+    right: 45px;
   }
 
   .login{
-  height: 1,5rem;
-  width: 100px;
-  font-size: 10px;
-  margin-left: 25px;
+    width: 6.0rem;
+    font-size: 14px;
+    position: relative;
+    left: 20px;
+  }
+
+  .bar{
+    display: none;
   }
 
   .title{
@@ -707,235 +689,193 @@ footer {
 
   /*caixa 1*/
   .caixa{
-  max-width: 150px;
+  width: 150px;
   height: 150px;
-  position: relative;
-  right:120px ;
-  margin-top: 20px;
-  }
-
-  .caixa:hover{
-  box-shadow: 9px 9px 37px 11px hsla(9, 72%, 52%, 0.5);
-  transition: all 0.9s ease;
-  transform: rotate(360deg);
   }
 
   .text{
-  font-size: 12px;
-  position: relative;
-  top: 130px;
-  width: 40%;
+  font-size: 14px;
   }
 
 
   /*caixa 2*/
   .caixa2{
-  max-width: 150px;
+  width: 150px;
   height: 150px;
-  position: relative;
-  margin-left:  24rem;
-  }
-
-  .caixa2:hover{
-  box-shadow: 9px 9px 37px 11px hsl(219, 42%, 28%);
-  transform: rotateY(360deg);
-  transition: all 1.5s ease;
   }
 
   .text2{
-  font-size: 12px;
-  position: relative;
-  top: 130px;
-  width: 40%;
+  font-size: 14px;
   }
 
   /*caixa 3*/
   .caixa3{
-  max-width: 150px;
   height: 150px;
-  position: relative;
-  right:120px;
-  bottom: -200px;
-  }
-
-  .caixa3:hover{
-  box-shadow:9px 9px 37px 11px hsla(198, 39%, 51%, 0.5);
-  transition: all 0.7s ease;
-  transform: scale(1.05);
   }
 
   .text3{
-  font-size: 12px;
-  position: relative;
-  bottom: 140px;
-  left: 80px;
-  width: 40%;
-  margin-top: 220px;
+  font-size: 14px;
   }
 
 
   /*chat*/
   .container{
-    width: 500px;
+    width: 400px;
     position: relative;
     height: 400px;
     bottom: 100px;
     left: 5px;
+    margin-top: 120px;
   }
 
-  .card{
-    margin-top: 0;
+  .container h1{
+    font-size: 18px;
   }
 
+  .container textarea{
+    height: 45px;
+  }
+
+  .container button{
+    font-size: 1rem;
+  }
+
+  .container h2{
+    font-size: 1rem;
+  }
+
+  .comment{
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  /*fotter*/
   .card1{
-    cursor: pointer;
+    position: relative;
+    top: -5px;
   }
 
-  .facebook,  
+  .copy{
+    padding-bottom: 50px;
+  }
+
+  .facebook, 
   .instagram, 
-  .twitter, 
-  .youtube{
-    width: 30px;
+  .youtube, 
+  .twitter{
+    width: 35px;
   }
 }
 
 
-@media (min-width: 601px) and (max-width:767px) {
+@media (min-width: 650px) and (max-width:767px) {
   .logo{
     width: 60px;
-    margin-right: 10px;
   }
-  
-   .menu{
-      font-size: 13px;
-      margin-right: 55px;
-      gap: 10px;
+
+  .menu{
+    font-size: 14px;
+    gap: 8px;
+    position: relative;
+    right: 45px;
   }
-  
+
   .login{
-    height: 1,5rem;
-    width: 100px;
-    font-size: 10px;
-    margin-left: 25px;
+    width: 6.0rem;
+    font-size: 14px;
+    position: relative;
+    left: 20px;
   }
-  
+
   .title{
-    margin-top: 45px;
-    font-size: var(--h2-32);
+  margin-top: 45px;
+  font-size: 3rem;
   }
-  
+
   /*caixa 1*/
   .caixa{
-    max-width: 150px;
-    height: 150px;
-    position: relative;
-    right: 10px ;
-    margin-top: 20px;
-    margin-left: 100px;
+  width: 200px;
+  height: 200px;
   }
-  
-  .caixa:hover{
-    box-shadow: 9px 9px 37px 11px hsla(9, 72%, 52%, 0.5);
-    transition: all 0.9s ease;
-    transform: rotate(360deg);
-  }
-  
+
   .text{
-    font-size: 12px;
-    position: relative;
-    top: 130px;
-    width: 40%;
+  font-size: 1rem;
   }
-  
-  
+
   /*caixa 2*/
   .caixa2{
-    max-width: 150px;
-    height: 150px;
-    position: relative;
-    margin-left:  28rem;
+  width: 200px;
+  height: 200px;
   }
-  
-  .caixa2:hover{
-    box-shadow: 9px 9px 37px 11px hsl(219, 42%, 28%);
-    transform: rotateY(360deg);
-    transition: all 1.5s ease;
-  }
-  
+
   .text2{
-    font-size: 12px;
-    position: relative;
-    top: 130px;
-    width: 40%;
+  font-size: 1rem;
   }
-  
+
   /*caixa 3*/
   .caixa3{
-    max-width: 150px;
-    height: 150px;
-    position: relative;
-    right:120px;
-    bottom: -200px;
+    height: 200px;
   }
-  
-  .caixa3:hover{
-    box-shadow:9px 9px 37px 11px hsla(198, 39%, 51%, 0.5);
-    transition: all 0.7s ease;
-    transform: scale(1.05);
-  }
-  
   .text3{
-    font-size: 12px;
-    position: relative;
-    bottom: 140px;
-    left: 80px;
-    width: 40%;
-    margin-top: 220px;
+  font-size: 1rem;
   }
-  
-  
+
+
   /*chat*/
   .container{
-    width: 500px;
+    width: 400px;
     position: relative;
     height: 400px;
     bottom: 100px;
     left: 5px;
-}
+    margin-top: 140px;
+  }
 
-.card{
-    margin-top: 0;
-}
+  .container h1{
+    font-size: 18px;
+  }
 
-.card1{
-    cursor: pointer;
-}
+  .container textarea{
+    height: 45px;
+  }
 
-.facebook{
-    height: 40px;
+  .container button{
+    font-size: 1rem;
+  }
+
+  .container h2{
+    font-size: 1rem;
+  }
+
+  .comment{
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  /*fotter*/
+  .card1{
+    position: relative;
+    top: -5px;
+  }
+
+  .copy{
+    position: relative;
+    padding-bottom: 50px;
+  }
+
+  .facebook, 
+  .instagram, 
+  .youtube, 
+  .twitter{
     width: 40px;
+  }
 }
 
-.instagram{
-    height: 40px;
-    width: 40px;
-}
-
-.twitter{
-    height: 40px;
-    width: 40px;
-}
-
-.youtube{
-    height: 40px;
-    width: 40px;
-}
-}
 
 @media(min-width: 768px) and (max-width: 1024px){
   .menu{
     font-size: 1rem;
-    gap: 8px;
+    gap: 10px;
     position: relative;
     right: 45px;
   }
@@ -953,118 +893,153 @@ footer {
     position: relative;
     left:10px;
   }
-  
+
   .title{
-    margin-top: 45px;
-    font-size: 3rem;
+  margin-top: 45px;
+  font-size: 3rem;
   }
-  
+
   /*caixa 1*/
   .caixa{
-    max-width: 200px;
-    height: 200px;
-    position: relative;
-    right: 10px ;
-    margin-top: 20px;
-    margin-left: 100px;
+  width: 250px;
+  height: 250px;
   }
-  
-  .caixa:hover{
-    box-shadow: 9px 9px 37px 11px hsla(9, 72%, 52%, 0.5);
-    transition: all 0.9s ease;
-    transform: rotate(360deg);
-  }
-  
+
   .text{
-    font-size: 1rem;
-    position: relative;
-    top: 130px;
-    width: 50%;
+  font-size: 1.25rem;
   }
-  
-  
+
+
   /*caixa 2*/
   .caixa2{
-    max-width: 200px;
-    height: 200px;
-    position: relative;
-    left: 70vw;
-    margin-left:  0rem;
-    margin-right: 5vw;
+  width: 250px;
+  height: 250px;
   }
-  
-  .caixa2:hover{
-    box-shadow: 9px 9px 37px 11px hsl(219, 42%, 28%);
-    transform: rotateY(360deg);
-    transition: all 1.5s ease;
-  }
-  
+
   .text2{
-    font-size: 1rem;
-    position: relative;
-    top: 130px;
-    width: 50%;
+  font-size: 1.25rem;
   }
-  
+
   /*caixa 3*/
   .caixa3{
-    max-width: 200px;
-    height: 200px;
-    position: relative;
-    right:120px;
-    bottom: -200px;
+  height: 250px;
   }
-  
-  .caixa3:hover{
-    box-shadow:9px 9px 37px 11px hsla(198, 39%, 51%, 0.5);
-    transition: all 0.7s ease;
-    transform: scale(1.05);
-  }
-  
+
   .text3{
-    font-size: 1rem;
-    position: relative;
-    bottom: 140px;
-    left: 80px;
-    width: 50%;
-    margin-top: 220px;
+  font-size: 1.25rem;
   }
-  
-  
+
+
   /*chat*/
   .container{
-      width: 500px;
-      position: relative;
-      height: 400px;
-      bottom: 100px;
-      left: 5px;
+    width: 600px;
+    position: relative;
+    height: 600px;
+    bottom: 100px;
+    left: 5px;
+    margin-top: 160px;
   }
-  
-  .card{
-      margin-top: 0;
+
+  .container h1{
+    font-size: 1.5rem;
   }
-  
+
+  .container textarea{
+    height: 45px;
+  }
+
+  .container button{
+    font-size: 1rem;
+  }
+
+  .container h2{
+    font-size: 1.5rem;
+  }
+
+  .comment{
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  /*fotter*/
   .card1{
-      cursor: pointer;
+    position: relative;
+    top: -5px;
   }
-  
-  .facebook{
-      height: 40px;
-      width: 40px;
+
+  .copy{
+    padding-bottom: 50px;
   }
-  
-  .instagram{
-      height: 40px;
-      width: 40px;
+}
+
+
+@media(min-width: 1025px) and (max-width: 1350px){
+  .logo{
+    margin-right: 0px;
   }
-  
-  .twitter{
-      height: 40px;
-      width: 40px;
+
+  .menu{
+    width: 35%;
+    font-size: 1rem;
   }
-  
-  .youtube{
-      height: 40px;
-      width: 40px;
+
+  .title{
+  margin-top: 45px;
+  font-size: 3rem;
+  }
+
+  /*caixa 1*/
+  .caixa{
+  width: 300px;
+  height: 300px;
+  }
+
+  .text{
+  font-size: 24px;
+  }
+
+
+  /*caixa 2*/
+  .caixa2{
+  width: 300px;
+  height: 300px;
+  }
+
+  .text2{
+  font-size: 24px;
+  }
+
+  /*caixa 3*/
+  .caixa3{
+  height: 300px;
+  }
+
+  .text3{
+  font-size: 24px;
+  }
+
+
+  /*chat*/
+  .container{
+    width: 800px;
+    position: relative;
+    height: 600px;
+    bottom: 100px;
+    left: 5px;
+    margin-top: 160px;
+  }
+
+  .container h1{
+    font-size: 1.75rem;
+  }
+
+  /*fotter*/
+  .card1{
+    position: relative;
+    top: -5px;
+  }
+
+  .copy{
+    padding-bottom: 50px;
   }
 }

@@ -892,9 +892,6 @@ z-index: 10;
 }
 
 
-/*---------------------------------------------*/
-
-/*Celular*/
 @media (min-width: 481px) and (max-width: 649px){
   .logo{
     width: 60px;
@@ -1075,7 +1072,7 @@ z-index: 10;
   .instagram, 
   .youtube, 
   .twitter{
-    width: 30px;
+    width: 35px;
   }
 }
 
@@ -1097,10 +1094,6 @@ z-index: 10;
     font-size: 14px;
     position: relative;
     left: 20px;
-  }
-
-  .bar{
-    display: none;
   }
 
   .bandeira1{
@@ -1273,12 +1266,10 @@ z-index: 10;
 }
 
 
-
-/*Tablet*/
 @media(min-width: 768px) and (max-width: 1024px) {
   .menu{
     font-size: 1rem;
-    gap: 8px;
+    gap: 10px;
     position: relative;
     right: 45px;
   }
@@ -1452,6 +1443,7 @@ z-index: 10;
   .logo{
     margin-right: 0px;
   }
+
   .menu{
     width: 35%;
     font-size: 1rem;
@@ -1464,7 +1456,6 @@ z-index: 10;
   .sub-titulo{
     font-size: 3rem;
   }
-
 
   /*NOTÍCIAS*/
   .noticia-titulo{
@@ -1593,6 +1584,7 @@ z-index: 10;
     top: 260px;
   }
 }
+
 
 @media(min-width: 1351px) and (max-width: 1750px) {
 
