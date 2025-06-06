@@ -1,33 +1,41 @@
-document.adddEvenListener('DOMContentLoaded',function(){
+document.addEventListener('DOMContentLoaded', function () {
     const token = localStorage.getItem("token");
-    if(!token){
+    if (!token) {
         window.location.href = 'login.html';
-    return;
+        return;
     }
 
-    const form = document.querySelector(".form")
+    const form = document.querySelector(".form");
 
-    //função para buscar dados do usuario
-    async function buscarDadosUsuario(){
+    // Função para buscar dados do usuário
+    async function buscarDadosUsuario() {
         try {
-            const response = await fetch('http:localhost:4000/usuarios/perfil', {
+            console.log('Token que será enviado:', token);
+            console.log('Headers que serão enviados:', {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            });
+
+            const response = await fetch('http://localhost:4000/usuarios/perfil', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`
                 }
             });
-        
+
             if (response.ok) {
                 const userData = await response.json();
-        
-                document.getElementById("NOME").value = userData.NOME;
-                document.getElementById("EMAIL").value = userData.EMAIL;
-        
-                // Não exibir a senha
-                document.getElementById('SENHA').value = '';
+                console.log('Usuário:', userData);
+
+                const nomeInput = document.getElementById("Nome");
+                const emailInput = document.getElementById("Email");
+                const senhaInput = document.getElementById("password");
+
+                if (nomeInput) nomeInput.value = userData.NOME || '';
+                if (emailInput) emailInput.value = userData.EMAIL || '';
+                if (senhaInput) senhaInput.value = userData.SENHA || '';
             } else if (response.status === 401 || response.status === 403) {
-                // Token expirado
                 alert("Sessão expirada, faça login novamente.");
                 localStorage.removeItem("token");
                 window.location.href = 'login.html';
@@ -40,53 +48,96 @@ document.adddEvenListener('DOMContentLoaded',function(){
             alert('Erro ao conectar à API.');
         }
     }
-    // Chama a função para atualizar os dados do usuário
 
-    async function atalizarDadosUsuario(event) {
+    // Função para atualizar dados do usuário
+    async function atualizarDadosUsuario(event) {
         event.preventDefault();
 
-        const nome = document.getElementById('NOME').value.trim();
-        const email = document.getElementById('EMAIL').value.trim();
-        const senha = document.getElementById('SENHA').value.trim();
+        const nomeInput = document.getElementById('Nome');
+        const emailInput = document.getElementById('Email');
+        const senhaInput = document.getElementById('password');
 
-        //monta o payload apenas com os campos preenchidos
+        const nome = nomeInput ? nomeInput.value.trim() : '';
+        const email = emailInput ? emailInput.value.trim() : '';
+        const senha = senhaInput ? senhaInput.value.trim() : '';
+
         const payload = {};
         if (nome) payload.NOME = nome;
-          if (email) payload.NOME = email;
-            if (senha) payload.NOME = senha;
+        if (email) payload.EMAIL = email;
+        if (senha) payload.SENHA = senha;
 
-            try{
-                const response = await fetch('http://localhost:4000/usuarios/perfil', {
-                    method: 'PUT',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${token}`
-                    },
-                    body: JSON.stringify(payload)
-                });
+        try {
+            const response = await fetch('http://localhost:4000/usuarios/perfil', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify(payload)
+            });
 
-                if(response.ok){
-                    const data  = await response.json();
-                    alert('Dados atualizados com sucesso!')
+            if (response.ok) {
+                const data = await response.json();
+                alert('Dados atualizados com sucesso!');
 
-                    // atualiza o nome no localStorage se foi alterado
-                    if(payload.NOME){
-                        localStorage.setItem("usuarioNome",payload.NOME)
-                    }else if(response.status === 401 || response.status === 403){
-                        // Token expirado
-                        alert('Sessão expirada. Faça login novamente.');
-                        localStorage.removeItem('token');
-                        window.location.href = 'login.html';
-                    } else{
-                        const errorData = await response.json();
-                        alert(`Erro ao atualizar dados do usuário: ${errorData.error || "Erro desconhecido"}`);
-                    }
+                if (payload.NOME) {
+                    localStorage.setItem("usuarioNome", payload.NOME);
                 }
-
-            } catch (error) {
-                console.error('Erro na requisição:', error);
-                alert('Erro ao conectar à API.');
+            } else if (response.status === 401 || response.status === 403) {
+                alert('Sessão expirada. Faça login novamente.');
+                localStorage.removeItem('token');
+                window.location.href = 'login.html';
+            } else {
+                const errorData = await response.json();
+                alert(`Erro ao atualizar dados do usuário: ${errorData.error || "Erro desconhecido"}`);
             }
+        } catch (error) {
+            console.error('Erro na requisição:', error);
+            alert('Erro ao conectar à API.');
+        }
     }
-    
+
+    // Função para excluir conta do usuário
+    function excluirConta() {
+        if (confirm("Tem certeza que deseja excluir sua conta? Esta ação não pode ser desfeita.")) {
+            fetch("http://localhost:4000/usuarios/perfil", {
+                method: 'DELETE',
+                headers: {
+                    "Authorization": `Bearer ${token}`,
+                }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        alert("Conta excluída com sucesso.");
+                        localStorage.removeItem("token");
+                        localStorage.removeItem("usuarioNome");
+                        window.location.href = './index.html';
+                    } else {
+                        return response.json().then(errorData => {
+                            throw new Error(errorData.error || "Erro ao excluir conta");
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro ao excluir conta:', error);
+                    alert(`Erro ao excluir conta: ${error.message}`);
+                });
+        }
+    }
+
+    // Adiciona eventos
+    if (form) {
+        form.addEventListener('submit', atualizarDadosUsuario);
+    }
+
+    const btnExcluir = document.querySelector('.login-button2');
+    if (btnExcluir) {
+        btnExcluir.addEventListener('click', function (event) {
+            event.preventDefault();
+            excluirConta();
+        });
+    }
+
+    // Busca dados do usuário ao carregar a página
+    buscarDadosUsuario();
 });
