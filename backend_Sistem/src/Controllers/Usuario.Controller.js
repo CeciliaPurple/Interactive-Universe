@@ -168,4 +168,74 @@ const UsuarioController = {
     }
 }
 
+//Listar todos os usuários apenas para admins
+exports.listar = async (req,res) => {
+    try{
+        const usuarios = await Usuarip.findAll({
+            attributes: ['ID', 'NOME', 'EMAIL', 'TIPO_USUARIO']
+        });
+
+        return res.status(200).json(usuarios);
+    } catch (error) {
+        console.error('Erro ao listar usuários:', error);
+        return res.status(500).json({ error: 'Erro ao listar usuários.' });
+    }
+}
+
+//atualizar usuario por id 
+exports.atualizar = async (req, res) => {
+    try {
+        const {id} = req.params;
+        const { NOME, EMAIL, SENHA, TIPO_USUARIO } = req.body;
+
+        const usuario = await Usuario.findByPk(id);
+        if(!usuario){
+            return res.status(404).json({ message: 'Usuário não encontrado.' });
+        }
+
+        //atualizar os campos
+        await usuaerio.update({
+            NOME: NOME || usuario.NOME,
+            EMAIL: EMAIL || usuario.EMAIL,
+            SENHA: SENHA || usuario.SENHA,
+            TIPO_USUARIO: TIPO_USUARIO || usuario.TIPO_USUARIO
+        })
+
+        return res.status(200).json({
+            message: 'Usuário atualizado com sucesso.',
+            usuario: {
+                ID: usuario.ID,
+                NOME: usuario.NOME,
+                EMAIL: usuario.EMAIL,
+                TIPO_USUARIO: usuario.TIPO_USUARIO
+            }
+        });
+    } catch (error) {
+        console.error('Erro ao atualizar usuário:', error);
+        return res.status(500).json({ error: 'Erro ao atualizar usuário.' });
+    }
+}
+
+    //deletar usuario por id
+    exports.deletar = async (req,res) => {
+        try{
+            const {id} = req.params;
+
+            const usuario = await Usuario.findAllByPk(id);
+
+            if(usuario){
+                return res.status(404).json({
+                    message: 'Usuário não encontrado.'
+                })
+            }
+
+            await Usuario.destroy();
+
+            return res.status(200).json({mensage:'Usuário deletado com sucesso.'});
+        } catch (error) {
+            console.error('Erro ao deletar usuário:', error);
+            return res.status(500).json({ error: 'Erro ao deletar usuário.' });
+        }
+    }
+
 module.exports = UsuarioController;

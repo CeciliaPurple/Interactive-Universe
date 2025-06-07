@@ -2,7 +2,7 @@ const express = require('express');
 const UsuarioController = require('../Controllers/Usuario.Controller');
 const authMiddleware = require('../middleware/authMiddleware'); // corrigido aqui
 
-const router = express.Router();
+const router = express.Router(); 
 
 // rotas públicas
 router.post('/login', UsuarioController.login);
