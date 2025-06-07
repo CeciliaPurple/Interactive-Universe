@@ -1,4 +1,3 @@
-// filepath: /c:/Users/cg3036626/Desktop/projeto/Interactive-Universe/js/controllers/UsuarioController.js
 const Usuario = require('../Models/Usuario');
 const jwt = require('jsonwebtoken');
 const config = require('../Config/Database');
@@ -19,7 +18,15 @@ const UsuarioController = {
     async criar(req, res) {
         try {
             const { NOME, EMAIL, SENHA, TIPO_USUARIO } = req.body;
-            const novoUsuario = await Usuario.create({ NOME, EMAIL, SENHA, TIPO_USUARIO });
+            const tipoFormatado = TIPO_USUARIO ? TIPO_USUARIO.toUpperCase() : 'USUARIO';
+
+            const novoUsuario = await Usuario.create({
+                NOME,
+                EMAIL,
+                SENHA,
+                TIPO_USUARIO: tipoFormatado
+            });
+
             res.status(200).json({ message: 'Usuário cadastrado com sucesso.', usuario: novoUsuario });
         } catch (error) {
             console.error(error);
@@ -31,7 +38,11 @@ const UsuarioController = {
     async atualizar(req, res) {
         try {
             const { id } = req.params;
-            const { NOME, EMAIL, SENHA, TIPO_USUARIO } = req.body;
+            let { NOME, EMAIL, SENHA, TIPO_USUARIO } = req.body;
+
+            if (TIPO_USUARIO) {
+                TIPO_USUARIO = TIPO_USUARIO.toUpperCase();
+            }
 
             await Usuario.update(
                 { NOME, EMAIL, SENHA, TIPO_USUARIO },
@@ -62,10 +73,7 @@ const UsuarioController = {
     async login(req, res) {
         try {
             const { nome, senha } = req.body;
-            console.log(nome, senha);
-
             const usuario = await Usuario.findOne({ where: { NOME: nome } });
-            console.log("USUARIO", usuario);
 
             if (!usuario) {
                 return res.status(404).json({ error: 'Usuário não encontrado' });
@@ -76,12 +84,13 @@ const UsuarioController = {
                 return res.status(401).json({ error: 'Senha inválida' });
             }
 
+            // Gerar token com TIPO em maiúsculo
             const token = jwt.sign(
                 {
-                    id: usuario.ID,
-                    nome: usuario.NOME,
-                    tipo_usuario: usuario.TIPO_USUARIO,
-                    email: usuario.EMAIL
+                    ID: usuario.ID,
+                    NOME: usuario.NOME,
+                    EMAIL: usuario.EMAIL,
+                    TIPO: usuario.TIPO_USUARIO.toUpperCase()
                 },
                 "meusegredo",
                 {
@@ -100,10 +109,9 @@ const UsuarioController = {
     },
 
     // Obter perfil do usuário logado
-    perfil: async (req, res) => {
+    async perfil(req, res) {
         try {
-            const id = req.user.id;
-
+            const id = req.user.ID;
             const usuario = await Usuario.findByPk(id);
 
             if (!usuario) {
@@ -111,7 +119,6 @@ const UsuarioController = {
             }
 
             const { SENHA, ...dadosUsuario } = usuario.dataValues;
-
             res.status(200).json(dadosUsuario);
         } catch (error) {
             console.error('Erro ao obter perfil do usuário', error);
@@ -120,9 +127,9 @@ const UsuarioController = {
     },
 
     // Atualizar perfil do usuário logado
-    atualizarPerfil: async (req, res) => {
+    async atualizarPerfil(req, res) {
         try {
-            const userId = req.user.id;
+            const userId = req.user.ID;
             const { NOME, EMAIL, SENHA } = req.body;
 
             const usuario = await Usuario.findByPk(userId);
@@ -133,6 +140,7 @@ const UsuarioController = {
             if (NOME) usuario.NOME = NOME;
             if (EMAIL) usuario.EMAIL = EMAIL;
             if (SENHA) usuario.SENHA = SENHA;
+
             await usuario.save();
 
             const { SENHA: _, ...dadosAtualizados } = usuario.dataValues;
@@ -148,10 +156,9 @@ const UsuarioController = {
     },
 
     // Excluir conta do usuário logado
-    excluirConta: async (req, res) => {
+    async excluirConta(req, res) {
         try {
-            const userId = req.user.id;
-
+            const userId = req.user.ID;
             const usuario = await Usuario.findByPk(userId);
 
             if (!usuario) {
@@ -159,83 +166,12 @@ const UsuarioController = {
             }
 
             await usuario.destroy();
-
             res.status(200).json({ message: 'Conta excluída com sucesso.' });
         } catch (error) {
             console.error('Erro ao excluir conta do usuário', error);
             res.status(500).json({ error: 'Erro ao excluir conta.' });
         }
     }
-}
-
-//Listar todos os usuários apenas para admins
-exports.listar = async (req,res) => {
-    try{
-        const usuarios = await Usuarip.findAll({
-            attributes: ['ID', 'NOME', 'EMAIL', 'TIPO_USUARIO']
-        });
-
-        return res.status(200).json(usuarios);
-    } catch (error) {
-        console.error('Erro ao listar usuários:', error);
-        return res.status(500).json({ error: 'Erro ao listar usuários.' });
-    }
-}
-
-//atualizar usuario por id 
-exports.atualizar = async (req, res) => {
-    try {
-        const {id} = req.params;
-        const { NOME, EMAIL, SENHA, TIPO_USUARIO } = req.body;
-
-        const usuario = await Usuario.findByPk(id);
-        if(!usuario){
-            return res.status(404).json({ message: 'Usuário não encontrado.' });
-        }
-
-        //atualizar os campos
-        await usuaerio.update({
-            NOME: NOME || usuario.NOME,
-            EMAIL: EMAIL || usuario.EMAIL,
-            SENHA: SENHA || usuario.SENHA,
-            TIPO_USUARIO: TIPO_USUARIO || usuario.TIPO_USUARIO
-        })
-
-        return res.status(200).json({
-            message: 'Usuário atualizado com sucesso.',
-            usuario: {
-                ID: usuario.ID,
-                NOME: usuario.NOME,
-                EMAIL: usuario.EMAIL,
-                TIPO_USUARIO: usuario.TIPO_USUARIO
-            }
-        });
-    } catch (error) {
-        console.error('Erro ao atualizar usuário:', error);
-        return res.status(500).json({ error: 'Erro ao atualizar usuário.' });
-    }
-}
-
-    //deletar usuario por id
-    exports.deletar = async (req,res) => {
-        try{
-            const {id} = req.params;
-
-            const usuario = await Usuario.findAllByPk(id);
-
-            if(usuario){
-                return res.status(404).json({
-                    message: 'Usuário não encontrado.'
-                })
-            }
-
-            await Usuario.destroy();
-
-            return res.status(200).json({mensage:'Usuário deletado com sucesso.'});
-        } catch (error) {
-            console.error('Erro ao deletar usuário:', error);
-            return res.status(500).json({ error: 'Erro ao deletar usuário.' });
-        }
-    }
+};
 
 module.exports = UsuarioController;
