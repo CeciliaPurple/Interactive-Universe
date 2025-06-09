@@ -15,6 +15,10 @@ router.post('/', authMiddleware, NoticiaController.criarNoticia);
 // Atualizar notícia existente (somente com autenticação)
 router.put('/:id', authMiddleware, NoticiaController.atualizarNoticia);
 
+// Atualizar conteúdos parciais de notícia (somente com autenticação)
+// Para edição in-place: use PUT ou PATCH
+router.patch('/update-content/:id', authMiddleware, NoticiaController.atualizarConteudoParcial);
+
 // Excluir notícia (somente com autenticação)
 router.delete('/:id', authMiddleware, NoticiaController.excluirNoticia);
 

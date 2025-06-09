@@ -63,7 +63,7 @@ exports.criarNoticia = async (req, res) => {
   }
 };
 
-// Atualizar uma notícia (somente ADM)
+// Atualizar uma notícia completa (somente ADM)
 exports.atualizarNoticia = async (req, res) => {
   const { id } = req.params;
   const { TITULO, SUB_TITULO, DESCRICAO1, FOTO_CAPA, CONTEUDO, DATA_PUBLICACAO } = req.body;
@@ -92,6 +92,32 @@ exports.atualizarNoticia = async (req, res) => {
   } catch (error) {
     console.error('Erro ao atualizar notícia:', error);
     res.status(500).json({ error: 'Erro ao atualizar notícia' });
+  }
+};
+
+// Atualizar conteúdos parciais de notícia (somente ADM)
+// Essa rota será usada para salvar as alterações do editor in-place
+exports.atualizarConteudoParcial = async (req, res) => {
+  const noticiaId = req.params.id;
+  const atualizacoes = req.body; // Espera receber um objeto com os campos a atualizar
+
+  if (req.user.TIPO !== 'ADM') {
+    return res.status(403).json({ error: 'Apenas administradores podem atualizar notícias.' });
+  }
+
+  try {
+    const noticia = await Noticia.findByPk(noticiaId);
+
+    if (!noticia) {
+      return res.status(404).json({ error: 'Notícia não encontrada.' });
+    }
+
+    await noticia.update(atualizacoes);
+
+    return res.json({ message: 'Notícia atualizada com sucesso.', noticia });
+  } catch (error) {
+    console.error('Erro ao atualizar notícia:', error);
+    return res.status(500).json({ error: 'Erro ao atualizar notícia.' });
   }
 };
 
