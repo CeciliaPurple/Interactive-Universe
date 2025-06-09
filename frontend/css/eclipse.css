@@ -288,7 +288,6 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
   background-size: cover;
   height: 400px;
   width: 500px;
-  margin-left: ;
   border-radius: 10px;
   transition: all 1.5s ease;
 }
@@ -665,6 +664,7 @@ footer {
   }
 
   .menu{
+    width: 30%;
     font-size: 14px;
     gap: 8px;
     position: relative;
@@ -682,10 +682,11 @@ footer {
     display: none;
   }
 
+
   .title{
   margin-top: 45px;
   font-size: var(--h2-32);
-  }
+  } 
 
   /*caixa 1*/
   .caixa{

@@ -75,7 +75,6 @@ color:  #fff;
   text-decoration: underline;
 }
 
-
 .login > .inp {
 display: none;
 }
@@ -230,25 +229,28 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
   justify-self: center;
   margin-top: 2%;
   font-size: 90px;
+  text-align: center;
 }
-
-.title2{
-  font-family: var(--ff-bruno);
-  justify-self: center;
-  margin-top: -20px;
-  font-size: 90px;
-}
-
 
 /*card1*/
+.info{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  margin-right: 10%;
+  margin-left: 5%;
+  gap: 10%;
+}
+
 .caixa{
-  background-image: url(../img/rocha.png);
+  background-image: url(../img/rocha.png) !important;
   background-position: center;
   background-size: cover;
-  height: 300px;
-  max-width: 600px;
-  margin-left: 1000px;
-  margin-top: 120px;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 600px;
   border-radius: 10px;
   transition: 1.5s;
 }
@@ -258,26 +260,23 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
   transition: 1.5s;
 }
 
-.asteroides{
-    margin-left: 400px;
-    margin-top: -160px;
+.tipo{
     font-family: var(--ff-bruno);
     font-size: 50px;
 }
 
 .text{
-  width:33%;
+  width: 70%;
+  text-align: justify;
   justify-self: center;
-  text-align: and;
-  margin-top: 180px;
-  margin-bottom: 50px;
   font-family: var(--ff-smooch);
   font-weight: 400;
   font-size: 26px;
+  margin-bottom: 2%;
 }
 
 .linha{
-  max-width: 800px;
+  width: 70%;
   display: flex;
   justify-self: center;
 }
@@ -287,25 +286,11 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
   background-image: url(../img/caixa_2.png);
   background-position: center;
   background-size: cover;
-  height: 300px;
-  max-width: 600px;
-  margin-left: 700px;
-  margin-top: 70px;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 600px;
   border-radius: 10px;
   transition: 1.5s;
-}
-
-
-
-.text2{
-  width:45%;
-  justify-self: center;
-  text-align: and;
-  margin-top: 180px;
-  margin-bottom: 50px;
-  font-family: var(--ff-smooch);
-  font-weight: 400;
-  font-size: 26px;
 }
 
 .caixa2:hover{
@@ -313,63 +298,37 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
   transition: 1.5s;
 }
 
-.Cometas{
-    margin-left: 200px;
-    margin-top: -160px;
-    font-family: var(--ff-bruno);
-    font-size: 50px;
-}
-
-.linha2{
- max-width: 1000px;
- position: relative;
- left: 23%;
- bottom: 45px;
-}
-
-
 /*card3*/
+.info2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.meteoro{
+  font-family: var(--ff-bruno);
+  font-size: 50px;
+  margin-bottom: 1%;
+}
+
 .caixa3{
   background-image: url(../img/meteoro-mais-antigo.jpg);
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   height: 300px;
-  max-width: 600px;
-  margin-left: 200px;
-  margin-top: 70px;
+  width: 70%;
   border-radius: 10px;
   transition: 1.5s;
+  margin-bottom: 2%;
 }
 
 .caixa3:hover{
   box-shadow: 10px 10px 35px 10px hsla(12, 77%, 41%, 0.5);
   transition: 1.5s;
 }
-
-.Meteóros{
-  margin-left: 950px;
-  margin-top: -180px;
-  font-family: var(--ff-bruno);
-  font-size: 50px;
-}
-.text3{
-  width:52%;
-  justify-self: center;
-  text-align: and;
-  margin-top: 180px;
-  margin-bottom: 50px;
-  font-family: var(--ff-smooch);
-  font-weight: 400;
-  font-size: 26px;
-}
-
-.linha3{
-  max-width: 1400px;
-  margin-left: 275px;
-  justify-self: center;
-  margin-top: -20px;
-}
-
 
 /*footer*/
 .card{
@@ -385,6 +344,12 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
   width: 50px;
 }
 
+ @keyframes bounce_613 {
+   100% {
+     transform: scale(1);
+   }
+ }
+
 footer {
   display: flex;
   flex-direction: column;
@@ -394,9 +359,13 @@ footer {
   text-align: center;
 }
   
-  footer p{
+  ooter p{
   position: relative;
   z-index: 6;
+}
+
+.copy{
+  padding-bottom: 25px;
 }
 
 .card1{
@@ -425,10 +394,9 @@ footer {
     background-color: #b480cc;
     border-radius: 10px;
   }
-  
-/*responsividade*/
 
-@media (max-width: 480px) {
+/*responsividade*/
+@media (max-width: 480px){
   .logo{
     position: relative;
     left: -30px;
@@ -456,166 +424,243 @@ footer {
   }
 
   .title{
-    margin-top: 45px;
+    font-size: var(--h2-32);
   }
 
-  .title2{
-    margin-top: 0;
-  }
-
-  .title, .title2{
-  font-size: var(--h2-32);
-  }
-
-  h1{
-    margin-left: 20px;
-    margin-top: -70px;
+  .tipo{
     font-size: var(--h4-20);
   }
 
-  /*card1*/
-  .caixa{
-  width: 200px;
-  height: 100px;
-  margin-left: 200px;
-  margin-top: 80px;
-  }
-
   .text{
-  width: 70%;
-  margin-top: 60px;
-  font-size: 12px;
+    font-size: 12px;
   }
 
-  .linha{
-  max-width: 400px;
-  position: relative;
+  .caixa,
+  .caixa2, 
+  .caixa3{
+    height: 150px;
   }
 
-/*card2*/
-.caixa2{
-  height: 300px;
-  max-width: 600px;
-  margin-left: 700px;
-  margin-top: 70px;
-  border-radius: 10px;
-  transition: 1.5s;
+   /*fotter*/
+   .card1{
+    position: relative;
+    top: -5px;
+  }
+
+  .copy{
+    padding-bottom: 50px;
+  }
+
+  .facebook, 
+  .instagram, 
+  .youtube, 
+  .twitter{
+    width: 30px;
+  }
 }
 
-.text2{
-  width:45%;
-  justify-self: center;
-  text-align: and;
-  margin-top: 180px;
-  margin-bottom: 50px;
-  font-family: var(--ff-smooch);
-  font-weight: 400;
-  font-size: 26px;
-}
-
-.caixa2:hover{
-  box-shadow: 10px 10px 35px 10px hsla(231, 73%, 55%, 0.5);
-  transition: 1.5s;
-}
-
-.Cometas{
-    margin-left: 200px;
-    margin-top: -160px;
-    font-family: var(--ff-bruno);
-    font-size: 50px;
-}
-
-.linha2{
- max-width: 1000px;
- position: relative;
- left: 23%;
- bottom: 45px;
-}
-
-
-/*card3*/
-.caixa3{
-  background-image: url(../img/meteoro-mais-antigo.jpg);
-  background-position: center;
-  background-size: cover;
-  height: 300px;
-  max-width: 600px;
-  margin-left: 200px;
-  margin-top: 70px;
-  border-radius: 10px;
-  transition: 1.5s;
-}
-
-.caixa3:hover{
-  box-shadow: 10px 10px 35px 10px hsla(12, 77%, 41%, 0.5);
-  transition: 1.5s;
-}
-
-.Meteóros{
-  margin-left: 950px;
-  margin-top: -180px;
-  font-family: var(--ff-bruno);
-  font-size: 50px;
-}
-.text3{
-  width:52%;
-  justify-self: center;
-  text-align: and;
-  margin-top: 180px;
-  margin-bottom: 50px;
-  font-family: var(--ff-smooch);
-  font-weight: 400;
-  font-size: 26px;
-}
-
-.linha3{
-  max-width: 1400px;
-  margin-left: 275px;
-  justify-self: center;
-  margin-top: -20px;
-}
-
-}
-
-
-@media (min-width: 481px) and (max-width:600px) {
+@media (min-width: 481px) and (max-width:649px){
   .logo{
-  width: 60px;
-  margin-right: 10px;
+    width: 60px;
   }
 
   .menu{
-    font-size: 13px;
-    margin-right: 55px;
-    gap: 10px;
+    width: 30%;
+    font-size: 14px;
+    gap: 8px;
+    position: relative;
+    right: 45px;
   }
 
   .login{
-  height: 1,5rem;
-  width: 100px;
-  font-size: 10px;
-  margin-left: 25px;
+    width: 6.0rem;
+    font-size: 14px;
+    position: relative;
+    left: 20px;
   }
 
-  .title, .title2{
-  margin-top: 45px;
-  font-size: var(--h2-32);
+  .bar{
+    display: none;
   }
 
-  .asteroides{
-    margin-left: 100px;
-    margin-top: 0px;
+  .title{
+    font-size: var(--h2-32);
+  }
+
+  .tipo{
+    font-size: var(--h4-20);
+  }
+
+  .text{
+    font-size: 14px;
+  }
+
+  .caixa,
+  .caixa2, 
+  .caixa3{
+    height: 175px;
+  }
+
+   /*fotter*/
+   .card1{
+    position: relative;
+    top: -5px;
+  }
+
+  .copy{
+    padding-bottom: 50px;
+  }
+
+  .facebook, 
+  .instagram, 
+  .youtube, 
+  .twitter{
+    width: 35px;
+  }
+}
+
+@media (min-width: 650px) and (max-width:767px){
+  .logo{
+    width: 60px;
+  }
+
+  .menu{
+    font-size: 14px;
+    gap: 8px;
+    position: relative;
+    right: 45px;
+  }
+
+  .login{
+    width: 6.0rem;
+    font-size: 14px;
+    position: relative;
+    left: 20px;
+  }
+
+  .title{
+    font-size: 3rem;
+  }
+
+  .tipo{
     font-size: var(--h3-24);
   }
 
   .text{
-  width:33%;
-  justify-self: center;
-  text-align: and;
-  margin-top: 180px;
-  margin-bottom: 50px;
-  font-family: var(--ff-smooch);
-  font-weight: 400;
-  font-size: 26px;
+    font-size: 1rem;
+  }
+
+  .caixa,
+  .caixa2, 
+  .caixa3{
+    height: 200px;
+  }
+
+   /*fotter*/
+   .card1{
+    position: relative;
+    top: -5px;
+  }
+
+  .copy{
+    position: relative;
+    padding-bottom: 50px;
+  }
+
+  .facebook, 
+  .instagram, 
+  .youtube, 
+  .twitter{
+    width: 40px;
+  }
+}
+
+@media(min-width: 768px) and (max-width: 1024px){
+  .menu{
+    font-size: 1rem;
+    gap: 10px;
+    position: relative;
+    right: 45px;
+  }
+
+  .login{
+    width: 6.0rem;
+    font-size: 14px;
+    position: relative;
+    left: 20px;
+  }
+
+  .bar-list{
+    width: 15px;
+    height: 5px;
+    position: relative;
+    left:10px;
+  }
+
+  .title{
+    font-size: 3rem;
+  }
+
+  .tipo{
+    font-size: var(--h2-32);
+  }
+
+  .text{
+    font-size: 1.25rem;
+  }
+
+  .caixa,
+  .caixa2, 
+  .caixa3{
+    height: 250px;
+  }
+
+   /*fotter*/
+  .card1{
+    position: relative;
+    top: -5px;
+  }
+
+  .copy{
+    padding-bottom: 50px;
+  }
+}
+
+@media(min-width: 1025px) and (max-width: 1350px){
+  .logo{
+    margin-right: 0px;
+  }
+
+  .menu{
+    width: 35%;
+    font-size: 1rem;
+  }
+
+  .title{
+    font-size: 3rem;
+  }
+
+  .tipo{
+    font-size: var(--h2-32);
+  }
+
+  .text{
+    font-size: var(--h3-24);
+  }
+
+  .caixa,
+  .caixa2, 
+  .caixa3{
+    height: 300px;
+  }
+
+   /*fotter*/
+  .card1{
+    position: relative;
+    top: -5px;
+  }
+
+  .copy{
+    padding-bottom: 50px;
   }
 }

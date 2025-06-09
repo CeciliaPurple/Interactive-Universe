@@ -895,9 +895,11 @@ z-index: 10;
 @media (min-width: 481px) and (max-width: 649px){
   .logo{
     width: 60px;
+    margin-right: 25px;
   }
 
   .menu{
+    width: 30%;
     font-size: 14px;
     gap: 8px;
     position: relative;
@@ -908,18 +910,22 @@ z-index: 10;
     width: 6.0rem;
     font-size: 14px;
     position: relative;
-    left: 20px;
+    left: 25px;
   }
 
   .bar{
     display: none;
   }
 
+  .bandeiras{
+    flex-direction: column;
+  }
+
   .bandeira1{
     width: 40px;
     height: auto;
     position: relative;
-    left: 15px;
+    left: 10px;
   }
 
   .titulo{

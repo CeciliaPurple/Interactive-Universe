@@ -286,7 +286,6 @@ font-size: var(--h2-32);
   background-size: cover;
   height: 400px;
   width: 500px;
-  margin-left: ;
   border-radius: 10px;
   transition: all 1.5s ease;
 }
@@ -491,7 +490,6 @@ footer {
   }
 
 
-
 /*responsividade*/
 @media (max-width: 480px){
   .logo{
@@ -612,6 +610,7 @@ footer {
   }
 
   .menu{
+    width: 30%;
     font-size: 14px;
     gap: 8px;
     position: relative;
