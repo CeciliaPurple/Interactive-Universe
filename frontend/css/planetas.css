@@ -231,79 +231,46 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
   
 
 /*PLANETA*/
-.titulo{
+
+h1{
   text-align: center;
-  margin-top: 2%;
   font-family: var(--ff-bruno);
   font-size: var(--h1-96);
-  color: white;
+  margin-top: 2%;
 }
 
-.planeta-img{
-  position: relative;
-  bottom: 30px;
-  margin-left: 10vw;
-  width: 50%;
+.grupo-info{
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: 2% 5%;
 }
 
-.planeta-info{
-  position: relative;
-  top: -450px;
-  z-index: -100;
+img{
+  width: 60%;
 }
-
-.caixa-menor,
-.caixa-maior{
-  width: 30%;
+.caixa-menor{
   border: var(--borda);
   border-radius: var(--borda-curva);
   box-shadow: var(--brilho);
-  transition: 0.7s;
-}
-
-.caixa-menor{
-  box-shadow: var(--brilho-2);
-  transition: 0.7s;
-}
-
-
-
-.caixa-menor{
-  align-self: self-start;
-  position: relative;
-  justify-self: end;
-  margin-right: 20%;
-  margin-bottom: 5%;
-  top: 10vh;
-  color: white;
-}
-
-.caixa-maior{
-  position: relative;
-  top: 10vh;
-  justify-self: center;
-  width: 70%;
-  align-self: end;
-  color: white;
-}
-
-.sub-titulo1,
-.sub-titulo2{
-  display: flex;
-  justify-content: center;
-  height: auto;
-  padding: 1%;
-  border-bottom: var(--borda);
-  font-size: var(--h3-24);
-  font-family: var(--ff-bruno);
-  background-color: var(--cinza);
-}
-
-.texto{
-  margin: 4%;
-  display: flex;
   font-family: var(--ff-poppins);
+  text-align: justify;
+}
+
+.sub-titulo{
+  font-weight: lighter;
+  font-family: var(--ff-bruno);
+  font-size: var(--h3-24);
   text-align: center;
+  border-bottom: var(--borda);
+  background-color: var(--cinza);
+  padding: 10px;
+}
+
+p{
+  padding: 10px;
 }
 
 ul{
@@ -312,11 +279,20 @@ ul{
   place-items: start;
   padding: 0 5% 3%;
   font-family: var(--ff-poppins);
+  gap: 2%;
 }
 
 li{
   margin-top: 10%;
   font-size: var(--h4-20);
+}
+
+.caixa-maior{
+  border: var(--borda);
+  border-radius: var(--borda-curva);
+  box-shadow: var(--brilho);
+  width: 70%;
+  justify-self: center;
 }
 
 
@@ -328,31 +304,10 @@ li{
   cursor: pointer;
   margin-top: 50px;
   gap: 20px;
-  top: 10vh;
 }
 
 .icon-footer{
   width: 50px;
-}
-
-.facebook:hover{
-  background-color: #3d77cf;
-  border-radius: 10px; 
-}
-
-.instagram:hover{
-  background-color: #7a2d63;
-  border-radius: 10px; 
-}
-
-.youtube:hover{
-  background-color: #852121;
-  border-radius: 10px;
-}
-
-.twitter:hover{
-  background-color: #b480cc;
-  border-radius: 10px;
 }
 
  @keyframes bounce_613 {
@@ -360,32 +315,208 @@ li{
      transform: scale(1);
    }
  }
- 
- /*copy*/
- .agreement{
-  font-size: 20px;
-  font-family: var(--ff-bruno-ace);
+
+footer {
   display: flex;
-  justify-self: center;
-  padding: 20px 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+  
+  footer p{
   position: relative;
-  top: 10vh;
- }
- 
- footer{
-  clear: both;
+  z-index: 6;
+}
+
+.copy{
+  padding-bottom: 25px;
+}
+
+.card1{
+  display: flex;  
   position: relative;
-  bottom: 430px;
- }
- 
- .icons{
-  position: relative;
-  bottom: 460px;
- }
+  gap: 18px;
+  z-index: 10;
+  }
+  
+  .facebook:hover{
+    background-color: #3d77cf;
+    border-radius: 10px; 
+  }
+  
+  .instagram:hover{
+    background-color: #7a2d63;
+    border-radius: 10px; 
+  }
+  
+  .youtube:hover{
+    background-color: #852121;
+    border-radius: 10px;
+  }
+  
+  .twitter:hover{
+    background-color: #b480cc;
+    border-radius: 10px;
+  }
 
 
  /*MEDIA QUERY*/
-@media (max-width: 649px){
+ @media (max-width: 480px){
+  .logo{
+    position: relative;
+    left: -30px;
+    width: 40px;
+    margin-right: 10px;
+  }
+
+  .menu{
+    font-size: 10px;
+    gap: 8px;
+    position: relative;
+    right: 40px;
+  }
+
+  .login{
+    width: 3.5rem;
+    height: 2rem;
+    font-size: 8px;
+    position: relative;
+    left: 25px;
+  }
+
+  .bar{
+    display: none;
+  }
+
+  h1{
+    font-size: var(--h2-32);
+  }
+
+  .grupo-info{
+    width: fit-content;
+  }
+
+  .caixa-menor{
+    font-size: 12px;
+  }
+
+  .sub-titulo{
+    font-size: 14px;
+  }
+
+  img{
+    width: 50%;
+  }
+
+  ul{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  li{
+    font-size: 10px;
+  }
+
+  .caixa-maior{
+    width: 90%;
+  }
+
+   /*fotter*/
+   .card1{
+    position: relative;
+    top: -5px;
+  }
+
+  .copy{
+    padding-bottom: 50px;
+  }
+
+  .facebook, 
+  .instagram, 
+  .youtube, 
+  .twitter{
+    width: 30px;
+  }
+ }
+
+
+ @media (min-width: 481px) and (max-width:649px){
+  .logo{
+    width: 60px;
+  }
+
+  .menu{
+    width: 30%;
+    font-size: 14px;
+    gap: 8px;
+    position: relative;
+    right: 45px;
+  }
+
+  .login{
+    width: 6.0rem;
+    font-size: 14px;
+    position: relative;
+    left: 20px;
+  }
+
+  .bar{
+    display: none;
+  }
+
+  h1{
+    font-size: var(--h2-32);
+  }
+
+  .grupo-info{
+    width: fit-content;
+  }
+
+  .caixa-menor{
+    font-size: 14px;
+  }
+
+  .sub-titulo{
+    font-size: 16px;
+  }
+
+  img{
+    width: 50%;
+  }
+
+  ul{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  li{
+    font-size: 12px;
+  }
+
+  .caixa-maior{
+    width: 90%;
+  }
+
+  /*fotter*/
+  .card1{
+    position: relative;
+    top: -5px;
+  }
+
+  .copy{
+    padding-bottom: 50px;
+  }
+
+  .facebook, 
+  .instagram, 
+  .youtube, 
+  .twitter{
+    width: 35px;
+  }
+ }
+
+
+ @media (min-width: 650px) and (max-width:767px){
   .logo{
     width: 60px;
   }
@@ -402,185 +533,66 @@ li{
     font-size: 14px;
     position: relative;
     left: 20px;
-    z-index: 100;
   }
 
-  .bar{
-    display: none;
+  h1{
+    font-size: 3rem;
   }
 
-  .titulo{
-    font-size: 30px;
-  }
-
-  .text{
-    font-size: 7px;
-  }
-
-  .planeta-info{
-    z-index: -100;
+  .grupo-info{
+    width: fit-content;
   }
 
   .caixa-menor{
-    position: relative;
-    top: 35vh;
+    font-size: 1rem;
   }
 
-  .sub-titulo1{
-    text-align: center;
-    font-size: 10px;
+  .sub-titulo{
+    font-size: 18px;
   }
 
-  .sub-titulo2{
-    text-align: center;
-    font-size: 10px;
-  }
-
-  .lista{
-    gap: 7px;
-  }
-
-  .caixa-maior{
-    width: 85%;
-    position: relative;
-    top: 35vh;
-    z-index: -100;
+  img{
+    width: 50%;
   }
 
   ul{
-    padding: 0 6% 3%;
+    grid-template-columns: 1fr 1fr;
   }
 
   li{
-    font-size: 0.5rem;
-  }
-
-  .card{
-   position:relative; 
-   top:35vh;
-  }
-
-  .agreement{
     font-size: 14px;
-    position: relative;
-    top: 35vh;
-  }
-
-  .icon-footer{
-    width: 37px;
-  }
-
-  .planeta-img{
-    position: relative;
-    top: 0vh;
-  }
-
-}
-
-@media (min-width: 650px) and (max-width: 767px){
-  .logo{
-    width: 70px;
-    position: relative;
-    gap: 20px;
-  }
-
-  .menu{
-    font-size: 0.8rem;
-    position: relative;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .login{
-    width: 6.0rem;
-    font-size: 14px;
-    position: relative;
-    left: 20px;
-    z-index: 100;
-  }
-
-  .bar{
-    display: none;
-  }
-  
-  .titulo{
-    font-size: 30px;
-  }
-
-  .text{
-    font-size: 7px;
-  }
-
-  .planeta-info{
-    z-index: -100;
-  }
-
-  .caixa-menor{
-    position: relative;
-    top: 35vh;
-  }
-
-  .sub-titulo1{
-    text-align: center;
-    font-size: 0.6rem;
-  }
-
-  .sub-titulo2{
-    text-align: center;
-    font-size: 0.6rem;
-  }
-
-  .lista{
-    gap: 7px;
   }
 
   .caixa-maior{
     width: 90%;
+  }
+
+  /*fotter*/
+  .card1{
     position: relative;
-    top: 35vh;
+    top: -5px;
   }
 
-  ul{
-    padding: 0 6% 3%;
-  }
-
-  li{
-    font-size: 0.6rem;
-  }
-
-  .card{
-   position:relative; 
-   top: 35vh;
-  }
-
-  .agreement{
-    font-size: 14px;
+  .copy{
     position: relative;
-    top: 35vh;
+    padding-bottom: 50px;
   }
 
-  .icon-footer{
-    width: 37px;
+  .facebook, 
+  .instagram, 
+  .youtube, 
+  .twitter{
+    width: 40px;
   }
+ }
 
-  .planeta-img{
-    position: relative;
-    top: 0;
-  }
-}
 
-@media (min-width: 768px) and (max-width: 1023px){
-  .logo{
-    width: 70px;
-    position: relative;
-    gap: 20px;
-  }
-
+ @media(min-width: 768px) and (max-width: 1024px){
   .menu{
-    font-size: 0.8rem;
+    font-size: 1rem;
+    gap: 10px;
     position: relative;
-    justify-content: center;
-    gap: 15px;
+    right: 45px;
   }
 
   .login{
@@ -588,73 +600,92 @@ li{
     font-size: 14px;
     position: relative;
     left: 20px;
-    z-index: 100;
   }
 
-  .bar{
-    display: none;
+  .bar-list{
+    width: 15px;
+    height: 5px;
+    position: relative;
+    left:10px;
   }
-  
-  .titulo{
+
+  h1{
     font-size: 3rem;
   }
 
-  .text{
-    font-size: 0.7rem;
-  }
-
-  .planeta-info{
-    z-index: -100;
+  .grupo-info{
+    width: fit-content;
   }
 
   .caixa-menor{
-    position: relative;
-    top: 30vh;
+    font-size: 1.25rem;
   }
 
-  .sub-titulo1{
-    text-align: center;
-    font-size: 0.9rem;
+  .sub-titulo{
+    font-size: var(--h3-24);
   }
 
-  .sub-titulo2{
-    text-align: center;
-    font-size: 0.9rem;
-  }
-
-  .lista{
-    gap: 7px;
-  }
-
-  .caixa-maior{
-    position: relative;
-    top: 30vh;
-  }
-
-  ul{
-    padding: 0 6% 3%;
+  img{
+    width: 50%;
   }
 
   li{
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
 
-  .card{
-   position:relative; 
-   top: 30vh;
+  .caixa-maior{
+    width: 90%;
   }
 
-  .agreement{
-    font-size: 14px;
+  /*fotter*/
+  .card1{
     position: relative;
-    top: 30vh;
+    top: -5px;
   }
 
-  .icon-footer{
-    width: 37px;
+  .copy{
+    padding-bottom: 50px;
+  }
+ }
+
+
+ @media(min-width: 1025px) and (max-width: 1350px){
+  .logo{
+    margin-right: 0px;
   }
 
-  .planeta-img{
-    top: 0;
+  .menu{
+    width: 35%;
+    font-size: 1rem;
   }
-}
+
+  h1{
+    font-size: 3rem;
+  }
+
+  .grupo-info{
+    width: fit-content;
+  }
+
+  .caixa-menor{
+    font-size: var(--h3-24);
+  }
+
+  .sub-titulo{
+    font-size: 26px;
+  }
+
+  img{
+    width: 60%;
+  }
+
+  li{
+    font-size: 1rem;
+  }
+
+  .caixa-maior{
+    width: 95%;
+  }
+
+  
+ }
