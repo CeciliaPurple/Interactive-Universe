@@ -12,7 +12,7 @@ style.innerHTML = `
         width: 100vw;
         height: 100vh;
         background: #1a1a2e;
-        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        background: linear-gradient(135deg,rgb(33, 30, 54) 0%,rgb(21, 21, 32) 50%,rgb(9, 8, 14) 100%);
         display: flex;
         justify-content: center;
         align-items: center;

@@ -35,7 +35,7 @@ select * from USUARIO;
 
 INSERT INTO USUARIO (NOME, EMAIL,SENHA,TIPO_USUARIO)
 VALUES 
-	('DEIVIN', 'ana@email.com', 28,'ADM'),
+	('sys_configDEIVIN', 'ana@email.com', 28,'ADM'),
     ('Maria puple', 'maria@email.com', 25,'ADM'),
     ('mica grau', 'pedro@email.com', 35, 'USUARIO'),
     ('dan dan', 'ana@email.com', 28,'ADM');
@@ -51,31 +51,72 @@ CREATE TABLE IF NOT EXISTS `Sistem`.`NOTICIAS` (
   `idNOTICIAS` INT NOT NULL AUTO_INCREMENT,
   `TITULO` VARCHAR(45) NOT NULL,
   `SUB_TITULO` VARCHAR(45) NOT NULL,
-  `DESCRICAO1` VARCHAR(225) NOT NULL,
+  `DESCRICAO1` text NOT NULL,
   `FOTO_CAPA` VARCHAR(45) NOT NULL,
-  `CONTEUDO` VARCHAR(45) NULL,
-  `AUTOR_ID` INT UNSIGNED NULL,
+  `CONTEUDO` text NULL,
+  `ID_ADM` INT UNSIGNED NULL,
   PRIMARY KEY (`idNOTICIAS`),
-  INDEX `fk_NOTICIAS_USUARIO1_idx` (`AUTOR_ID` ASC) VISIBLE,
+  INDEX `fk_NOTICIAS_USUARIO1_idx` (`ID_ADM` ASC) ,
   CONSTRAINT `fk_NOTICIAS_USUARIO1`
-    FOREIGN KEY (`AUTOR_ID`)
+    FOREIGN KEY (`ID_ADM`)
     REFERENCES `Sistem`.`USUARIO` (`ID`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 select * FROM NOTICIAS;
 
-ALTER TABLE COMENTARIO
-ADD CONSTRAINT fk_COMENTARIO_USUARIO1
-FOREIGN KEY (USUARIO_ID)
-REFERENCES USUARIO(ID)
-ON DELETE CASCADE
-ON UPDATE NO ACTION;
+ ALTER TABLE `Sistem`.`NOTICIAS`
+ ADD COLUMN `DATA_PUBLICACAO` DATETIME NULL AFTER `ID_ADM`;
 
 
-INSERT INTO  `Sistem`.`NOTICIAS` (`TITULO`, `SUB_TITULO`, `DESCRICAO1`, `FOTO_CAPA`, `CONTEUDO`, `AUTOR_ID`) VALUES
-('Título 1', 'Subtítulo 1', 'Descrição da notícia1 ', 'capa1.jpg', 'Conteúdo da notícia 1 detalhado.', 3),
-('Título 2', 'Subtítulo 2', 'Descrição da notícia2 ', 'capa2.jpg', 'Conteúdo da notícia 2 com mais texto.',1);
+
+
+
+INSERT INTO  `Sistem`.`NOTICIAS` (`TITULO`, `SUB_TITULO`, `DESCRICAO1`, `FOTO_CAPA`, `CONTEUDO`, `ID_ADM`, `DATA_PUBLICACAO`) VALUES
+('O GRANDE FENÔMENO', 'Eclipse Lunar', 'Um eclipse lunar é um fenômeno astronômico fascinante que ocorre
+ quando a Terra se posiciona entre o Sol e a Lua, fazendo com que a sombra da Terra seja projetada sobre
+ a Lua. Esse evento só acontece durante a Lua cheia, e pode ser observado a olho nu, sem equipamentos especiais,
+ desde que o céu esteja limpo.Durante um eclipse lunar, a Luz do Sol, que normalmente ilumina a Lua cheia,
+ é bloqueada pela Terra, que fica
+ exatamente entre os dois astros. A Lua, então, escurece parcialmente ou totalmente por um período 
+ que pode durar várias horas. ', 'img/ecipse01.png', 'Eclipse Lunar
+ 
+Um eclipse lunar ocorre quando a Terra fica entre o Sol e a Lua, bloqueando a luz do Sol que normalmente ilumina a Lua. Durante 
+esse evento, a sombra da Terra se projeta sobre a Lua, fazendo com que ela se escureça ou mude de cor, dependendo do tipo de 
+eclipse. Acontece quando a Lua passa completamente pela umbra da Terra, a região mais escura da sombra. Quando a Lua entra 
+totalmente na umbra, ela pode adquirir uma coloração avermelhada, fenômeno conhecido como "Lua de Sangue".
+
+Corpos que apresentam movimento próprio, maioria já catalogada. Apresenta órbitas elípticas e encontra-se no cinturão de
+ asteroides entre Marte e Júpiter. O seu tamanho pode ser calculado por meio da medida da quantidade de luz que ele reflete. 
+ Apenas 16 asteroides, dos mais de 3000 catalogados, apresentam dimensões superiores a 240 km. Seu brilho não é constante devido
+ à reflexão solar.
+
+Meteoro corresponde ao fenômeno luminoso observado durante a passagem de um meteoroide na atmosfera. Os meteoroides correspondem 
+a restos de cometas ou fragmentos oriundos de asteroides. Os meteoritos são meteoroides que sobrevivem ao adentrarem a atmosfera e atinge o chão.
+
+', 3 , '2022-03-01'),
+('O ENCANTO CÓSMICO DAS', 'Nebulosas', 'No vasto universo, entre as estrelas e os planetas, existem enormes 
+nuvens compostas de gás e poeira chamadas
+ nebulosas. Essas estruturas são fundamentais para a compreensão da formação, evolução e morte das estrelas.
+ As nebulosas não são apenas belos objetos celestes, mas também os ambientes onde estrelas nascem e, em muitos
+ casos, onde elas terminam suas vidas. Vamos explorar, em detalhes, o que são as nebulosas, como se formam
+, seus diferentes tipos e seu papel essencial no ciclo de vida estelar ', 'img/fotos.png', 'Nebulosas
+
+As nebulosas são grandes nuvens de gás e poeira cósmica espalhadas pelo espaço. Elas são compostas principalmente
+ por hidrogênio em estado de gás ou ionizado e hélio, mas também contêm outros elementos em menores quantidades, 
+ como carbono, oxigênio, nitrogênio e metais mais pesados. Além disso, as nebulosas podem ter diferentes formas e
+ características, dependendo do seu tipo e da sua origem.
+
+Nebulosas não são apenas locais de nascimento de estrelas, mas também de evolução do cosmos. À medida que as estrelas
+ nascem, elas liberam grandes quantidades de radiação, o que pode ionizar o gás ao redor, criando novas nebulosas de 
+ emissão. Quando essas estrelas morrem, elas liberam matéria que pode enriquecer outras regiões do espaço, ajudando na
+ formação de novas estrelas e sistemas planetários.
+
+Meteoro corresponde ao fenômeno luminoso observado durante a passagem de um meteoroide na atmosfera. Os meteoroides
+ correspondem a restos de cometas ou fragmentos oriundos de asteroides. Os meteoritos são meteoroides que sobrevivem
+ ao adentrarem a atmosfera e atinge o chão.
+
+',1,'2022-03-02');
 
 
 -- -----------------------------------------------------
@@ -90,8 +131,8 @@ CREATE TABLE IF NOT EXISTS `Sistem`.`COMENTARIO` (
   `USUARIO_ID` INT UNSIGNED NOT NULL,
   `NOTICIAS_idNOTICIAS` INT NOT NULL,
   PRIMARY KEY (`ID`),
-  INDEX `fk_COMENTARIO_USUARIO1_idx` (`USUARIO_ID` ASC) VISIBLE,
-  INDEX `fk_COMENTARIO_NOTICIAS1_idx` (`NOTICIAS_idNOTICIAS` ASC) VISIBLE,
+  INDEX `fk_COMENTARIO_USUARIO1_idx` (`USUARIO_ID` ASC) ,
+  INDEX `fk_COMENTARIO_NOTICIAS1_idx` (`NOTICIAS_idNOTICIAS` ASC) ,
   CONSTRAINT `fk_COMENTARIO_USUARIO1`
     FOREIGN KEY (`USUARIO_ID`)
     REFERENCES `Sistem`.`USUARIO` (`ID`)
@@ -122,7 +163,7 @@ CREATE TABLE IF NOT EXISTS `Sistem`.`midia` (
   `TIPO_MIDIA` VARCHAR(45) NOT NULL,
   `NOTICIAS_idNOTICIAS` INT NOT NULL,
   PRIMARY KEY (`ID`),
-  INDEX `fk_midia_NOTICIAS1_idx` (`NOTICIAS_idNOTICIAS` ASC) VISIBLE,
+  INDEX `fk_midia_NOTICIAS1_idx` (`NOTICIAS_idNOTICIAS` ASC) ,
   CONSTRAINT `fk_midia_NOTICIAS1`
     FOREIGN KEY (`NOTICIAS_idNOTICIAS`)
     REFERENCES `Sistem`.`NOTICIAS` (`idNOTICIAS`)
