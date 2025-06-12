@@ -46,24 +46,32 @@ exports.listarPorNoticia = async (req, res) => {
       }]
     });
 
-    // Mapear para formato amigável frontend
+    console.log('Comentarios encontrados:', comentarios);  // Debug no terminal
+
     const comentariosFormatados = comentarios.map(c => ({
       id: c.ID,
       texto: c.TEXTO,
       dataPost: c.DATA_POST,
       usuario: {
-        id: c.Usuario.ID,
-        nome: c.Usuario.NOME,
-        email: c.Usuario.EMAIL
+        id: c.Usuario?.ID || null,
+        nome: c.Usuario?.NOME || 'Usuário desconhecido',
+        email: c.Usuario?.EMAIL || null
       }
     }));
 
-    res.json(comentariosFormatados);
+    console.log('Comentarios formatados:', comentariosFormatados);  // Debug no terminal
+
+    // Responder ao cliente (Postman ou frontend)
+    res.json({
+      message: 'Comentários encontrados',
+      comentarios: comentariosFormatados
+    });
   } catch (error) {
     console.error('Erro ao listar comentários:', error);
     res.status(500).json({ error: 'Erro ao listar comentários.' });
   }
 };
+
 
 // Atualizar um comentário (apenas o autor)
 exports.atualizarComentario = async (req, res) => {

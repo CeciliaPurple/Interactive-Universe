@@ -7,7 +7,7 @@ const authMiddleware = require('../middleware/authMiddleware');
 router.post('/', authMiddleware, ComentarioController.criarComentario);
 
 // Listar comentários de uma notícia (público)
-router.get('/:idNoticia', ComentarioController.listarPorNoticia);
+router.get('/noticia/:idNoticia', ComentarioController.listarPorNoticia);
 
 // Atualizar comentário (usuário ou ADM)
 router.put('/:id', authMiddleware, ComentarioController.atualizarComentario);

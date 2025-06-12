@@ -2,28 +2,43 @@ const comentariosContainer = document.getElementById('comentarios-container');
 const adicionarBtn = document.getElementById('adicionar-btn');
 const comentarioInput = document.getElementById('comentario-input');
 
-const apiURL = 'http://localhost:4000/comentario/1';
-let comentarios = [];
+const noticiaId = 1;
+const baseURL = 'http://localhost:4000/comentario';
+const listarComentariosURL = `${baseURL}/noticia/${noticiaId}`;
 
+let comentarios = [];
+let usuarioLogadoId = null;
+
+// Recuperar token do localStorage
 function getToken() {
   return localStorage.getItem('token');
 }
 
-async function buscarComentarios() {
-  const token = getToken();
-  if (!token) {
-    alert('Você precisa estar logado para ver os comentários.');
-    return;
-  }
-
+// Decodificar o token para obter o ID do usuário logado
+function getUsuarioIdDoToken(token) {
+  if (!token) return null;
   try {
-    const res = await fetch(apiURL, {
-      headers: {
-        'Authorization': 'Bearer ' + token,
-      },
-    });
+    const payload = token.split('.')[1];
+    const decoded = JSON.parse(atob(payload));
+    return decoded.ID;
+  } catch (error) {
+    console.error('Erro ao decodificar token:', error);
+    return null;
+  }
+}
+
+// Buscar comentários da notícia
+async function buscarComentarios() {
+  try {
+    const res = await fetch(listarComentariosURL);
     if (!res.ok) throw new Error('Erro ao buscar comentários');
-    comentarios = await res.json();
+
+    const data = await res.json(); // Corrigido aqui
+    comentarios = data.comentarios;
+
+    const token = getToken();
+    usuarioLogadoId = getUsuarioIdDoToken(token);
+
     renderComentarios();
   } catch (err) {
     console.error(err);
@@ -31,6 +46,7 @@ async function buscarComentarios() {
   }
 }
 
+// Renderizar comentários na página
 function renderComentarios() {
   comentariosContainer.innerHTML = '';
 
@@ -43,66 +59,64 @@ function renderComentarios() {
     textoEl.textContent = comentario.texto;
     textoEl.className = 'texto-comentario';
 
-    // Botões container
+    const autorId = comentario.usuario.id;
+
     const botoesDiv = document.createElement('div');
     botoesDiv.className = 'botoes';
 
-    // Botão "Atualizar"
-    const btnAtualizar = document.createElement('button');
-    btnAtualizar.textContent = 'Atualizar';
-    btnAtualizar.addEventListener('click', () => {
-      textoEl.contentEditable = 'true';
-      textoEl.focus();
-      textoEl.dataset.original = comentario.texto;
-    });
+    if (usuarioLogadoId && usuarioLogadoId === autorId) {
+      const btnAtualizar = document.createElement('button');
+      btnAtualizar.textContent = 'Atualizar';
+      btnAtualizar.addEventListener('click', () => {
+        textoEl.contentEditable = 'true';
+        textoEl.focus();
+        textoEl.dataset.original = comentario.texto;
+      });
 
-    // Atualiza o texto do comentário localmente ao digitar
-    textoEl.addEventListener('input', () => {
-      if (textoEl.isContentEditable) {
-        comentario.texto = textoEl.textContent.trim();
-      }
-    });
-
-    // Duplo clique para cancelar edição
-    textoEl.addEventListener('dblclick', () => {
-      if (textoEl.isContentEditable) {
-        textoEl.contentEditable = 'false';
-        textoEl.textContent = textoEl.dataset.original;
-        comentario.texto = textoEl.dataset.original;
-      }
-    });
-
-    // Botão para salvar edição
-    const btnSalvar = document.createElement('button');
-    btnSalvar.textContent = 'Salvar';
-    btnSalvar.addEventListener('click', async () => {
-      textoEl.contentEditable = 'false';
-      try {
-        await atualizarComentario(comentario.id, comentario.texto);
-        buscarComentarios();
-      } catch {
-        alert('Erro ao atualizar comentário.');
-        textoEl.textContent = textoEl.dataset.original;
-      }
-    });
-
-    // Botão "Excluir"
-    const btnExcluir = document.createElement('button');
-    btnExcluir.textContent = 'Excluir';
-    btnExcluir.addEventListener('click', async () => {
-      if (confirm('Deseja realmente excluir este comentário?')) {
-        try {
-          await excluirComentario(comentario.id);
-          await buscarComentarios();
-        } catch {
-          alert('Erro ao excluir comentário.');
+      textoEl.addEventListener('input', () => {
+        if (textoEl.isContentEditable) {
+          comentario.texto = textoEl.textContent.trim();
         }
-      }
-    });
+      });
 
-    botoesDiv.appendChild(btnAtualizar);
-    botoesDiv.appendChild(btnSalvar);
-    botoesDiv.appendChild(btnExcluir);
+      textoEl.addEventListener('dblclick', () => {
+        if (textoEl.isContentEditable) {
+          textoEl.contentEditable = 'false';
+          textoEl.textContent = textoEl.dataset.original;
+          comentario.texto = textoEl.dataset.original;
+        }
+      });
+
+      const btnSalvar = document.createElement('button');
+      btnSalvar.textContent = 'Salvar';
+      btnSalvar.addEventListener('click', async () => {
+        textoEl.contentEditable = 'false';
+        try {
+          await atualizarComentario(comentario.id, comentario.texto);
+          buscarComentarios();
+        } catch {
+          alert('Erro ao atualizar comentário.');
+          textoEl.textContent = textoEl.dataset.original;
+        }
+      });
+
+      const btnExcluir = document.createElement('button');
+      btnExcluir.textContent = 'Excluir';
+      btnExcluir.addEventListener('click', async () => {
+        if (confirm('Deseja realmente excluir este comentário?')) {
+          try {
+            await excluirComentario(comentario.id);
+            await buscarComentarios();
+          } catch {
+            alert('Erro ao excluir comentário.');
+          }
+        }
+      });
+
+      botoesDiv.appendChild(btnAtualizar);
+      botoesDiv.appendChild(btnSalvar);
+      botoesDiv.appendChild(btnExcluir);
+    }
 
     comentarioEl.appendChild(textoEl);
     comentarioEl.appendChild(botoesDiv);
@@ -110,6 +124,7 @@ function renderComentarios() {
   });
 }
 
+// Criar novo comentário
 adicionarBtn.addEventListener('click', async () => {
   const texto = comentarioInput.value.trim();
   if (!texto) return alert('Digite um comentário.');
@@ -118,15 +133,17 @@ adicionarBtn.addEventListener('click', async () => {
   if (!token) return alert('Você precisa estar logado para comentar.');
 
   try {
-    const res = await fetch(apiURL, {
+    const res = await fetch(baseURL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + token,
       },
-      body: JSON.stringify({ texto }),
+      body: JSON.stringify({ texto, noticiaId }),
     });
+
     if (!res.ok) throw new Error('Erro ao enviar comentário');
+
     comentarioInput.value = '';
     await buscarComentarios();
   } catch (err) {
@@ -135,11 +152,12 @@ adicionarBtn.addEventListener('click', async () => {
   }
 });
 
+// Atualizar comentário
 async function atualizarComentario(id, texto) {
   const token = getToken();
   if (!token) throw new Error('Token não encontrado');
 
-  const res = await fetch(`${apiURL}/${id}`, {
+  const res = await fetch(`${baseURL}/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -147,20 +165,24 @@ async function atualizarComentario(id, texto) {
     },
     body: JSON.stringify({ texto }),
   });
+
   if (!res.ok) throw new Error('Erro ao atualizar comentário');
 }
 
+// Excluir comentário
 async function excluirComentario(id) {
   const token = getToken();
   if (!token) throw new Error('Token não encontrado');
 
-  const res = await fetch(`${apiURL}/${id}`, {
+  const res = await fetch(`${baseURL}/${id}`, {
     method: 'DELETE',
     headers: {
       'Authorization': 'Bearer ' + token,
     },
   });
+
   if (!res.ok) throw new Error('Erro ao excluir comentário');
 }
 
+// Buscar comentários ao carregar a página
 window.onload = buscarComentarios;
