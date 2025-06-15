@@ -74,6 +74,12 @@ color:  #fff;
   text-decoration: underline;
 }
 
+.login1{
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+}
+
 
 .login > .inp {
 display: none;
@@ -457,6 +463,30 @@ button:hover {
   border-left: 5px solid #000000;
   color: #000000;
   max-width: 600px;
+}
+
+.message {
+  padding: 10px !important;
+  margin-bottom: 10px !important;
+  border-radius: 4px !important;
+  font-weight: bold !important;
+  transition: opacity 0.3s ease !important;
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  z-index: 9999 !important;
+}
+
+.success {
+  background-color: #d4edda !important;
+  color: #155724 !important;
+  border: 1px solid #c3e6cb !important;
+}
+
+.error {
+  background-color: #f8d7da !important;
+  color: #721c24 !important;
+  border: 1px solid #f5c6cb !important;
 }
 
 .selo-adm {

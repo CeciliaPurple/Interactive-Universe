@@ -55,7 +55,7 @@ async function carregarComentariosEclipse() {
   container.innerHTML = '';
 
   try {
-    const resposta = await fetch(`http://localhost:4000/comentarios/noticia/1`);
+    const resposta = await fetch(`http://localhost:4000/comentario/noticia/1`);
     if (!resposta.ok) throw new Error('Erro na resposta da API');
 
     const comentarios = await resposta.json();
