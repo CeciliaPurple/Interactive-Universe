@@ -13,10 +13,12 @@ router.post('/', UsuarioController.criar);
 router.get('/perfil', authMiddleware, UsuarioController.perfil);
 router.put('/perfil', authMiddleware, UsuarioController.atualizarPerfil);
 router.delete('/perfil', authMiddleware, UsuarioController.excluirConta);
+    
 
 // Outras rotas (públicas ou com outra lógica)
 router.get('/', UsuarioController.listar);
 router.put('/:id', UsuarioController.atualizar);
 router.delete('/:id', UsuarioController.deletar);
+
 
 module.exports = router;

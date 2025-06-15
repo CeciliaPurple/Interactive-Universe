@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 const config = require('../Config/Database');
 
 const UsuarioController = {
+    
     // Listar todos os usuários
     async listar(req, res) {
         try {
@@ -173,5 +174,7 @@ const UsuarioController = {
         }
     }
 };
+
+
 
 module.exports = UsuarioController;

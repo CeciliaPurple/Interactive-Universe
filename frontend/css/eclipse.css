@@ -422,37 +422,27 @@ button:hover {
   margin-top: 10px;
 }
 
-button1 {
-  padding: 5px 10px;
-  border: none;
-  border-radius: 3px;
+
+.botoes button {
+  font-size: 12px;      /* menor tamanho da fonte */
+  padding: 4px 8px;     /* menos espaçamento interno */
+  margin-right: 8px;    /* espaço entre os botões */
+  border-radius: 4px;   /* cantos arredondados */
+  border: 1px solid #ccc; /* borda sutil */
+  background-color: #f0f0f0;
   cursor: pointer;
-  background: linear-gradient(0deg, hsl(246, 21%, 29%,0.5)100%, hsl(246, 64%, 10%,0.5) 70%,hsl(250, 24%, 10%,0.5) 100%);
-  color: white;
-  font-size: 14px;
+  transition: background-color 0.2s ease;
 }
 
-button2 {
-  padding: 5px 10px;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  background: linear-gradient(0deg, hsl(246, 21%, 29%,0.5)100%, hsl(246, 64%, 10%,0.5) 70%,hsl(250, 24%, 10%,0.5) 100%);
-  color: white;
-  font-size: 14px;
+.botoes button:last-child {
+  margin-right: 0;      /* remove margem do último botão */
 }
 
-
-button1:hover {
-  background-color: #3cff00;
+.botoes button:hover {
+  background-color: #ddd;
   transform: scale(1.03);
 }
 
-
-button2:hover {
-  background-color:red;
-  transform: scale(1.03);
-}
 
 
 .comment {

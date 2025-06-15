@@ -1,52 +1,62 @@
-const comentariosContainer = document.getElementById('comentarios-container');
-const adicionarBtn = document.getElementById('adicionar-btn');
-const comentarioInput = document.getElementById('comentario-input');
+document.addEventListener('DOMContentLoaded', () => {
+  const comentariosContainer = document.getElementById('comentarios-container');
+  const adicionarBtn = document.getElementById('adicionar-btn');
+  const comentarioInput = document.getElementById('comentario-input');
 
-const noticiaId = 1;
-const baseURL = 'http://localhost:4000/comentario';
-const listarComentariosURL = `${baseURL}/noticia/${noticiaId}`;
-
-let comentarios = [];
-let usuarioLogadoId = null;
-
-// Recuperar token do localStorage
-function getToken() {
-  return localStorage.getItem('token');
-}
-
-// Decodificar o token para obter o ID do usuário logado
-function getUsuarioIdDoToken(token) {
-  if (!token) return null;
-  try {
-    const payload = token.split('.')[1];
-    const decoded = JSON.parse(atob(payload));
-    return decoded.ID;
-  } catch (error) {
-    console.error('Erro ao decodificar token:', error);
-    return null;
+  // PEGANDO O ID DINÂMICO DA NOTÍCIA DA PÁGINA
+  const noticiaId = document.querySelector('[data-noticia-id]')?.getAttribute('data-noticia-id');
+  if (!noticiaId) {
+    console.warn("ID da notícia não encontrado na página.");
+    return;
   }
-}
 
-// Buscar comentários da notícia
-async function buscarComentarios() {
-  try {
-    const res = await fetch(listarComentariosURL);
-    if (!res.ok) throw new Error('Erro ao buscar comentários');
+  const baseURL = 'http://localhost:4000/comentario';
+  const listarComentariosURL = `${baseURL}/noticia/${noticiaId}`;
 
-    const data = await res.json(); // Corrigido aqui
-    comentarios = data.comentarios;
+  // ... resto do seu código continua igual ...
 
-    const token = getToken();
-    usuarioLogadoId = getUsuarioIdDoToken(token);
 
-    renderComentarios();
-  } catch (err) {
-    console.error(err);
-    alert('Erro ao carregar comentários.');
-  }
-}
+      let comentarios = [];
+      let usuarioLogadoId = null;
 
-// Renderizar comentários na página
+      // Recuperar token do localStorage
+      function getToken() {
+        return localStorage.getItem('token');
+      }
+
+      // Decodificar o token para obter o ID do usuário logado
+      function getUsuarioIdDoToken(token) {
+        if (!token) return null;
+        try {
+          const payload = token.split('.')[1];
+          const decoded = JSON.parse(atob(payload));
+          return decoded.ID;
+        } catch (error) {
+          console.error('Erro ao decodificar token:', error);
+          return null;
+        }
+      }
+
+      // Buscar comentários da notícia
+      async function buscarComentarios() {
+        try {
+          const res = await fetch(listarComentariosURL);
+          if (!res.ok) throw new Error('Erro ao buscar comentários');
+
+          const data = await res.json();
+          comentarios = data.comentarios;
+
+          const token = getToken();
+          usuarioLogadoId = getUsuarioIdDoToken(token);
+
+          renderComentarios();
+        } catch (err) {
+          console.error(err);
+          alert('Erro ao carregar comentários.');
+        }
+      }
+
+      // Renderizar comentários na página
 function renderComentarios() {
   comentariosContainer.innerHTML = '';
 
@@ -59,8 +69,16 @@ function renderComentarios() {
     textoEl.textContent = comentario.texto;
     textoEl.className = 'texto-comentario';
 
-    const autorId = comentario.usuario.id;
+    // 🔽 Novo bloco: Info com email + data
+    const infoEl = document.createElement('small');
+    const nome = comentario.usuario?.nome || 'Usuário';
+    const email = comentario.usuario?.email || 'desconhecido@email.com';
+    const data = new Date(comentario.dataPost).toLocaleString('pt-BR');
+    infoEl.innerHTML = `<strong>${nome} (${email}) — ${data}</strong>`;  
+    infoEl.className = 'info-comentario';
+    // 🔼 Fim do bloco novo
 
+    const autorId = comentario.usuario.id;
     const botoesDiv = document.createElement('div');
     botoesDiv.className = 'botoes';
 
@@ -93,7 +111,7 @@ function renderComentarios() {
         textoEl.contentEditable = 'false';
         try {
           await atualizarComentario(comentario.id, comentario.texto);
-          buscarComentarios();
+          await buscarComentarios();
         } catch {
           alert('Erro ao atualizar comentário.');
           textoEl.textContent = textoEl.dataset.original;
@@ -119,70 +137,73 @@ function renderComentarios() {
     }
 
     comentarioEl.appendChild(textoEl);
+    comentarioEl.appendChild(infoEl); // 👈 Adiciona aqui embaixo do texto
     comentarioEl.appendChild(botoesDiv);
     comentariosContainer.appendChild(comentarioEl);
   });
 }
 
-// Criar novo comentário
-adicionarBtn.addEventListener('click', async () => {
-  const texto = comentarioInput.value.trim();
-  if (!texto) return alert('Digite um comentário.');
 
-  const token = getToken();
-  if (!token) return alert('Você precisa estar logado para comentar.');
+      // Criar novo comentário
+      adicionarBtn.addEventListener('click', async () => {
+        const texto = comentarioInput.value.trim();
+        if (!texto) return alert('Digite um comentário.');
 
-  try {
-    const res = await fetch(baseURL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + token,
-      },
-      body: JSON.stringify({ texto, noticiaId }),
+        const token = getToken();
+        if (!token) return alert('Você precisa estar logado para comentar.');
+
+        try {
+          const res = await fetch(baseURL, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': 'Bearer ' + token,
+            },
+            body: JSON.stringify({ texto, noticiaId }),
+          });
+
+          if (!res.ok) throw new Error('Erro ao enviar comentário');
+
+          comentarioInput.value = '';
+          await buscarComentarios();
+        } catch (err) {
+          console.error(err);
+          alert('Erro ao enviar comentário.');
+        }
+      });
+
+      // Atualizar comentário
+      async function atualizarComentario(id, texto) {
+        const token = getToken();
+        if (!token) throw new Error('Token não encontrado');
+
+        const res = await fetch(`${baseURL}/${id}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token,
+          },
+          body: JSON.stringify({ texto }),
+        });
+
+        if (!res.ok) throw new Error('Erro ao atualizar comentário');
+      }
+
+      // Excluir comentário
+      async function excluirComentario(id) {
+        const token = getToken();
+        if (!token) throw new Error('Token não encontrado');
+
+        const res = await fetch(`${baseURL}/${id}`, {
+          method: 'DELETE',
+          headers: {  
+            'Authorization': 'Bearer ' + token,
+          },
+        });
+
+        if (!res.ok) throw new Error('Erro ao excluir comentário');
+      }
+
+      // Buscar comentários ao carregar a página
+      buscarComentarios();
     });
-
-    if (!res.ok) throw new Error('Erro ao enviar comentário');
-
-    comentarioInput.value = '';
-    await buscarComentarios();
-  } catch (err) {
-    console.error(err);
-    alert('Erro ao enviar comentário.');
-  }
-});
-
-// Atualizar comentário
-async function atualizarComentario(id, texto) {
-  const token = getToken();
-  if (!token) throw new Error('Token não encontrado');
-
-  const res = await fetch(`${baseURL}/${id}`, {
-    method: 'PUT',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + token,
-    },
-    body: JSON.stringify({ texto }),
-  });
-
-  if (!res.ok) throw new Error('Erro ao atualizar comentário');
-}
-
-// Excluir comentário
-async function excluirComentario(id) {
-  const token = getToken();
-  if (!token) throw new Error('Token não encontrado');
-
-  const res = await fetch(`${baseURL}/${id}`, {
-    method: 'DELETE',
-    headers: {
-      'Authorization': 'Bearer ' + token,
-    },
-  });
-
-  if (!res.ok) throw new Error('Erro ao excluir comentário');
-}
-
-// Buscar comentários ao carregar a página
-window.onload = buscarComentarios;

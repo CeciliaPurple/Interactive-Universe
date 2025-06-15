@@ -1,142 +1,110 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nebulosas</title>
-    <link rel="stylesheet" href="css/admEditor.css" />
+  <!DOCTYPE html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Nebulosas</title>
 
-    <!--LINK CSS-->
-    <link rel="stylesheet" href="css/nebulosa.css" />
+      <!-- CSS -->
+      <link rel="stylesheet" href="css/admEditor.css" />
+      <link rel="stylesheet" href="css/nebulosa.css" />
 
-    <!--LOGO GUIA-->
-    <link
-      rel="shortcut icon"
-      href="img/favicon.ico"
-      width="120px"
-      heigth="120px"
-      type="image/png"
-    />
+      <!-- Favicon -->
+      <link rel="shortcut icon" href="img/favicon.ico" type="image/png" />
 
-    <!--FONTES-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <main>
-      <div class="header">
-        <a href="index.html"><img class="logo" src="img/logo.png" /></a>
+      <!-- Fontes -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins:wght@100..900&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap"
+        rel="stylesheet"
+      />
+    </head>
+    <body>
+      <main>
+        <div class="header">
+          <a href="index.html"><img class="logo" src="img/logo.png" /></a>
 
-        <!--MENU-->
-        <div class="menu">
-          <a href="index.html#planeta">Planetas</a>
-          <a href="index.html#news">Notícias</a>
-          <a href="astros.html">Astros</a>
-        </div>
-        <!--LOGIN-->
-        <label class="login">
-          Login
-          <input class="inp" checked="" type="checkbox" />
-          <div class="bar">
-            <span class="top bar-list"></span>
-            <span class="middle bar-list"></span>
-            <span class="bottom bar-list"></span>
+          <div class="menu">
+            <a href="index.html#planeta">Planetas</a>
+            <a href="index.html#news">Notícias</a>
+            <a href="astros.html">Astros</a>
           </div>
 
-          <section class="menu-container">
-            <div class="menu-list">
-              <a href="login.html"><p>Entrar</p></a>
+          <label class="login">
+            Login
+            <input class="inp" checked="" type="checkbox" />
+            <div class="bar">
+              <span class="top bar-list"></span>
+              <span class="middle bar-list"></span>
+              <span class="bottom bar-list"></span>
             </div>
-            <div class="menu-list">
-              <a href="cadastro.html"><p>Cadastrar</p></a>
-            </div>
-          </section>
-        </label>
-      </div>
 
-      <!--card1-->
-      <div class="cotainer">
-        <p class="title">Nebulosas</p>
-      </div>
-
-      <div class="info">
-        <div class="caixa"></div>
-        <p class="text">
-          As nebulosas são grandes nuvens de gás e poeira cósmica espalhadas
-          pelo espaço. Elas são compostas principalmente por hidrogênio em
-          estado de gás ou ionizado e hélio, mas também contêm outros elementos
-          em menores quantidades, como carbono, oxigênio, nitrogênio e metais
-          mais pesados. Além disso, as nebulosas podem ter diferentes formas e
-          características, dependendo do seu tipo e da sua origem.
-        </p>
-      </div>
-
-      <!--card2-->
-      <div class="info2">
-        <p class="text2">
-          Nebulosas não são apenas locais de nascimento de estrelas, mas também
-          de evolução do cosmos. À medida que as estrelas nascem, elas liberam
-          grandes quantidades de radiação, o que pode ionizar o gás ao redor,
-          criando novas nebulosas de emissão. Quando essas estrelas morrem, elas
-          liberam matéria que pode enriquecer outras regiões do espaço, ajudando
-          na formação de novas estrelas e sistemas planetários.
-        </p>
-        <div class="caixa2"></div>
-      </div>
-
-      <!--card3-->
-      <div class="info3">
-        <div class="caixa3"></div>
-        <p class="text3">
-          Meteoro corresponde ao fenômeno luminoso observado durante a passagem
-          de um meteoroide na atmosfera. Os meteoroides correspondem a restos de
-          cometas ou fragmentos oriundos de asteroides. Os meteoritos são
-          meteoroides que sobrevivem ao adentrarem a atmosfera e atinge o chão.
-        </p>
-      </div>
-
-      <div class="container">
-        <h1>Caixa de Comentários</h1>
-
-        <!-- Formulário de comentário -->
-        <div class="comment-form">
-          <textarea
-            id="comment-text"
-            placeholder="Deixe um Comentário..."
-            rows="4"
-          ></textarea>
-          <button onclick="addComment()">Comentar</button>
+            <section class="menu-container">
+              <div class="menu-list">
+                <a href="login.html"><p>Entrar</p></a>
+              </div>
+              <div class="menu-list">
+                <a href="cadastro.html"><p>Cadastrar</p></a>
+              </div>
+            </section>
+          </label>
         </div>
 
-        <!-- Exibição do histórico de comentários -->
-        <div class="comment-history" id="comment-history">
-          <h2>Histórico de Comentários:</h2>
-          <!-- Aqui os comentários serão exibidos dinamicamente -->
+        <!-- Conteúdo -->
+        <div class="cotainer">
+          <p class="title">Nebulosas</p>
         </div>
-      </div>
 
-      <footer>
+        <div class="info">
+          <div class="caixa"></div>
+          <p class="text">
+            As nebulosas são grandes nuvens de gás e poeira cósmica espalhadas pelo espaço...
+          </p>
+        </div>
+
+        <div class="info2">
+          <p class="text2">
+            Nebulosas não são apenas locais de nascimento de estrelas, mas também de evolução...
+          </p>
+          <div class="caixa2"></div>
+        </div>
+
+        <div class="info3">
+          <div class="caixa3"></div>
+          <p class="text3">
+            Meteoro corresponde ao fenômeno luminoso observado durante a passagem de um meteoroide...
+          </p>
+        </div>
+
+        <!-- Caixa de Comentários -->
+        <div class="container" data-noticia-id="2">
+          <h1>Caixa de Comentários</h1>
+
+          <div class="comment-form">
+            <textarea
+              id="comentario-input"
+              placeholder="Deixe um Comentário..."
+              rows="4"
+            ></textarea>
+            <button id="adicionar-btn">Comentar</button>
+          </div>
+
+          <div class="comment-history" id="comentarios-container">
+            <h2>Histórico de Comentários:</h2>
+          </div>
+        </div>
+
+        <!-- Rodapé -->
         <footer class="icons">
           <div class="card">
             <div class="card1">
-              <img
-                class="facebook"
-                src="img/icons8-facebook-novo.svg"
-                alt="facebook"
-              />
-              <img
-                class="instagram"
-                src="img/icons8-instagram.svg"
-                alt="INSTA"
-              />
+              <img class="facebook" src="img/icons8-facebook-novo.svg" alt="facebook" />
+              <img class="instagram" src="img/icons8-instagram.svg" alt="INSTA" />
               <img class="youtube" src="img/youtube-c.svg" alt="tube" />
               <img class="twitter" src="img/twitter-c.svg" alt="tw" />
             </div>
@@ -146,17 +114,16 @@
           </p>
         </footer>
 
+        <!-- Scripts -->
         <script src="js/tradutorhome.JS"></script>
-        <script src="js/caixa.JS"></script>
-        <script src="js/nebulosaEditor.js"></script>
         <script src="js/token.js"></script>
-
         <script src="js/contentApi.js"></script>
         <script src="js/enhancedAdminDetector.js"></script>
         <script src="js/pagesEditor.js"></script>
+        <script src="js/admEditor.js"></script>
         <script src="js/baseEditor.js"></script>
         <script src="js/edit-noticias.js"></script>
-      </footer>
-    </main>
-  </body>
-</html>
+        <script src="js/caixa.JS"></script>
+      </main>
+    </body>
+  </html>

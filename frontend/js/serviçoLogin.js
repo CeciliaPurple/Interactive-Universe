@@ -1,15 +1,14 @@
-// Corrige a seleção do formulário
-const formLogin = document.querySelector(".form"); // Atualizado para corresponder à classe correta
+// Seleciona o formulário de login
+const formLogin = document.querySelector(".form");
 
 formLogin.addEventListener("submit", async (event) => {
-  event.preventDefault(); // Evita recarregar a página
+  event.preventDefault(); // Evita o recarregamento da página
 
   // Pega os valores do formulário
-  const nome = document.getElementById("Nome").value.trim(); // Corrige o ID para 'Nome'
-  const senha = document.getElementById("password").value.trim(); // Corrige o ID para 'password'
+  const nome = document.getElementById("Nome").value.trim();
+  const senha = document.getElementById("password").value.trim();
 
   try {
-    // Faz uma requisição para verificar o nome e a senha no banco
     const response = await fetch("http://localhost:4000/usuarios/login", {
       method: "POST",
       headers: {
@@ -21,22 +20,49 @@ formLogin.addEventListener("submit", async (event) => {
     if (response.ok) {
       const data = await response.json();
 
-      // Salva o token no localStorage
+      // Salva o token e o nome do usuário no localStorage
       localStorage.setItem("token", data.token);
+      localStorage.setItem("usuarioNome", nome);
 
-      alert(`Bem-vindo, ${nome}!`);
-      console.log("Formulário enviado!");
-      // Redireciona para a página principal (index.html) após login bem-sucedido
-      window.location.href = "./index.html"; // Certifique-se de que o caminho está correto
+      // Mostra mensagem de boas-vindas
+      showMessage(`Bem-vindo(a), ${nome}!`, "success");
+
+      // Redireciona após pequena pausa
+      setTimeout(() => {
+        window.location.href = "./index.html";
+      }, 1500);
     } else {
-      const errorData = await response.json();
-      console.error(errorData);
-      alert(
-        `Erro ao fazer login: ${errorData.error || "Nome ou senha incorretos"}`
-      );
+      // Tenta extrair o erro da resposta
+      let errorText = "Nome ou senha incorretos.";
+      try {
+        const errorData = await response.json();
+        if (errorData.error) {
+          errorText = errorData.error;
+        }
+      } catch (jsonError) {
+        console.warn("Erro ao interpretar resposta JSON:", jsonError);
+      }
+
+      showMessage(`Erro ao fazer login: ${errorText}`, "error");
     }
   } catch (error) {
     console.error("Erro na requisição:", error);
-    alert("Erro ao conectar com a API.");
+    showMessage(`Erro ao conectar com o servidor.`, "error");
   }
 });
+
+// Função para mostrar mensagens visuais
+function showMessage(text, type = "success") {
+  console.log("Chamando showMessage com:", text); // <-- teste aqui
+  const messageDiv = document.getElementById("message");
+  if (!messageDiv) return;
+
+  messageDiv.textContent = text;
+  messageDiv.className = ""; // limpa classes anteriores
+  messageDiv.classList.add("message", type); // adiciona nova classe e tipo
+  messageDiv.style.display = "block";
+
+  setTimeout(() => {  
+    messageDiv.style.display = "none";
+  }, 4000);
+}

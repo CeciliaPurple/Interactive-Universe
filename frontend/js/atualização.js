@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (response.ok) {
                 const data = await response.json();
-                alert('Dados atualizados com sucesso!');
+                showMessage('Dados atualizados com sucesso!', 'success');
 
                 if (payload.NOME) {
                     localStorage.setItem("usuarioNome", payload.NOME);
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 window.location.href = 'login.html';
             } else {
                 const errorData = await response.json();
-                alert(`Erro ao atualizar dados do usuário: ${errorData.error || "Erro desconhecido"}`);
+                showMessage(`Erro ao atualizar dados: ${errorData.error || "Erro desconhecido"}`, 'error');
             }
         } catch (error) {
             console.error('Erro na requisição:', error);
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
             })
                 .then(response => {
                     if (response.ok) {
-                        alert("Conta excluída com sucesso.");
+                        showMessage("Conta excluída com sucesso.", "success");
                         localStorage.removeItem("token");
                         localStorage.removeItem("usuarioNome");
                         window.location.href = './index.html';
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 })
                 .catch(error => {
                     console.error('Erro ao excluir conta:', error);
-                    alert(`Erro ao excluir conta: ${error.message}`);
+                    showMessage("Conta excluída com sucesso.", "success");
                 });
         }
     }
@@ -141,3 +141,38 @@ document.addEventListener('DOMContentLoaded', function () {
     // Busca dados do usuário ao carregar a página
     buscarDadosUsuario();
 });
+
+const logoutBtn = document.getElementById("logoutBtn");
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", (event) => {
+    event.preventDefault(); // previne o comportamento padrão do botão submit
+
+    localStorage.removeItem("token");
+    localStorage.removeItem("usuarioNome");
+
+    showMessage("Você saiu da conta com sucesso.", "success");
+
+    // Depois de um tempo, redireciona para a página inicial/login
+    setTimeout(() => {
+      window.location.href = './index.html';
+    }, 1500); // espera 1.5 segundos para a mensagem aparecer
+  });
+}
+
+
+//função de mensagen 
+function showMessage(text, type = 'success') {
+  const messageDiv = document.getElementById('message');
+  if (!messageDiv) return;
+
+  messageDiv.textContent = text;
+  messageDiv.className = 'message'; // reseta classes
+  messageDiv.classList.add(type);
+  messageDiv.style.display = 'block';
+
+  // Opcional: esconde a mensagem depois de 4 segundos
+  setTimeout(() => {
+    messageDiv.style.display = 'none';
+  }, 4000);
+}
+
