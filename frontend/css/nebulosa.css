@@ -455,6 +455,22 @@ button:hover {
   max-width: 600px;
 }
 
+.selo-adm {
+    color: red;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+#btnExcluirTodos {
+    background-color: crimson;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
 
 
 /*footer*/

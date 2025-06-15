@@ -3,13 +3,13 @@ const router = express.Router();
 const ConteudoController = require('../Controllers/conteudoController');
 const authMiddleware = require('../middleware/authMiddleware');
 
-// Atualizar conteúdo (somente com autenticação)
-router.put('/', authMiddleware, ConteudoController.atualizarConteudo);
+// Excluir comentário individual como ADM
+router.delete('/comentario/:id', authMiddleware, ConteudoController.deletarComentarioComoAdm);
 
-// Obter histórico de alterações
-router.get('/historico/:page', authMiddleware, ConteudoController.obterHistorico);
+// Listar todos os comentários
+router.get('/comentarios', authMiddleware, ConteudoController.listarTodosComentarios);
 
-// Restaurar versão anterior
-router.post('/restaurar', authMiddleware, ConteudoController.restaurarVersao);
+// Apagar todos os comentários de uma notícia
+router.delete('/comentarios/todos/:idNoticia', authMiddleware, ConteudoController.deletarTodosComentarios);
 
 module.exports = router;

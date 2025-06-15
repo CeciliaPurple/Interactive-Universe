@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  setupEclipseAdminActions(isAdmin);
-  carregarComentariosEclipse();
+  setupNebulosaAdminActions(isAdmin);
+  carregarComentariosNebulosa();
 });
 
-function setupEclipseAdminActions(isAdmin) {
+function setupNebulosaAdminActions(isAdmin) {
   if (!isAdmin) return;
 
   const btnExcluirTodos = document.getElementById('btnExcluirTodos');
@@ -30,14 +30,14 @@ function setupEclipseAdminActions(isAdmin) {
     const token = localStorage.getItem('token');
 
     try {
-      const resposta = await fetch(`http://localhost:4000/comentario/noticia/1`, {
+      const resposta = await fetch(`http://localhost:4000/comentario/noticia/2`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
       });
 
       if (resposta.ok) {
         alert('Todos os comentários foram excluídos.');
-        carregarComentariosEclipse();
+        carregarComentariosNebulosa();
       } else {
         alert('Erro ao excluir comentários.');
       }
@@ -48,14 +48,14 @@ function setupEclipseAdminActions(isAdmin) {
   };
 }
 
-async function carregarComentariosEclipse() {
+async function carregarComentariosNebulosa() {
   const container = document.getElementById('comentarios');
   if (!container) return;
 
   container.innerHTML = '';
 
   try {
-    const resposta = await fetch(`http://localhost:4000/comentarios/noticia/1`);
+    const resposta = await fetch(`http://localhost:4000/comentario/noticia/2`);
     if (!resposta.ok) throw new Error('Erro na resposta da API');
 
     const comentarios = await resposta.json();
