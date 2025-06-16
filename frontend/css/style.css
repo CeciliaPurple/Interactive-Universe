@@ -752,6 +752,11 @@ z-index: 10;
     left: 25px;
   }
 
+  .login1{
+    width: 30px;
+    margin-left: 50px;
+  }
+
   .bar{
     display: none;
   }
@@ -949,6 +954,11 @@ z-index: 10;
     left: 25px;
   }
 
+  .login1{
+    width: 35px;
+    margin-left: 40px;
+  }
+
   .bar{
     display: none;
   }
@@ -1138,6 +1148,11 @@ z-index: 10;
     left: 20px;
   }
 
+  .login1{
+    width: 40px;
+    margin-left: 40px;
+  }
+
   .bandeira1{
     width: 40px;
     height: auto;
@@ -1323,6 +1338,10 @@ z-index: 10;
     left: 20px;
   }
 
+  .login1{
+    margin-left: 40px;
+  }
+  
   .bar-list{
     width: 15px;
     height: 5px;
