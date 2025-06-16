@@ -253,11 +253,13 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
   width: 600px;
   border-radius: 10px;
   transition: 1.5s;
+  cursor: pointer;
 }
 
 .caixa:hover{
   box-shadow: 10px 10px 35px 10px hsl(0, 0%, 100%, 0.5);
   transition: 1.5s;
+  transform: scale(1.2) rotate(15deg)
 }
 
 .tipo{
@@ -312,7 +314,10 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 .caixa2:hover{
   box-shadow: 10px 10px 35px 10px hsla(231, 73%, 55%, 0.5);
   transition: 1.5s;
+  filter: grayscale(100%);
+  transform: scale(1.1);
 }
+
 
 /*card3*/
 .info2{
@@ -339,11 +344,13 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
   border-radius: 10px;
   transition: 1.5s;
   margin-bottom: 2%;
+ 
 }
 
 .caixa3:hover{
   box-shadow: 10px 10px 35px 10px hsla(12, 77%, 41%, 0.5);
   transition: 1.5s;
+  filter: grayscale(100%);
 }
 
 /*footer*/
