@@ -53,6 +53,38 @@ text-decoration: none;
   margin-top: 20px;
 }
 
+/* Adicione no seu CSS */
+#admin-icon-container {
+position:absolute ;
+  top: 39px;
+  right: 1700px;
+  background: linear-gradient(0deg, hsl(246, 21%, 29%,0.5)5%, hsl(246, 64%, 10%,0.5) 50%,hsl(250, 24%, 10%,0.5) 100%);
+  color: white;
+  border: 1px solid #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  box-shadow: #fff;
+  cursor: default;;
+}
+
+#admin-icon-container :hover{
+  transform: scale(1.05);
+}
+
+#admin-icon-container span:first-child {
+  margin-right: 6px;
+}
+
+#admin-icon-container span:last-child {
+  font-size: 18px;
+}
+
+
 .logo{
   width: 80px;
   height: auto;

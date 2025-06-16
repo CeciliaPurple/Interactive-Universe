@@ -15,26 +15,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let comentarios = [];
   let usuarioLogadoId = null;
+  let isAdmin = false;
 
   // Recuperar token do localStorage
   function getToken() {
     return localStorage.getItem('token');
   }
 
-  // Decodificar token para pegar ID do usuário logado
-  function getUsuarioIdDoToken(token) {
+  // Decodificar token para pegar ID e TIPO do usuário logado
+  function getUsuarioInfoDoToken(token) {
     if (!token) return null;
     try {
       const payload = token.split('.')[1];
       const decoded = JSON.parse(atob(payload));
-      return decoded.ID;
+      return {
+        id: decoded.ID,
+        tipo: decoded.TIPO ? decoded.TIPO.toUpperCase() : 'USUARIO'
+      };
     } catch (error) {
       console.error('Erro ao decodificar token:', error);
       return null;
     }
   }
-
-
 
   // Buscar comentários da notícia
   async function buscarComentarios() {
@@ -45,10 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = await res.json();
 
       // Se a API retornar um array direto, adapte aqui, ex: data ou data.comentarios
-      comentarios = Array.isArray(data) ? data : data.comentarios;
+      comentarios = Array.isArray(data) ? data : data.comentarios || [];
 
       const token = getToken();
-      usuarioLogadoId = getUsuarioIdDoToken(token);
+      const usuarioInfo = getUsuarioInfoDoToken(token);
+      usuarioLogadoId = usuarioInfo?.id || null;
+      isAdmin = usuarioInfo?.tipo === 'ADM';
 
       renderComentarios();
     } catch (err) {
@@ -82,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const botoesDiv = document.createElement('div');
       botoesDiv.className = 'botoes';
 
-      // Mostrar botões só para autor do comentário
+      // Mostrar botões Atualizar e Salvar só para autor do comentário
       if (usuarioLogadoId && usuarioLogadoId === autorId) {
         // Botão Atualizar
         const btnAtualizar = document.createElement('button');
@@ -122,40 +126,42 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
 
-       // Botão Excluir
-const btnExcluir = document.createElement('button');
-btnExcluir.textContent = 'Excluir';
-
-// Variável para controlar confirmação
-let confirmandoExclusao = false;
-
-btnExcluir.addEventListener('click', async () => {
-  if (!confirmandoExclusao) {
-    confirmandoExclusao = true;
-    showMessage('Clique novamente para confirmar a exclusão.', 'error');
-
-    // Cancela se não clicar em 5 segundos
-    setTimeout(() => {
-      confirmandoExclusao = false;
-    }, 5000);
-    return;
-  }
-
-  // Confirmado: agora pode excluir
-  try {
-    await excluirComentario(comentario.id);
-    showMessage('Comentário excluído com sucesso.');
-    await buscarComentarios();
-  } catch {
-    showMessage('Erro ao excluir comentário.', 'error');
-  } finally {
-    confirmandoExclusao = false;
-  }
-});
-
-
         botoesDiv.appendChild(btnAtualizar);
         botoesDiv.appendChild(btnSalvar);
+      }
+
+      // Mostrar botão Excluir para autor do comentário ou para ADM
+      if ((usuarioLogadoId && usuarioLogadoId === autorId) || isAdmin) {
+        const btnExcluir = document.createElement('button');
+        btnExcluir.textContent = 'Excluir';
+
+        // Variável para controlar confirmação
+        let confirmandoExclusao = false;
+
+        btnExcluir.addEventListener('click', async () => {
+          if (!confirmandoExclusao) {
+            confirmandoExclusao = true;
+            showMessage('Clique novamente para confirmar a exclusão.', 'error');
+
+            // Cancela se não clicar em 5 segundos
+            setTimeout(() => {
+              confirmandoExclusao = false;
+            }, 5000);
+            return;
+          }
+
+          // Confirmado: agora pode excluir
+          try {
+            await excluirComentario(comentario.id);
+            showMessage('Comentário excluído com sucesso.');
+            await buscarComentarios();
+          } catch {
+            showMessage('Erro ao excluir comentário.', 'error');
+          } finally {
+            confirmandoExclusao = false;
+          }
+        });
+
         botoesDiv.appendChild(btnExcluir);
       }
 
@@ -172,8 +178,7 @@ btnExcluir.addEventListener('click', async () => {
     if (!texto) return showMessage('Digite um comentário.', 'error');
 
     const token = getToken();
-    if (!token) return  showMessage('Você precisa estar logado para comentar.', 'error');
-    
+    if (!token) return showMessage('Você precisa estar logado para comentar.', 'error');
 
     try {
       const res = await fetch(baseURL, {
@@ -228,42 +233,24 @@ btnExcluir.addEventListener('click', async () => {
     if (!res.ok) throw new Error('Erro ao excluir comentário');
   }
 
-  //função de mensagem
-function showMessage(text, type = 'success') {
-  console.log('showMessage chamada:', text, type);
-  
-  const messageDiv = document.getElementById('message');
-  console.log('Elemento message:', messageDiv);
-  
-  if (!messageDiv) {
-    console.error('ERRO: Elemento #message não encontrado!');
-    alert(`FALLBACK: ${text}`);
-    return;
+  // Função de mensagem
+  function showMessage(text, type = 'success') {
+    const messageDiv = document.getElementById('message');
+    if (!messageDiv) {
+      alert(text);
+      return;
+    }
+
+    messageDiv.textContent = text;
+    messageDiv.className = 'message';
+    messageDiv.classList.add(type);
+    messageDiv.style.display = 'block';
+
+    setTimeout(() => {
+      messageDiv.style.display = 'none';
+    }, 4000);
   }
 
-  console.log('Definindo texto:', text);
-  messageDiv.textContent = text;
-  
-  console.log('Resetando classes');
-  messageDiv.className = 'message';
-  
-  console.log('Adicionando classe:', type);
-  messageDiv.classList.add(type);
-  
-  console.log('Mostrando elemento');
-  messageDiv.style.display = 'block';
-  
-  console.log('Estilo computado:', window.getComputedStyle(messageDiv).display);
-
-  setTimeout(() => {
-    console.log('Ocultando mensagem após 4 segundos');
-    messageDiv.style.display = 'none';
-  }, 4000);
-}
   // Iniciar buscando comentários ao carregar a página
   buscarComentarios();
 });
-
-
-
-
