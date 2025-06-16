@@ -158,7 +158,7 @@ if (logoutBtn) {
     }, 1500); // espera 1.5 segundos para a mensagem aparecer
   });
 }
-
+    
 
 //função de mensagen 
 function showMessage(text, type = 'success') {

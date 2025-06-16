@@ -109,20 +109,26 @@ exports.atualizarComentario = async (req, res) => {
 exports.deletarComentario = async (req, res) => {
   try {
     const { id } = req.params;
-
     const comentario = await Comentario.findByPk(id);
+
     if (!comentario) {
       return res.status(404).json({ error: 'Comentário não encontrado.' });
     }
 
-    if (comentario.USUARIO_ID !== req.user.ID) {
+    const usuarioLogadoId = req.user.ID;
+    const tipoUsuario = req.user.TIPO; // 'ADM' ou 'USUARIO'
+
+    // Permite exclusão se for autor ou ADM
+    if (comentario.USUARIO_ID !== usuarioLogadoId && tipoUsuario !== 'ADM') {
       return res.status(403).json({ error: 'Você não tem permissão para excluir este comentário.' });
     }
 
     await comentario.destroy();
     res.json({ message: 'Comentário excluído com sucesso.' });
+
   } catch (error) {
     console.error('Erro ao excluir comentário:', error);
     res.status(500).json({ error: 'Erro ao excluir comentário.' });
   }
 };
+
