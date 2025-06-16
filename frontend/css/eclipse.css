@@ -354,11 +354,12 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 .container {
   background-color: rgb(0, 0, 0);
   padding: 20px;
+  padding-bottom: 50px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgb(255, 255, 255);
   width: 100%;
   max-width: 1200px;
-  height: 700px;
+  height: fit-content;
   margin-top: 70px;
   text-align: center;
   justify-self: center;
@@ -684,7 +685,7 @@ footer {
   strong{
     font-size: 10px;
   }
-  
+
   /*fotter*/
   .card1{
     position: relative;
@@ -774,7 +775,7 @@ footer {
   .container{
     width: 400px;
     position: relative;
-    height: 400px;
+    height: fit-content;
     bottom: 100px;
     left: 5px;
     margin-top: 120px;
@@ -799,6 +800,14 @@ footer {
   .comment{
     font-size: 1rem;
     padding: 5px;
+  }
+
+  .texto-comentario{
+    font-size: 14px;
+  }
+
+  strong{
+    font-size: 12px;
   }
 
   /*fotter*/
@@ -880,9 +889,9 @@ footer {
 
   /*chat*/
   .container{
-    width: 400px;
+    width: 500px;
     position: relative;
-    height: 400px;
+    height: fit-content;
     bottom: 100px;
     left: 5px;
     margin-top: 140px;
@@ -907,6 +916,14 @@ footer {
   .comment{
     font-size: 1rem;
     padding: 5px;
+  }
+
+  .texto-comentario{
+    font-size: 1rem;
+  }
+
+  strong{
+    font-size: 14px;
   }
 
   /*fotter*/
@@ -995,7 +1012,7 @@ footer {
   .container{
     width: 600px;
     position: relative;
-    height: 600px;
+    height: fit-content;
     bottom: 100px;
     left: 5px;
     margin-top: 160px;
@@ -1020,6 +1037,14 @@ footer {
   .comment{
     font-size: 1rem;
     padding: 5px;
+  }
+
+  .texto-comentario{
+    font-size: 1.25rem;
+  }
+
+  strong{
+    font-size: 1rem;
   }
 
   /*fotter*/
@@ -1084,7 +1109,7 @@ footer {
   .container{
     width: 800px;
     position: relative;
-    height: 600px;
+    height: fit-content;
     bottom: 100px;
     left: 5px;
     margin-top: 160px;
