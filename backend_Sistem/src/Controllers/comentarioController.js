@@ -77,7 +77,11 @@ exports.listarPorNoticia = async (req, res) => {
 exports.atualizarComentario = async (req, res) => {
   try {
     const { id } = req.params;
-    const { texto } = req.body;  // minúsculo
+    const { texto } = req.body; // minúsculo
+
+    if (!texto) {
+      return res.status(400).json({ error: 'O campo TEXTO é obrigatório.' });
+    }
 
     const comentario = await Comentario.findByPk(id);
     if (!comentario) {
@@ -103,7 +107,7 @@ exports.atualizarComentario = async (req, res) => {
     console.error('Erro ao atualizar comentário:', error);
     res.status(500).json({ error: 'Erro ao atualizar comentário.' });
   }
-};
+}
 
 // Excluir um comentário (apenas o autor)
 exports.deletarComentario = async (req, res) => {
