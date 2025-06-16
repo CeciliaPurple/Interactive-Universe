@@ -79,7 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const nome = comentario.usuario?.nome || 'Usuário';
       const email = comentario.usuario?.email || 'desconhecido@email.com';
       const data = new Date(comentario.dataPost).toLocaleString('pt-BR');
-      infoEl.innerHTML = `<strong>${nome} (${email}) — ${data}</strong>`;
+      //infoEl.innerHTML = `<strong>${nome} (${email}) — ${data}</strong>`;
+      infoEl.innerHTML = `<strong>${nome} — ${data}</strong>`;
       infoEl.className = 'info-comentario';
 
       const autorId = comentario.usuario?.id || null;
@@ -164,9 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         botoesDiv.appendChild(btnExcluir);
       }
-
-      comentarioEl.appendChild(textoEl);
       comentarioEl.appendChild(infoEl);
+      comentarioEl.appendChild(textoEl);
       comentarioEl.appendChild(botoesDiv);
       comentariosContainer.appendChild(comentarioEl);
     });

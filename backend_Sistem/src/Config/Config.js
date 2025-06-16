@@ -1,4 +1,4 @@
 module.exports = {
     JWT_SECRET: 'seu_segredo_secreto',
-    JWT_EXPIRE_IN: '1h', // Tempo de expiração do token
+    JWT_EXPIRE_IN: '2h', // Tempo de expiração do token
 }
