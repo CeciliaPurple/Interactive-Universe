@@ -283,6 +283,10 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
   top: -200px;
 }
 
+#news {
+  scroll-margin-top: 50px;
+}
+
 /*Animação NOTÍCIAS*/
 .noticias.active .anima{
   animation: see 2s forwards;
