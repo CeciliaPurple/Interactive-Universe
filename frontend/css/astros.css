@@ -419,6 +419,11 @@ footer {
     left: 25px;
   }
 
+  .login1{
+    width: 30px;
+    margin-left: 50px;
+  }
+
   .bar{
     display: none;
   }
@@ -477,6 +482,11 @@ footer {
     font-size: 14px;
     position: relative;
     left: 20px;
+  }
+
+  .login1{
+    width: 35px;
+    margin-left: 40px;
   }
 
   .bar{
@@ -538,6 +548,11 @@ footer {
     left: 20px;
   }
 
+  .login1{
+    width: 40px;
+    margin-left: 40px;
+  }
+
   .title{
     font-size: 3rem;
   }
@@ -590,6 +605,10 @@ footer {
     left: 20px;
   }
 
+  .login1{
+    margin-left: 40px;
+  }
+  
   .bar-list{
     width: 15px;
     height: 5px;

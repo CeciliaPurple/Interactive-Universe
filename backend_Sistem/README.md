@@ -31,54 +31,6 @@
 
 Desenvolvido em JavaScript utilizando **Visual Studio Code**
 
-## 🚀 Instalação e Execução
-
-### Pré-requisitos
-- Node.js instalado
-- MySQL instalado e rodando
-- Git
-
-### Passos para executar
-
-1. **Clone o repositório**:
-```bash
-git clone https://github.com/CeciliaPurple/Interactive-Universe.git
-cd Interactive-Universe
-```
-
-2. **Instale as dependências**:
-```bash
-npm install
-```
-
-3. **Configure as variáveis de ambiente**:
-Crie um arquivo `.env` na raiz do projeto:
-```env
-DB_HOST=localhost
-DB_USER=seu_usuario
-DB_PASSWORD=sua_senha
-DB_NAME=interactive_universe
-JWT_SECRET=seu_jwt_secret_aqui
-PORT=3000
-```
-
-4. **Execute as migrações do banco** (se aplicável):
-```bash
-npx sequelize-cli db:migrate
-```
-
-5. **Inicie o servidor**:
-
-**Desenvolvimento**:
-```bash
-npm run dev
-```
-
-**Produção**:
-```bash
-npm start
-```
-
 O servidor estará rodando em `http://localhost:4000`
 
 ## 📋 Funcionalidades

@@ -416,6 +416,7 @@ button:hover {
   border-radius: 5px;
   background-color: #ffffff;
   color:#000000;
+  font-family: var(--ff-poppins);
 }
 
 .botoes {
@@ -593,6 +594,11 @@ footer {
     left: 25px;
   }
 
+  .login1{
+    width: 30px;
+    margin-left: 50px;
+  }
+
   .bar{
     display: none;
   }
@@ -635,9 +641,9 @@ footer {
 
   /*chat*/
   .container{
-    width: 300px;
+    width: 350px;
     position: relative;
-    height: 400px;
+    height: fit-content;
     bottom: 100px;
     left: 5px;
     margin-top: 140px;
@@ -651,10 +657,6 @@ footer {
     height: 45px;
   }
 
-  .container button{
-    font-size: 1rem;
-  }
-
   .container h2{
     font-size: 1rem;
   }
@@ -664,6 +666,14 @@ footer {
     padding: 5px;
   }
 
+  .texto-comentario{
+    font-size: 12px;
+  }
+
+  strong{
+    font-size: 10px;
+  }
+  
   /*fotter*/
   .card1{
     position: relative;
@@ -701,6 +711,11 @@ footer {
     font-size: 14px;
     position: relative;
     left: 20px;
+  }
+
+  .login1{
+    width: 35px;
+    margin-left: 40px;
   }
 
   .bar{
@@ -812,6 +827,11 @@ footer {
     left: 20px;
   }
 
+  .login1{
+    width: 40px;
+    margin-left: 40px;
+  }
+
   .title{
   margin-top: 45px;
   font-size: 3rem;
@@ -912,6 +932,10 @@ footer {
     left: 20px;
   }
 
+  .login1{
+    margin-left: 40px;
+  }
+  
   .bar-list{
     width: 15px;
     height: 5px;
