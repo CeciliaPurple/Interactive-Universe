@@ -354,11 +354,12 @@ transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
 .container {
   background-color: rgb(0, 0, 0);
   padding: 20px;
+  padding-bottom: 50px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgb(255, 255, 255);
   width: 100%;
   max-width: 1200px;
-  height: 700px;
+  height: fit-content;
   margin-top: 70px;
   text-align: center;
   justify-self: center;
@@ -420,6 +421,7 @@ button:hover {
   border-radius: 5px;
   background-color: #ffffff;
   color:#000000;
+  font-family: var(--ff-poppins);
 }
 
 .botoes {
@@ -604,6 +606,11 @@ footer {
     left: 25px;
   }
 
+  .login1{
+    width: 30px;
+    margin-left: 50px;
+  }
+
   .bar{
     display: none;
   }
@@ -646,9 +653,9 @@ footer {
 
   /*chat*/
   .container{
-    width: 300px;
+    width: 350px;
     position: relative;
-    height: 400px;
+    height: fit-content;
     bottom: 100px;
     left: 5px;
     margin-top: 140px;
@@ -662,10 +669,6 @@ footer {
     height: 45px;
   }
 
-  .container button{
-    font-size: 1rem;
-  }
-
   .container h2{
     font-size: 1rem;
   }
@@ -673,6 +676,14 @@ footer {
   .comment{
     font-size: 1rem;
     padding: 5px;
+  }
+
+  .texto-comentario{
+    font-size: 12px;
+  }
+
+  strong{
+    font-size: 10px;
   }
 
   /*fotter*/
@@ -712,6 +723,11 @@ footer {
     font-size: 14px;
     position: relative;
     left: 20px;
+  }
+
+  .login1{
+    width: 35px;
+    margin-left: 40px;
   }
 
   .bar{
@@ -759,7 +775,7 @@ footer {
   .container{
     width: 400px;
     position: relative;
-    height: 400px;
+    height: fit-content;
     bottom: 100px;
     left: 5px;
     margin-top: 120px;
@@ -784,6 +800,14 @@ footer {
   .comment{
     font-size: 1rem;
     padding: 5px;
+  }
+
+  .texto-comentario{
+    font-size: 14px;
+  }
+
+  strong{
+    font-size: 12px;
   }
 
   /*fotter*/
@@ -824,6 +848,11 @@ footer {
     left: 20px;
   }
 
+  .login1{
+    width: 40px;
+    margin-left: 40px;
+  }
+
   .title{
   margin-top: 45px;
   font-size: 3rem;
@@ -860,9 +889,9 @@ footer {
 
   /*chat*/
   .container{
-    width: 400px;
+    width: 500px;
     position: relative;
-    height: 400px;
+    height: fit-content;
     bottom: 100px;
     left: 5px;
     margin-top: 140px;
@@ -887,6 +916,14 @@ footer {
   .comment{
     font-size: 1rem;
     padding: 5px;
+  }
+
+  .texto-comentario{
+    font-size: 1rem;
+  }
+
+  strong{
+    font-size: 14px;
   }
 
   /*fotter*/
@@ -924,6 +961,10 @@ footer {
     left: 20px;
   }
 
+  .login1{
+    margin-left: 40px;
+  }
+  
   .bar-list{
     width: 15px;
     height: 5px;
@@ -971,7 +1012,7 @@ footer {
   .container{
     width: 600px;
     position: relative;
-    height: 600px;
+    height: fit-content;
     bottom: 100px;
     left: 5px;
     margin-top: 160px;
@@ -996,6 +1037,14 @@ footer {
   .comment{
     font-size: 1rem;
     padding: 5px;
+  }
+
+  .texto-comentario{
+    font-size: 1.25rem;
+  }
+
+  strong{
+    font-size: 1rem;
   }
 
   /*fotter*/
@@ -1060,7 +1109,7 @@ footer {
   .container{
     width: 800px;
     position: relative;
-    height: 600px;
+    height: fit-content;
     bottom: 100px;
     left: 5px;
     margin-top: 160px;
