@@ -378,23 +378,27 @@ footer {
   }
   
   .facebook:hover{
-    background-color: #3d77cf;
+    background-color: #0c3168;
     border-radius: 10px; 
+    cursor: pointer;
   }
   
   .instagram:hover{
     background-color: #7a2d63;
     border-radius: 10px; 
+    cursor: pointer;
   }
   
   .youtube:hover{
     background-color: #852121;
     border-radius: 10px;
+    cursor: pointer;
   }
   
   .twitter:hover{
     background-color: #b480cc;
     border-radius: 10px;
+    cursor: pointer;
   }
 
 
